@@ -1,6 +1,6 @@
 package com.company.game;
 
-public class GameInjection {
+public class GameSelect {
 
     public Game game() {
         return new BBBGame();

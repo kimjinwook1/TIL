@@ -20,7 +20,7 @@ public class ImageMaker {
         int value = (int) (Math.random() * 10000);
         graphics.setColor(Color.BLACK);
 
-        graphics.setFont((new Font("TimesRoman", Font.BOLD, 40)));
+        graphics.setFont((new Font("Times New Roman", Font.BOLD, 40)));
         graphics.drawString("" + value, 10, 140);
 
         OutputStream fileOutputStream = new FileOutputStream("/Users/kimjinwook/zzz/test.gif");
