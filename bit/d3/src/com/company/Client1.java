@@ -10,17 +10,15 @@ public class Client1 {
     public static void main(String[] args) throws Exception{
 
         Socket socket = new Socket(/*"아이피주소", 포트번호*/"localhost",9000);
-        System.out.println(socket);
 
         OutputStream out = socket.getOutputStream();
-
+        System.out.println(socket);
         InputStream in = socket.getInputStream();
         Scanner inScanner = new Scanner(in);
 
         String name = "김진욱\n";
         out.write(name.getBytes());
         System.out.println("-----------------------------");
-
         String serverMsg = inScanner.nextLine();
         System.out.println("SERVER: " + serverMsg);
 

@@ -9,7 +9,6 @@ public class FileClient {
     //bad code
     public static void main(String[] args) throws Exception {
 
-
         Socket socket = new Socket("192.168.0.141", 9000);
         InputStream in = socket.getInputStream();
 
@@ -19,9 +18,10 @@ public class FileClient {
 
         String fileName = new String(nameArr).trim();
 
-        System.out.println("fileName = " + fileName);
+        System.out.println("fileName: " + fileName);
 
-        FileOutputStream fos = new FileOutputStream("/Users/kimjinwook/zzz2/" + fileName);
+
+        FileOutputStream fos = new FileOutputStream("C:\\zzz2\\" + fileName);
 
         byte[] buffer = new byte[1024 * 8];
         while (true) {
@@ -29,8 +29,7 @@ public class FileClient {
             if (count == -1) {
                 break;
             }
-
             fos.write(buffer, 0, count);
-        }
+        }//end while
     }
 }

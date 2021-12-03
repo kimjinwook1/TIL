@@ -87,6 +87,8 @@ public class StoreDAO {
 
     public int calcGap3(String from, String to) throws Exception {
 
+        int result = 0;
+
         @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
         @Cleanup PreparedStatement preparedStatement = connection.prepareStatement("SELECT TIMESTAMPDIFF(DAY, ?, ?)");
         preparedStatement.setString(1, from);
