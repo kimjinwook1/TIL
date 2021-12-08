@@ -1,16 +1,14 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: kimjinwook
-  Date: 2021/12/08
-  Time: 1:13 오후
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
-</html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%@include file="../includes/header.jsp"%>
+<h1 class="mt-4">Simple Sidebar</h1>
+
+<ul>
+    <c:forEach items="${dtoList}" var="dto">
+        <li>${dto}</li>
+    </c:forEach>
+</ul>
+
+<%@include file="../includes/footer.jsp"%>
+

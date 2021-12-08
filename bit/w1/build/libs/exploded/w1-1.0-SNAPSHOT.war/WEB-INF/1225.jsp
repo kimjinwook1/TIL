@@ -5,7 +5,13 @@
 <head>
     <title>Title</title>
 </head>
+
 <body>
+
+<form action="/greeting2" method="post">
+    <input type="tel" name="phone" value="010-1111-2222">
+    <button type="submit">제출</button>
+</form>
 
 <h2>${list}</h2>
 

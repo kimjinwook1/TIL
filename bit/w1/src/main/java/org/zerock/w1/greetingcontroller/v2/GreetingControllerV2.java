@@ -1,4 +1,4 @@
-package org.zerock.w1.greetingcontroller.v1;
+package org.zerock.w1.greetingcontroller.v2;
 
 import org.zerock.w1.dto.SampleDTO;
 
@@ -13,11 +13,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-@WebServlet(name = "greeting", urlPatterns = "/greeting")
-public class GreetingController extends HttpServlet {
+@WebServlet(name = "greeting2", urlPatterns = "/greeting2")
+public class GreetingControllerV2 extends HttpServlet {
 
     @Override
-    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         SampleDTO dto = new SampleDTO();
         dto.setFirst("Gil Dong");
@@ -45,4 +45,11 @@ public class GreetingController extends HttpServlet {
 
     }
 
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("doPost.................");
+
+        response.sendRedirect("/hello2");
+
+    }
 }

@@ -13,7 +13,9 @@ public enum ConnectionUtil {
 
     ConnectionUtil() {
         HikariConfig config = new HikariConfig();
+
         config.setJdbcUrl("jdbc:mysql://localhost:3306/webdb");
+        config.setDriverClassName("com.mysql.cj.jdbc.Driver");
         config.setUsername("webuser");
         config.setPassword("webuser");
         config.addDataSourceProperty("cachePrepStmts", "true");

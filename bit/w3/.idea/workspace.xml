@@ -10,63 +10,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d5db627-652a-421f-bac7-439d642859a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../d1_1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../d1_1/src/main/java/com/example/d1_1/dto/StoreDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../d1_1/src/main/java/com/example/d1_1/util/MapperUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../d1_1/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../d1_1/src/test/java/dao/MapperTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../d5/src/com/company/Main3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../d5/src/com/company/Server1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../d5/src/com/company/Server2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../d5/src/com/company/Server3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../d6/src/com/company/Ex1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../d6/src/com/company/Ex2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../d6/src/com/company/Ex3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../d6/src/com/company/Horse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../d6/src/com/company/onetwoone/v1/OneTwoOneClientV1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../d6/src/com/company/onetwoone/v1/OneTwoOneServerV1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../d6/src/com/company/onetwoone/v2/OneTwoOneClientV2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../d6/src/com/company/onetwoone/v2/OneTwoOneServerV2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../d6/src/com/company/onetwoone/v3/OneTwoOneClientV3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../d6/src/com/company/onetwoone/v3/OneTwoOneServerV3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w1/src/main/java/org/zerock/w1/GreetingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w1/src/main/java/org/zerock/w1/Hello2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w1/src/main/java/org/zerock/w1/dto/SampleDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w1/src/main/webapp/WEB-INF/1208.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w1/src/main/webapp/WEB-INF/1225.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w1/src/main/webapp/hello.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w1/src/main/webapp/img/target.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dao/ConnectionUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../study/servlet/src/main/java/hello/servlet/web/servletmvc/MvcMemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d1_1/.gradle/7.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../d1_1/.gradle/7.1.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d1_1/.gradle/7.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../d1_1/.gradle/7.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d1_1/.gradle/7.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../d1_1/.gradle/7.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d1_1/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../d1_1/.gradle/7.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d1_1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../d1_1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d1_1/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../d1_1/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d1_1/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../d1_1/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d1_1/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../d1_1/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d1_1/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../d1_1/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d1_1/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../d1_1/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d1_1/build/classes/java/main/com/example/d1_1/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../d1_1/build/classes/java/main/com/example/d1_1/HelloServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d1_1/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../d1_1/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d1_1/out/production/classes/com/example/d1_1/dao/ConnectionUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../d1_1/out/production/classes/com/example/d1_1/dao/ConnectionUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d1_1/out/production/classes/com/example/d1_1/domain/StoreVO$StoreVOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../d1_1/out/production/classes/com/example/d1_1/domain/StoreVO$StoreVOBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d1_1/out/production/classes/com/example/d1_1/domain/StoreVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../d1_1/out/production/classes/com/example/d1_1/domain/StoreVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d1_1/out/test/classes/dao/DAOTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../d1_1/out/test/classes/dao/DAOTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d1_1/src/main/java/com/example/d1_1/dao/ConnectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../d1_1/src/main/java/com/example/d1_1/dao/ConnectionUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d1_1/src/main/java/com/example/d1_1/dao/StoreDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../d1_1/src/main/java/com/example/d1_1/dao/StoreDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d1_1/src/main/java/com/example/d1_1/domain/StoreVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../d1_1/src/main/java/com/example/d1_1/domain/StoreVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d1_1/src/test/java/dao/DAOTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../d1_1/src/test/java/dao/DAOTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d5/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../d5/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../d5/src/com/company/Main2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../d5/src/com/company/Main2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dao/TodoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/domain/TodoVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dto/TodoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/service/TodoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/util/MapperUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dao/TodoDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w1/build/libs/exploded/w1-1.0-SNAPSHOT.war/WEB-INF/1225.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../w1/build/libs/exploded/w1-1.0-SNAPSHOT.war/WEB-INF/1225.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w1/build/libs/exploded/w1-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w1/GreetingController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w1/out/production/classes/org/zerock/w1/GreetingController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w1/src/main/java/org/zerock/w1/greetingcontroller/v2/GreetingControllerV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w1/src/main/java/org/zerock/w1/greetingcontroller/v2/GreetingControllerV2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w1/src/main/webapp/WEB-INF/1225.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../w1/src/main/webapp/WEB-INF/1225.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/dao/ConnectionUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/dao/ConnectionUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/dao/ConnectionUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/dao/ConnectionUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/dao/TimeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/TodoListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/TodoListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/TodoRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/TodoRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dao/ConnectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dao/ConnectionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/includes/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/includes/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/includes/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../study/servlet/src/main/java/hello/servlet/web/servletmvc/MvcMemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../study/servlet/src/main/java/hello/servlet/web/servletmvc/MvcMemberController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,8 +49,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Enum" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -97,26 +67,43 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="21wtxOVcpsUBgjVhQt0sIN4W0ie" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.zerock.w3.dao" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.zerock.w3.util" />
+      <recent name="org.zerock.w3.domain" />
+      <recent name="dao" />
       <recent name="org.zerock.w3.dao" />
     </key>
   </component>
@@ -132,6 +119,52 @@
       <option name="PACKAGE_NAME" value="dao" />
       <option name="MAIN_CLASS_NAME" value="dao.TimeTest" />
       <option name="METHOD_NAME" value="testNow" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoDAOTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="w3.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.TodoDAOTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="w3.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.zerock.w3.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.zerock.w3.dao" />
+      <option name="MAIN_CLASS_NAME" value="org.zerock.w3.dao.TodoDAOTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoDAOTest.testList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="w3.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.TodoDAOTest" />
+      <option name="METHOD_NAME" value="testList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -229,10 +262,16 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.TimeTest.testNow" />
+      <item itemvalue="JUnit.TodoDAOTest" />
+      <item itemvalue="JUnit.TodoDAOTest.testList" />
+      <item itemvalue="JUnit.TodoDAOTest (1)" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.554" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TodoDAOTest (1)" />
+        <item itemvalue="JUnit.TodoDAOTest.testList" />
+        <item itemvalue="JUnit.TodoDAOTest" />
         <item itemvalue="JUnit.TimeTest.testNow" />
       </list>
     </recent_temporary>
@@ -247,12 +286,26 @@
       <updated>1638864224457</updated>
       <workItem from="1638864226322" duration="3428000" />
       <workItem from="1638871622521" duration="5452000" />
-      <workItem from="1638924961017" duration="8000" />
+      <workItem from="1638924961017" duration="5415000" />
+      <workItem from="1638946521161" duration="6251000" />
+      <workItem from="1638953141844" duration="3741000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
