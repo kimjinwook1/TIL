@@ -12,7 +12,7 @@ public class Main2 {
         ServerSocket serverSocket = new ServerSocket(9000);
         System.out.println("ready..............");
 
-        File targetFile = new File("C:\\zzz\\test.mp3");
+        File targetFile = new File("/Users/kimjinwook/zzz/bbb.jpeg");
 
         while(true){
             try {

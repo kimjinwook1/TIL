@@ -21,7 +21,7 @@ public class Main {
 
                 out.write(new String("HTTP/1.1 200 OK\r\n").getBytes());
                 out.write(new String("Cache-Control: private\r\n").getBytes());
-                out.write(new String("Content-Length: "+msg.getBytes("UTF-8").length+"\r\n").getBytes());
+                out.write(new String("Content-Length: " + msg.getBytes("UTF-8").length + "\r\n").getBytes());
                 out.write(new String("Content-Type: text/html; charset=UTF-8\r\n\r\n").getBytes());
                 out.write(msg.getBytes("UTF-8"));
 

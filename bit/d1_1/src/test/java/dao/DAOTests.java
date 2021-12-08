@@ -1,9 +1,11 @@
 package dao;
 
+import com.example.d1_1.dao.ConnectionUtil;
 import com.example.d1_1.dao.StoreDAO;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
-import org.junit.jupiter.api.Assertions;
+import lombok.Cleanup;
+import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -12,16 +14,33 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+@Log4j2
 public class DAOTests {
 
     //의존성/ 협력객체들
 
     private StoreDAO storeDAO;
 
+
     @BeforeEach
     private void ready() {
         System.out.println("ready..............");
         storeDAO = new StoreDAO();
+    }
+
+    @Test
+    void testLog() throws  Exception {
+
+        log.trace("trace................");
+        log.debug("debug................");
+        log.info(" info.................");
+        log.warn(" warn.................");
+        log.error("error................");
+        log.fatal("fatal................");
+
+        @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
+        log.info("connection = "+connection);
+
     }
 
     @Test

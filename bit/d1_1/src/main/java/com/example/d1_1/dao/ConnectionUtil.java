@@ -2,7 +2,6 @@ package com.example.d1_1.dao;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
-import lombok.Data;
 
 import java.sql.Connection;
 
