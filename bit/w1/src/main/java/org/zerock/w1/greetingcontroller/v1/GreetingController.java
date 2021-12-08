@@ -1,4 +1,4 @@
-package org.zerock.w1;
+package org.zerock.w1.greetingcontroller.v1;
 
 import org.zerock.w1.dto.SampleDTO;
 
@@ -44,4 +44,5 @@ public class GreetingController extends HttpServlet {
         dispatcher.forward(request, response);
 
     }
+
 }
