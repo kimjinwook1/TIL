@@ -10,23 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d5db627-652a-421f-bac7-439d642859a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/TodoRegisterController2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w1/build/libs/exploded/w1-1.0-SNAPSHOT.war/WEB-INF/1225.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../w1/build/libs/exploded/w1-1.0-SNAPSHOT.war/WEB-INF/1225.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w1/src/main/java/org/zerock/w1/dto/TestServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w1/src/main/java/org/zerock/w1/dto/TestServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w1/src/main/java/org/zerock/w1/util/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w1/src/main/java/org/zerock/w1/util/StringUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w1/src/main/webapp/WEB-INF/1225.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../w1/src/main/webapp/WEB-INF/1225.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w1/src/main/webapp/WEB-INF/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../w1/src/main/webapp/WEB-INF/test.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w1/src/test/java/org/zerock/w1/UtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w1/src/test/java/org/zerock/w1/UtilTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/controller/TodoRegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/controller/TodoRegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/todo/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/todo/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/todo/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/todo/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/controller/TodoRegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/controller/TodoRegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/TodoRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/TodoRegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w3_1/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/controller/TodoRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/controller/TodoRegisterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/dao/ConnectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/dao/ConnectionUtil.java" afterDir="false" />
@@ -303,7 +292,7 @@
       <workItem from="1638871622521" duration="5452000" />
       <workItem from="1638924961017" duration="5415000" />
       <workItem from="1638946521161" duration="6251000" />
-      <workItem from="1638953141844" duration="22645000" />
+      <workItem from="1638953141844" duration="23227000" />
     </task>
     <servers />
   </component>

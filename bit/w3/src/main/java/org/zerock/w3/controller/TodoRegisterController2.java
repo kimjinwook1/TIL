@@ -47,15 +47,14 @@ public class TodoRegisterController2 extends HttpServlet {
         log.info(writer);
         log.info(dueDate);
 
-        TodoDTO dto = TodoDTO.builder()
+        TodoDTO todoDTO = TodoDTO.builder()
                 .title(title)
                 .writer(writer)
                 .dueDate(dueDate)
                 .build();
 
         try {
-            TodoVO vo = TodoService.INSTANCE.saveOne(dto);
-            TodoDAO.INSTANCE.save(vo);
+            TodoService.INSTANCE.register(todoDTO);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -36,4 +36,13 @@ public enum TodoService {
         TodoVO vo = modelMapper.map(todoDTO, TodoVO.class);
         return vo;
     }
+
+    //강사님 코드
+    public void register(TodoDTO dto) throws Exception {
+        log.info("dto: " + dto);
+        TodoVO vo = modelMapper.map(dto, TodoVO.class);
+        log.info("vo: " + vo);
+
+        todoDAO.insert(vo);
+    }
 }

@@ -4,6 +4,7 @@ import lombok.Cleanup;
 import lombok.extern.log4j.Log4j2;
 import org.zerock.w3.domain.TodoVO;
 import org.zerock.w3.dto.TodoDTO;
+import org.zerock.w3.util.DateUtil;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -60,6 +61,7 @@ public enum TodoDAO {
 
         String sql = "insert into tbl_todo (`title`, `writer`, `dueDate`) VALUES (?,?,?)";
         //title, writer, dueDate
+
         @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
         @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
@@ -69,5 +71,21 @@ public enum TodoDAO {
 
         preparedStatement.executeUpdate();
 
+    }
+
+    //강사님 코드
+    public void insert(TodoVO vo) throws Exception {
+
+        String sql = "insert into tbl_todo (`title`, `writer`, `dueDate`) VALUES (?,?,?)";
+        @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
+        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+        preparedStatement.setString(1, vo.getTitle());
+        preparedStatement.setString(2, vo.getWriter());
+        preparedStatement.setString(3, DateUtil.getStr(vo.getDueDate()));
+
+        int count = preparedStatement.executeUpdate();
+
+        log.info("Count: " + count);
     }
 }
