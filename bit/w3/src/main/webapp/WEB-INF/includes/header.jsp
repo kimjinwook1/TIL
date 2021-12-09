@@ -18,8 +18,8 @@
     <div class="border-end bg-white" id="sidebar-wrapper">
         <div class="sidebar-heading border-bottom bg-light">Start Bootstrap</div>
         <div class="list-group list-group-flush">
-            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/todo/list">list</a>
-            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/todo/register">register</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/todo/list">목록 보기</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/todo/register">등록 하기</a>
             <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">re</a>
             <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Events</a>
             <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Profile</a>

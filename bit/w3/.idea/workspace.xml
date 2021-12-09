@@ -10,62 +10,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d5db627-652a-421f-bac7-439d642859a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../w3_1/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/HelloServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/controller/TodoListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/controller/TodoRegisterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/dao/ConnectionUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/dao/TodoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/domain/TodoVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/dto/TodoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/service/TodoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/util/MapperUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/src/main/webapp/WEB-INF/includes/footer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/src/main/webapp/WEB-INF/includes/header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/src/main/webapp/WEB-INF/todo/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/src/main/webapp/WEB-INF/todo/register.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/src/main/webapp/assets/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/src/main/webapp/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/src/main/webapp/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../w3_1/src/main/webapp/js/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w1/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w1/src/main/java/org/zerock/w1/dto/TestServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w1/src/main/java/org/zerock/w1/util/StringUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w1/src/main/webapp/WEB-INF/test.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../w1/src/test/java/org/zerock/w1/UtilTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w1/build/libs/exploded/w1-1.0-SNAPSHOT.war/WEB-INF/1225.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../w1/build/libs/exploded/w1-1.0-SNAPSHOT.war/WEB-INF/1225.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w1/src/main/webapp/WEB-INF/1225.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../w1/src/main/webapp/WEB-INF/1225.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/controller/TodoListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/controller/TodoListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/HelloServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/controller/TodoRegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/controller/TodoRegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/dao/TodoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/dao/TodoDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/service/TodoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/service/TodoService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/includes/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/todo/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/todo/register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/controller/TodoListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/controller/TodoListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/HelloServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/controller/TodoRegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/controller/TodoRegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/dao/TodoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/dao/TodoDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/service/TodoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/service/TodoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/TodoListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/TodoListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/HelloServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/TodoRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/TodoRegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dao/TodoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dao/TodoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/service/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/service/TodoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/includes/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w3_1/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/controller/TodoRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/controller/TodoRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/dao/ConnectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/dao/ConnectionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/dao/TodoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/dao/TodoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/domain/TodoVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/domain/TodoVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/dto/TodoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/dto/TodoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/service/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/service/TodoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/util/MapperUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/util/MapperUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w3_1/src/main/webapp/WEB-INF/includes/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/src/main/webapp/WEB-INF/includes/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w3_1/src/main/webapp/WEB-INF/includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/src/main/webapp/WEB-INF/includes/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w3_1/src/main/webapp/WEB-INF/todo/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/src/main/webapp/WEB-INF/todo/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w3_1/src/main/webapp/WEB-INF/todo/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/src/main/webapp/WEB-INF/todo/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../w3_1/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/src/main/webapp/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../study/servlet/src/main/java/hello/servlet/web/servletmvc/MvcMemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../study/servlet/src/main/java/hello/servlet/web/servletmvc/MvcMemberController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -328,7 +305,7 @@
       <workItem from="1638871622521" duration="5452000" />
       <workItem from="1638924961017" duration="5415000" />
       <workItem from="1638946521161" duration="6251000" />
-      <workItem from="1638953141844" duration="14583000" />
+      <workItem from="1638953141844" duration="20805000" />
     </task>
     <servers />
   </component>

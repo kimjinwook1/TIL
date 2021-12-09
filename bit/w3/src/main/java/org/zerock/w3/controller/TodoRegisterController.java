@@ -25,10 +25,6 @@ public class TodoRegisterController extends HttpServlet {
 
         String viewPath = "/WEB-INF/todo/register.jsp";
 
-        String title = request.getParameter("title");
-        String writer = request.getParameter("writer");
-        String dueDate = request.getParameter("dueDate");
-
         try {
             RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
             dispatcher.forward(request, response);
@@ -39,6 +35,9 @@ public class TodoRegisterController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        request.setCharacterEncoding("UTF-8");
+
         String title = request.getParameter("title");
         String writer = request.getParameter("writer");
         String dueDate = request.getParameter("dueDate");
@@ -57,6 +56,39 @@ public class TodoRegisterController extends HttpServlet {
         }
 
         response.sendRedirect("/todo/list");
-
     }
+
+//    @Override
+//    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//
+//        String viewPath = "/WEB-INF/todo/register.jsp";
+//
+//        try {
+//            RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
+//            dispatcher.forward(request, response);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        String title = request.getParameter("title");
+//        String writer = request.getParameter("writer");
+//        String dueDate = request.getParameter("dueDate");
+//
+//        TodoDTO dto = TodoDTO.builder()
+//                .title(title)
+//                .writer(writer)
+//                .dueDate(LocalDate.parse(dueDate))
+//                .build();
+//
+//        try {
+//            TodoVO vo = TodoService.INSTANCE.saveOne(dto);
+//            TodoDAO.INSTANCE.save(vo);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        response.sendRedirect("/todo/list");
+//
+//    }
+
 }
+
