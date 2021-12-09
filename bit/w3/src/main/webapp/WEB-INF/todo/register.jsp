@@ -18,10 +18,10 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Date</label>
-                <input type="date" name="date" class="form-control">
+                <input type="date" name="dueDate" class="form-control">
             </div>
             <div class="mb-3">
-                <button type="button" class="btn btn-primary float-end">등록</button>
+                <button type="submit" class="btn btn-primary float-end">Register</button>
             </div>
 
 <%--            <br>--%>

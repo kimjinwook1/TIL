@@ -18,7 +18,7 @@ import java.time.LocalDate;
 
 @Log4j2
 @WebServlet(name = "todoRegister", urlPatterns = "/todo/register")
-public class TodoRegisterController extends HttpServlet {
+public class TodoRegisterController2 extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -36,11 +36,16 @@ public class TodoRegisterController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        log.info("--regitser doPost---------------------");
         request.setCharacterEncoding("UTF-8");
 
         String title = request.getParameter("title");
         String writer = request.getParameter("writer");
         LocalDate dueDate = StringUtil.parseLocalDate(request.getParameter("dueDate"));
+
+        log.info(title);
+        log.info(writer);
+        log.info(dueDate);
 
         TodoDTO dto = TodoDTO.builder()
                 .title(title)
@@ -51,7 +56,6 @@ public class TodoRegisterController extends HttpServlet {
         try {
             TodoVO vo = TodoService.INSTANCE.saveOne(dto);
             TodoDAO.INSTANCE.save(vo);
-
         } catch (Exception e) {
             e.printStackTrace();
         }

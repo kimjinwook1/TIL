@@ -6,7 +6,7 @@
 
 <ul>
     <c:forEach items="${dtoList}" var="dto">
-        <li>${dto}</li>
+        <li>${dto}</li>\
     </c:forEach>
 </ul>
 
