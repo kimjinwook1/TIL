@@ -19,7 +19,7 @@ public class TodoRemoveController extends HttpServlet {
         Long tno = StringUtil.parseLong(request.getParameter("tno"), -1L);
 
         try {
-//            TodoService.INSTANCE.remove(tno);
+            TodoService.INSTANCE.remove(tno);
         } catch (Exception e) {
             e.printStackTrace();
         }

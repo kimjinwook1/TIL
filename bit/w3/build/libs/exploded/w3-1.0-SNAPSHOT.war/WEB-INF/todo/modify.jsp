@@ -5,7 +5,8 @@
 <div class="card" style="width: 70vw;">
     <div class="card-body">
         <h5 class="card-title">Card title</h5>
-        <form action="/todo/modify/${dto.tno}" method="post">
+
+        <form method="post">
 
         <div class="mb-3">
             <label class="form-label">TNO</label>

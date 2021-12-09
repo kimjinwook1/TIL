@@ -2,11 +2,8 @@ package org.zerock.w3.dao;
 
 import lombok.Cleanup;
 import lombok.extern.log4j.Log4j2;
-import org.modelmapper.ModelMapper;
 import org.zerock.w3.domain.TodoVO;
-import org.zerock.w3.dto.TodoDTO;
 import org.zerock.w3.util.DateUtil;
-import org.zerock.w3.util.MapperUtil;
 import org.zerock.w3.util.StringUtil;
 
 import java.sql.Connection;
