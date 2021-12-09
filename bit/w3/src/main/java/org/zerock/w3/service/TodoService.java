@@ -45,4 +45,11 @@ public enum TodoService {
 
         todoDAO.insert(vo);
     }
+
+    public TodoDTO read(Long tno) throws Exception {
+
+        TodoDTO todoDTO = modelMapper.map(todoDAO.selectOne(tno), TodoDTO.class);
+
+        return todoDTO;
+    }
 }

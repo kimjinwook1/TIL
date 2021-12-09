@@ -16,6 +16,18 @@
       <change beforePath="$PROJECT_DIR$/../w1/src/main/webapp/WEB-INF/1225.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../w1/src/main/webapp/WEB-INF/1225.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w1/src/main/webapp/WEB-INF/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../w1/src/main/webapp/WEB-INF/test.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w1/src/test/java/org/zerock/w1/UtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w1/src/test/java/org/zerock/w1/UtilTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/controller/TodoRegisterController2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/controller/TodoRegisterController2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/dao/TodoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/dao/TodoDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/service/TodoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/service/TodoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/todo/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/todo/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/controller/TodoRegisterController2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/controller/TodoRegisterController2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/dao/TodoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/dao/TodoDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/service/TodoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/service/TodoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dao/TodoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dao/TodoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/service/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/service/TodoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dao/TodoDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dao/TodoDAOTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w3_1/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/controller/TodoRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/controller/TodoRegisterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/dao/ConnectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/src/main/java/org/zerock/w3_1/dao/ConnectionUtil.java" afterDir="false" />
@@ -44,10 +56,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -174,6 +186,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TodoDAOTest.testRead" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="w3.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.TodoDAOTest" />
+      <option name="METHOD_NAME" value="testRead" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 9.0.554" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.554" ALTERNATIVE_JRE_ENABLED="false">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
@@ -270,9 +298,11 @@
       <item itemvalue="JUnit.TodoDAOTest.testList" />
       <item itemvalue="JUnit.TodoDAOTest (1)" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.554" />
+      <item itemvalue="JUnit.TodoDAOTest.testRead" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TodoDAOTest.testRead" />
         <item itemvalue="JUnit.TodoDAOTest (1)" />
         <item itemvalue="JUnit.TodoDAOTest.testList" />
         <item itemvalue="JUnit.TodoDAOTest" />
@@ -292,7 +322,7 @@
       <workItem from="1638871622521" duration="5452000" />
       <workItem from="1638924961017" duration="5415000" />
       <workItem from="1638946521161" duration="6251000" />
-      <workItem from="1638953141844" duration="23227000" />
+      <workItem from="1638953141844" duration="31029000" />
     </task>
     <servers />
   </component>

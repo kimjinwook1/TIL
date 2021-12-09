@@ -2,9 +2,12 @@ package org.zerock.w3.dao;
 
 import lombok.Cleanup;
 import lombok.extern.log4j.Log4j2;
+import org.modelmapper.ModelMapper;
 import org.zerock.w3.domain.TodoVO;
 import org.zerock.w3.dto.TodoDTO;
 import org.zerock.w3.util.DateUtil;
+import org.zerock.w3.util.MapperUtil;
+import org.zerock.w3.util.StringUtil;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -87,5 +90,36 @@ public enum TodoDAO {
         int count = preparedStatement.executeUpdate();
 
         log.info("Count: " + count);
+    }
+
+    public TodoVO selectOne(Long tno) throws Exception {
+        TodoVO todoVO = null;
+
+        String selet = " select " +
+                "`tno`,`title`,`writer`,`dueDate`,`finished`,`regDate`, `updateDate` " +
+                "from tbl_todo where tno = ?";
+
+        @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
+        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(selet);
+        preparedStatement.setLong(1, tno);
+        @Cleanup ResultSet resultSet = preparedStatement.executeQuery();
+
+        resultSet.next();
+        //tno, title, writer, dueDate, finished, regDate, updateDate
+
+        int idx = 1;
+
+        todoVO = TodoVO.builder()
+                .tno(resultSet.getLong(idx++))
+                .title(resultSet.getString(idx++))
+                .writer(resultSet.getString(idx++))
+                .dueDate(StringUtil.parseLocalDate(resultSet.getString(idx++)))
+                .finished(resultSet.getBoolean(idx++))
+
+                .regDate(resultSet.getDate(idx++))
+                .updateDate(resultSet.getDate(idx++))
+                .build();
+
+        return todoVO;
     }
 }
