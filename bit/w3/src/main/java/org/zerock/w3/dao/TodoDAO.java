@@ -122,4 +122,34 @@ public enum TodoDAO {
 
         return todoVO;
     }
+
+    public void deleteOne(Long tno) throws Exception {
+
+        String sql = "delete from tbl_todo where tno = ?";
+
+        @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
+        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setLong(1, tno);
+        int count = preparedStatement.executeUpdate();
+
+        log.info("Count: " + count);
+    }
+
+    public void modify(TodoVO todo) throws Exception {
+
+        String sql = "UPDATE `tbl_todo`\n" +
+                "SET `title` = ?, dueDate = ?, `finished` = ?\n" +
+                "WHERE `tno` = ?";
+
+        //title, dueDate, finished, tno
+        @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
+        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1, todo.getTitle());
+        preparedStatement.setString(2, DateUtil.getStr(todo.getDueDate()));
+        preparedStatement.setBoolean(3, todo.isFinished());
+        preparedStatement.setLong(4, todo.getTno());
+
+        preparedStatement.executeUpdate();
+    }
+
 }

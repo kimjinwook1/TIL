@@ -20,18 +20,17 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Date</label>
-            <input type="date" class="form-control" value="${dto.dueDate}" readonly>
+            <input type="date" class="form-control" value="${dto.dueDate}" disabled>
         </div>
         <div class="mb-3">
             <label class="form-label">Finished</label>
             <input type="checkbox" ${dto.finished?"checked":""} disabled>
-
         </div>
         <div class="mb-3">
-            <button type="submit" class="btn btn-primary float-end">수정/삭제</button>
+            <a href="/todo/modify/${dto.tno}" class="btn btn-primary float-end">수정/삭제</a>
+            <a href="/todo/list" class="btn btn-info float-end">목록</a>
         </div>
 
-        </form>
     </div>
 </div>
 <br>
