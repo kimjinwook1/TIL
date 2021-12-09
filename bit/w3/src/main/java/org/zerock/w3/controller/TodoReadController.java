@@ -1,7 +1,6 @@
 package org.zerock.w3.controller;
 
 import lombok.extern.log4j.Log4j2;
-import org.zerock.w3.dao.TodoDAO;
 import org.zerock.w3.dto.TodoDTO;
 import org.zerock.w3.service.TodoService;
 import org.zerock.w3.util.StringUtil;

@@ -6,7 +6,6 @@
     <div class="card-body">
         <h5 class="card-title">Card title</h5>
 
-
         <div class="mb-3">
             <label class="form-label">TNO</label>
             <input type="text" class="form-control" value="${dto.tno}" readonly>
@@ -29,7 +28,7 @@
         </div>
         <div class="mb-3">
             <a href="/todo/modify/${dto.tno}" class="btn btn-primary float-end">수정/삭제</a>
-            <a href="/todo/list" class="btn btn-info float-end">목록</a>
+            <a href="/todo/list" class="btn btn-primary float-lg-start">목록</a>
         </div>
 
     </div>

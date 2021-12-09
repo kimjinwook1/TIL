@@ -1,8 +1,6 @@
 package org.zerock.w3.controller;
 
 import lombok.extern.log4j.Log4j2;
-import org.zerock.w3.dao.TodoDAO;
-import org.zerock.w3.domain.TodoVO;
 import org.zerock.w3.dto.TodoDTO;
 import org.zerock.w3.service.TodoService;
 import org.zerock.w3.util.StringUtil;
@@ -36,7 +34,7 @@ public class TodoRegisterController2 extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        log.info("--regitser doPost---------------------");
+        log.info("--register doPost---------------------");
         request.setCharacterEncoding("UTF-8");
 
         String title = request.getParameter("title");

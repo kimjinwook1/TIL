@@ -132,19 +132,19 @@ public enum TodoDAO {
         log.info("Count: " + count);
     }
 
-    public void modify(TodoVO todo) throws Exception {
+    public void modify(TodoVO todoVo) throws Exception {
 
         String sql = "UPDATE `tbl_todo`\n" +
-                "SET `title` = ?, dueDate = ?, `finished` = ?\n" +
+                "SET `title` = ?, dueDate = ?, `finished` = ?, `updateDate` = now()" +
                 "WHERE `tno` = ?";
 
         //title, dueDate, finished, tno
         @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
         @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
-        preparedStatement.setString(1, todo.getTitle());
-        preparedStatement.setString(2, DateUtil.getStr(todo.getDueDate()));
-        preparedStatement.setBoolean(3, todo.isFinished());
-        preparedStatement.setLong(4, todo.getTno());
+        preparedStatement.setString(1, todoVo.getTitle());
+        preparedStatement.setString(2, DateUtil.getStr(todoVo.getDueDate()));
+        preparedStatement.setBoolean(3, todoVo.isFinished());
+        preparedStatement.setLong(4, todoVo.getTno());
 
         preparedStatement.executeUpdate();
     }

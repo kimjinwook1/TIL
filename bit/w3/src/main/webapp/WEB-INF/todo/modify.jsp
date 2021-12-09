@@ -30,8 +30,7 @@
         </div>
 
             <div class="mb-3">
-                <button type="submit" class="btn btn-primary float-end"
-                        value="${dto.tno},${dto.title},${dto.dueDate},${dto.finished}">수정</button>
+                <button type="submit" class="btn btn-primary float-end">수정</button>
             </div>
 
         </form>
