@@ -3,6 +3,7 @@ package org.zerock.w3.service;
 import lombok.extern.log4j.Log4j2;
 import org.modelmapper.ModelMapper;
 import org.zerock.w3.dao.TodoDAO;
+import org.zerock.w3.domain.TodoVO;
 import org.zerock.w3.dto.TodoDTO;
 import org.zerock.w3.util.MapperUtil;
 
@@ -22,14 +23,17 @@ public enum TodoService {
         todoDAO = TodoDAO.INSTANCE;
     }
 
-    public List<TodoDTO> getAll()throws Exception{
+    public List<TodoDTO> getAll() throws Exception {
 
         return todoDAO.getAll().stream()
-                .map(vo -> modelMapper.map(vo,TodoDTO.class))
+                .map(vo -> modelMapper.map(vo, TodoDTO.class))
                 .collect(Collectors.toList());
 
     }
 
+    public TodoVO saveOne(TodoDTO todoDTO) throws Exception {
 
-
+        TodoVO vo = modelMapper.map(todoDTO, TodoVO.class);
+        return vo;
+    }
 }

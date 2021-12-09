@@ -20,6 +20,7 @@ public class TodoListController extends HttpServlet {
         log.info("todoList........get");
 
         String viewPath = "/WEB-INF/todo/list.jsp";
+
         try {
             request.setAttribute("dtoList", TodoService.INSTANCE.getAll());
             RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);

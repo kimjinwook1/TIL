@@ -3,8 +3,10 @@ package org.zerock.w3.dao;
 import lombok.Cleanup;
 import lombok.extern.log4j.Log4j2;
 import org.zerock.w3.domain.TodoVO;
+import org.zerock.w3.dto.TodoDTO;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.time.LocalDate;
@@ -18,7 +20,7 @@ public enum TodoDAO {
 
     public List<TodoVO> getAll() throws Exception {
 
-        List<TodoVO> list = new ArrayList<>();
+        List<TodoVO> list = null;
 
         String sql = "select `tno`,\n" +
                 "       `title`,\n" +
@@ -35,8 +37,10 @@ public enum TodoDAO {
         @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
         @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
         @Cleanup ResultSet resultSet = preparedStatement.executeQuery();
+        list = new ArrayList<>();
 
         while (resultSet.next()) {
+
             TodoVO vo = TodoVO.builder()
                     .tno(resultSet.getLong(1))
                     .title(resultSet.getString(2))
@@ -49,8 +53,21 @@ public enum TodoDAO {
 
             list.add(vo);
         }
-
         return list;
+    }
+
+    public void save(TodoVO vo) throws Exception {
+
+        String sql = "insert into tbl_todo (`title`, `writer`, `dueDate`) VALUES (?,?,?)";
+        //title, writer, dueDate
+        @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
+        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+        preparedStatement.setString(1, vo.getTitle());
+        preparedStatement.setString(2, vo.getWriter());
+        preparedStatement.setDate(3, Date.valueOf(vo.getDueDate()));
+
+        preparedStatement.executeUpdate();
 
     }
 }
