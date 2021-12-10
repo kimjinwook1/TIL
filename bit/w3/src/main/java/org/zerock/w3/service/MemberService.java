@@ -6,6 +6,8 @@ import org.zerock.w3.domain.MemberVO;
 import org.zerock.w3.dto.MemberDTO;
 import org.zerock.w3.util.MapperUtil;
 
+import java.sql.Date;
+
 @Log4j2
 public enum MemberService {
 
@@ -14,6 +16,19 @@ public enum MemberService {
     public MemberDTO get(String userid) throws Exception {
 
         MemberVO vo = MemberDAO.INSTANCE.selectOne(userid);
+        MemberDTO memberDTO = MapperUtil.INSTANCE.get().map(vo, MemberDTO.class);
+
+        return memberDTO;
+    }
+
+    public void setCookieData(String userid, String uuid, Date expTime) throws Exception {
+
+        MemberDAO.INSTANCE.updateCookie(userid, uuid, expTime);
+    }
+
+    public MemberDTO getByUUID(String uuid) throws Exception {
+
+        MemberVO vo = MemberDAO.INSTANCE.finByUUID(uuid);
         MemberDTO memberDTO = MapperUtil.INSTANCE.get().map(vo, MemberDTO.class);
 
         return memberDTO;
