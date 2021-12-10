@@ -92,12 +92,12 @@ public enum TodoDAO {
     public TodoVO selectOne(Long tno) throws Exception {
         TodoVO todoVO = null;
 
-        String selet = " select " +
+        String select = " select " +
                 "`tno`,`title`,`writer`,`dueDate`,`finished`,`regDate`, `updateDate` " +
                 "from tbl_todo where tno = ?";
 
         @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
-        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(selet);
+        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(select);
         preparedStatement.setLong(1, tno);
         @Cleanup ResultSet resultSet = preparedStatement.executeQuery();
 

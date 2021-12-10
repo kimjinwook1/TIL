@@ -45,16 +45,16 @@ public class TodoModifyController extends HttpServlet {
 
         request.setCharacterEncoding("UTF-8");
 
-        Long tno = StringUtil.parseLong(request.getParameter("tno"), -1L);
-        String title = request.getParameter("title");
-        LocalDate dueDate = StringUtil.parseLocalDate(request.getParameter("dueDate"));
-        boolean finished = StringUtil.parseBoolean(request.getParameter("checkbox"));
+        Long tnoData = StringUtil.parseLong(request.getParameter("tno"), -1L);
+        String titleData = request.getParameter("title");
+        LocalDate dueDateData = StringUtil.parseLocalDate(request.getParameter("dueDate"));
+        boolean finishedData = StringUtil.parseBoolean(request.getParameter("checkbox"));
 
         TodoDTO todoDTO = TodoDTO.builder()
-                .tno(tno)
-                .title(title)
-                .dueDate(dueDate)
-                .finished(finished)
+                .tno(tnoData)
+                .title(titleData)
+                .dueDate(dueDateData)
+                .finished(finishedData)
                 .build();
 
         try {
