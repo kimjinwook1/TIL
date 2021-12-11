@@ -13,10 +13,6 @@
                 <input type="text" name="title" class="form-control" placeholder="Title..">
             </div>
             <div class="mb-3">
-                <label class="form-label">Writer</label>
-                <input type="text" name="writer" class="form-control" placeholder="Writer..">
-            </div>
-            <div class="mb-3">
                 <label class="form-label">Date</label>
                 <input type="date" name="dueDate" class="form-control">
             </div>
@@ -24,6 +20,7 @@
                 <button type="submit" class="btn btn-primary float-end">Register</button>
             </div>
             <input type="hidden" name="writerid" value="${userInfo.uno}">
+            <input type="hidden" name="writer" value="${userInfo.username}">
             <%--            <br>--%>
             <%--            <br>--%>
             <%--            <br>--%>

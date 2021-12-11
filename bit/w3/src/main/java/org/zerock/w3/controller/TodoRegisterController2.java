@@ -39,12 +39,11 @@ public class TodoRegisterController2 extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
 
         String title = request.getParameter("title");
-        String writer = request.getParameter("writer");
         LocalDate dueDate = StringUtil.parseLocalDate(request.getParameter("dueDate"));
+        String writer = request.getParameter("writer");
         int writerId = Integer.parseInt(request.getParameter("writerid"));
 
         log.info(title);
-        log.info(writer);
         log.info(dueDate);
 
         TodoDTO todoDTO = TodoDTO.builder()

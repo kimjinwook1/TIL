@@ -61,15 +61,14 @@ public enum TodoDAO {
 
     public void save(TodoVO vo) throws Exception {
 
-        String sql = "insert into tbl_todo (`title`, `writer`, `dueDate`) VALUES (?,?,?)";
+        String sql = "insert into tbl_todo (`title`, `dueDate`) VALUES (?,?,?)";
         //title, writer, dueDate
 
         @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
         @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
         preparedStatement.setString(1, vo.getTitle());
-        preparedStatement.setString(2, vo.getWriter());
-        preparedStatement.setDate(3, Date.valueOf(vo.getDueDate()));
+        preparedStatement.setDate(2, Date.valueOf(vo.getDueDate()));
 
         preparedStatement.executeUpdate();
 
