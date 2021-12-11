@@ -23,7 +23,7 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String viewPath = "/WEB-INF/login.jsp";
+        String viewPath = "/WEB-INF/login/login.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
         dispatcher.forward(request, response);
 
@@ -33,10 +33,14 @@ public class LoginController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String userid = request.getParameter("userid");
+        String userPw = request.getParameter("userpw");
         boolean rememberme = StringUtil.parseBoolean(request.getParameter("rememberme"));
 
         try {
-            MemberDTO memberDTO = MemberService.INSTANCE.get(userid);
+            MemberDTO memberDTO = MemberService.INSTANCE.get(userid, userPw);
+            if (memberDTO == null) {
+                response.sendRedirect("/login");
+            }
             request.getSession().setAttribute("userInfo", memberDTO);
 
             if (rememberme) {
@@ -54,8 +58,12 @@ public class LoginController extends HttpServlet {
                 MemberService.INSTANCE.setCookieData(userid, uuid, new Date(endTime));
 
             }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        response.sendRedirect("/todo/list");
+
     }
 }

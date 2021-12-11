@@ -4,12 +4,9 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/login" method="post">
+<form action="/loginCookie" method="post">
     <input type="text" name="userid">
-    <label>Remember-me</label>
-    <input type="checkbox" name="rememberme">
     <button>LOGIN</button>
 </form>
-
 </body>
 </html>

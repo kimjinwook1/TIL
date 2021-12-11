@@ -13,9 +13,9 @@ public enum MemberService {
 
     INSTANCE;
 
-    public MemberDTO get(String userid) throws Exception {
+    public MemberDTO get(String userid, String userPw) throws Exception {
 
-        MemberVO vo = MemberDAO.INSTANCE.selectOne(userid);
+        MemberVO vo = MemberDAO.INSTANCE.selectOne(userid, userPw);
         MemberDTO memberDTO = MapperUtil.INSTANCE.get().map(vo, MemberDTO.class);
 
         return memberDTO;

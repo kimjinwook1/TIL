@@ -11,14 +11,15 @@ import java.sql.ResultSet;
 public enum MemberDAO {
     INSTANCE;
 
-    public MemberVO selectOne(String userid) throws Exception {
+    public MemberVO selectOne(String userid, String userPw) throws Exception {
 
         MemberVO memberVO = null;
 
-        String sql = "select `userid`, `userpw`, `username` from `tbl_member` where `userid` = ?";
+        String sql = "select `userid`, `userpw`, `username` from `tbl_member` where `userid` = ? and `userPw` = ?";
         @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
         @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, userid);
+        preparedStatement.setString(2, userPw);
         @Cleanup ResultSet resultSet = preparedStatement.executeQuery();
 
         resultSet.next();
@@ -45,7 +46,7 @@ public enum MemberDAO {
     }
 
     public MemberVO finByUUID(String uuid) throws Exception {
-        MemberVO memberVO =null;
+        MemberVO memberVO = null;
 
         String sql = "select `userid`, `userpw`, `username` from `tbl_member` where `uuid` = ? and `exptime` > now()";
         @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();

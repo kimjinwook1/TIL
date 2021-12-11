@@ -17,4 +17,5 @@ public class MemberVO {
     private String username;
     private String uuid;
     private Date expTime;
+    private int uno;
 }
