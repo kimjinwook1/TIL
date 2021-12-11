@@ -2,11 +2,7 @@ package org.zerock.w3.dao;
 
 import lombok.Cleanup;
 import lombok.extern.log4j.Log4j2;
-import org.modelmapper.internal.util.Members;
-import org.zerock.w3.controller.LoginController;
-import org.zerock.w3.domain.MemberVO;
 import org.zerock.w3.domain.TodoVO;
-import org.zerock.w3.service.MemberService;
 import org.zerock.w3.util.DateUtil;
 import org.zerock.w3.util.StringUtil;
 
@@ -33,12 +29,13 @@ public enum TodoDAO {
                 "       `dueDate`,\n" +
                 "       `finished`,\n" +
                 "       `regDate`,\n" +
-                "       `updateDate`\n" +
+                "       `updateDate`,\n" +
+                "       `writerid`\n" +
                 "from tbl_todo\n" +
                 "order by abs(datediff(dueDate, now())), tno desc";
 
         //tno, title, writer, dueDate, finished,
-        //regDate, updateDate
+        //regDate, updateDate, writerid
         @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
         @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
         @Cleanup ResultSet resultSet = preparedStatement.executeQuery();
@@ -54,6 +51,7 @@ public enum TodoDAO {
                     .finished(resultSet.getBoolean(5))
                     .regDate(resultSet.getDate(6))
                     .updateDate(resultSet.getDate(7))
+                    .writerid(resultSet.getInt(8))
                     .build();
 
             list.add(vo);
@@ -87,7 +85,7 @@ public enum TodoDAO {
         preparedStatement.setString(1, vo.getTitle());
         preparedStatement.setString(2, vo.getWriter());
         preparedStatement.setString(3, DateUtil.getStr(vo.getDueDate()));
-        preparedStatement.setInt(4,  vo.getWriterId());
+        preparedStatement.setInt(4, vo.getWriterid());
 
         int count = preparedStatement.executeUpdate();
 
@@ -120,7 +118,7 @@ public enum TodoDAO {
 
                 .regDate(resultSet.getDate(idx++))
                 .updateDate(resultSet.getDate(idx++))
-                .writerId(resultSet.getInt(idx++))
+                .writerid(resultSet.getInt(idx++))
                 .build();
 
         return todoVO;

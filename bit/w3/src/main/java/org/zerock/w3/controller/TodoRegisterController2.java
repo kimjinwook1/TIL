@@ -51,7 +51,7 @@ public class TodoRegisterController2 extends HttpServlet {
                 .title(title)
                 .writer(writer)
                 .dueDate(dueDate)
-                .writerId(writerId)
+                .writerid(writerId)
                 .build();
 
         try {

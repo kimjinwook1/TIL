@@ -16,17 +16,18 @@
     </tr>
     </thead>
     <tbody>
-
     <c:forEach items="${dtoList}" var="dto">
-        <tr>
-            <td>${dto.tno}</td>
-            <td><a href="/todo/read/${dto.tno}">${dto.title}</a></td>
-            <td>${dto.dueDate}</td>
-            <td>${dto.writer}</td>
-            <td>${dto.finished?"Done":"Not Yet"}</td>
-        </tr>
-    </c:forEach>
+        <c:if test="${dto.writerid == userInfo.uno}">
+            <tr>
+                <td>${dto.tno}</td>
+                <td><a href="/todo/read/${dto.tno}">${dto.title}</a></td>
+                <td>${dto.dueDate}</td>
+                <td>${dto.writer}</td>
+                <td>${dto.finished?"Done":"Not Yet"}</td>
 
+            </tr>
+        </c:if>
+    </c:forEach>
     </tbody>
 </table>
 

@@ -8,10 +8,13 @@ import org.zerock.w3.service.TodoService;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.Optional;
 
 @Log4j2
 @WebServlet(name = "todoList", urlPatterns = "/todo/list")
@@ -24,6 +27,7 @@ public class TodoListController extends HttpServlet {
         String viewPath = "/WEB-INF/todo/list.jsp";
 
         try {
+            request.getSession().getAttribute("userInfo");
             request.setAttribute("dtoList", TodoService.INSTANCE.getAll());
             RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
             dispatcher.forward(request, response);

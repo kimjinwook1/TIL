@@ -7,7 +7,10 @@ import org.zerock.w3.domain.TodoVO;
 import org.zerock.w3.dto.TodoDTO;
 import org.zerock.w3.util.MapperUtil;
 
+import javax.servlet.http.Cookie;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Log4j2
@@ -22,6 +25,10 @@ public enum TodoService {
         modelMapper = MapperUtil.INSTANCE.get();
         todoDAO = TodoDAO.INSTANCE;
     }
+
+//    public TodoDTO selectOne() throws Exception {
+//
+//    }
 
     public List<TodoDTO> getAll() throws Exception {
 
