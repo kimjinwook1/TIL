@@ -3,7 +3,6 @@ package org.zerock.w3.dao;
 import lombok.Cleanup;
 import org.zerock.w3.domain.MemberVO;
 import org.zerock.w3.dto.MemberDTO;
-import org.zerock.w3.util.DateUtil;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -17,18 +16,21 @@ public enum MemberDAO {
 
         MemberVO memberVO = null;
 
-        String sql = "select `userid`, `userpw`, `username` from `tbl_member` where `userid` = ? and `userPw` = ?";
+        String sql = "select `userid`, `userpw`, `username`, `uno` from `tbl_member` where `userid` = ? and `userPw` = ?";
         @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
         @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, userid);
         preparedStatement.setString(2, userPw);
         @Cleanup ResultSet resultSet = preparedStatement.executeQuery();
 
+        int idx = 1;
+
         resultSet.next();
         memberVO = MemberVO.builder()
-                .userid(resultSet.getString(1))
-                .userpw(resultSet.getString(2))
-                .username(resultSet.getString(3))
+                .userid(resultSet.getString(idx++))
+                .userpw(resultSet.getString(idx++))
+                .username(resultSet.getString(idx++))
+                .uno(resultSet.getInt(idx++))
                 .build();
 
         return memberVO;
@@ -72,17 +74,20 @@ public enum MemberDAO {
 
         MemberVO memberVO = null;
 
-        String sql = "select `userid`, `userpw`, `username` from `tbl_member` where `userid` = ?";
+        String sql = "select `userid`, `userpw`, `username`, `uno` from `tbl_member` where `userid` = ?";
         @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
         @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, userid);
         @Cleanup ResultSet resultSet = preparedStatement.executeQuery();
 
+        int idx = 1;
+
         resultSet.next();
         memberVO = MemberVO.builder()
-                .userid(resultSet.getString(1))
-                .userpw(resultSet.getString(2))
-                .username(resultSet.getString(3))
+                .userid(resultSet.getString(idx++))
+                .userpw(resultSet.getString(idx++))
+                .username(resultSet.getString(idx++))
+                .uno(resultSet.getInt(idx++))
                 .build();
 
         return memberVO;

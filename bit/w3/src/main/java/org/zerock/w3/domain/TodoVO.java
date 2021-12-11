@@ -19,5 +19,6 @@ public class TodoVO {
     private boolean finished;
     private Date regDate;
     private Date updateDate;
+    private int writerId;
 
 }

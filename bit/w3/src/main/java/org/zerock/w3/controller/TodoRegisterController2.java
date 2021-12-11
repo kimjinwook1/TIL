@@ -24,6 +24,7 @@ public class TodoRegisterController2 extends HttpServlet {
         String viewPath = "/WEB-INF/todo/register.jsp";
 
         try {
+            request.getSession().getAttribute("userInfo");
             RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
             dispatcher.forward(request, response);
         } catch (Exception e) {
@@ -40,6 +41,7 @@ public class TodoRegisterController2 extends HttpServlet {
         String title = request.getParameter("title");
         String writer = request.getParameter("writer");
         LocalDate dueDate = StringUtil.parseLocalDate(request.getParameter("dueDate"));
+        int writerId = Integer.parseInt(request.getParameter("writerid"));
 
         log.info(title);
         log.info(writer);
@@ -49,6 +51,7 @@ public class TodoRegisterController2 extends HttpServlet {
                 .title(title)
                 .writer(writer)
                 .dueDate(dueDate)
+                .writerId(writerId)
                 .build();
 
         try {

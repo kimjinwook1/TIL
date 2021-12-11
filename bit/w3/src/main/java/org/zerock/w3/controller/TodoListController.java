@@ -1,6 +1,8 @@
 package org.zerock.w3.controller;
 
 import lombok.extern.log4j.Log4j2;
+import org.zerock.w3.domain.MemberVO;
+import org.zerock.w3.service.MemberService;
 import org.zerock.w3.service.TodoService;
 
 import javax.servlet.RequestDispatcher;

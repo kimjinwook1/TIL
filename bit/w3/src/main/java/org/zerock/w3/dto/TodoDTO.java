@@ -21,5 +21,6 @@ public class TodoDTO {
     private boolean finished;
     private Date regDate;
     private Date updateDate;
+    private int writerId;
 
 }

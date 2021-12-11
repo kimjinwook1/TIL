@@ -5,7 +5,6 @@
 <h1 class="mt-4">Todo List</h1>
 
 <table class="table">
-
     <thead>
     <tr>
         <th scope="col">#</th>

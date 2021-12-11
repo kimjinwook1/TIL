@@ -42,7 +42,6 @@ public class LoginController extends HttpServlet {
                 response.sendRedirect("/login");
             }
             request.getSession().setAttribute("userInfo", memberDTO);
-
             if (rememberme) {
 
                 String uuid = UUID.randomUUID().toString();

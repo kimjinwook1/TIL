@@ -2,7 +2,11 @@ package org.zerock.w3.dao;
 
 import lombok.Cleanup;
 import lombok.extern.log4j.Log4j2;
+import org.modelmapper.internal.util.Members;
+import org.zerock.w3.controller.LoginController;
+import org.zerock.w3.domain.MemberVO;
 import org.zerock.w3.domain.TodoVO;
+import org.zerock.w3.service.MemberService;
 import org.zerock.w3.util.DateUtil;
 import org.zerock.w3.util.StringUtil;
 
@@ -76,13 +80,14 @@ public enum TodoDAO {
     //강사님 코드
     public void insert(TodoVO vo) throws Exception {
 
-        String sql = "insert into tbl_todo (`title`, `writer`, `dueDate`) VALUES (?,?,?)";
+        String sql = "insert into tbl_todo (`title`, `writer`, `dueDate`, `writerid`) VALUES (?, ?, ?, ?)";
         @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
         @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
         preparedStatement.setString(1, vo.getTitle());
         preparedStatement.setString(2, vo.getWriter());
         preparedStatement.setString(3, DateUtil.getStr(vo.getDueDate()));
+        preparedStatement.setInt(4,  vo.getWriterId());
 
         int count = preparedStatement.executeUpdate();
 
@@ -93,7 +98,7 @@ public enum TodoDAO {
         TodoVO todoVO = null;
 
         String select = " select " +
-                "`tno`,`title`,`writer`,`dueDate`,`finished`,`regDate`, `updateDate` " +
+                "`tno`,`title`,`writer`,`dueDate`,`finished`,`regDate`, `updateDate`, `writerid` " +
                 "from tbl_todo where tno = ?";
 
         @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
@@ -115,6 +120,7 @@ public enum TodoDAO {
 
                 .regDate(resultSet.getDate(idx++))
                 .updateDate(resultSet.getDate(idx++))
+                .writerId(resultSet.getInt(idx++))
                 .build();
 
         return todoVO;
