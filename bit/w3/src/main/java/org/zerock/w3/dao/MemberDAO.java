@@ -2,6 +2,8 @@ package org.zerock.w3.dao;
 
 import lombok.Cleanup;
 import org.zerock.w3.domain.MemberVO;
+import org.zerock.w3.dto.MemberDTO;
+import org.zerock.w3.util.DateUtil;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -63,5 +65,40 @@ public enum MemberDAO {
                 .build();
 
         return memberVO;
+    }
+
+    public MemberVO SelectByUserID(String userid) throws Exception {
+
+
+        MemberVO memberVO = null;
+
+        String sql = "select `userid`, `userpw`, `username` from `tbl_member` where `userid` = ?";
+        @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
+        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1, userid);
+        @Cleanup ResultSet resultSet = preparedStatement.executeQuery();
+
+        resultSet.next();
+        memberVO = MemberVO.builder()
+                .userid(resultSet.getString(1))
+                .userpw(resultSet.getString(2))
+                .username(resultSet.getString(3))
+                .build();
+
+        return memberVO;
+    }
+
+    public void register(MemberDTO memberDTO) throws Exception {
+
+        String sql = "insert into tbl_member (`userid`, `userpw`, `username`) VALUES (?,?,?)";
+        @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
+        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+        preparedStatement.setString(1, memberDTO.getUserid());
+        preparedStatement.setString(2, memberDTO.getUserpw());
+        preparedStatement.setString(3, memberDTO.getUserpw());
+
+        preparedStatement.executeUpdate();
+
     }
 }
