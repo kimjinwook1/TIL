@@ -1,5 +1,6 @@
 package org.zerock.w3.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.zerock.w3.dto.MemberDTO;
 import org.zerock.w3.service.SignUpService;
 
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+@Slf4j
 @WebServlet(name = "signup", urlPatterns = "/signup")
 public class SignUpController extends HttpServlet {
 
@@ -32,6 +34,7 @@ public class SignUpController extends HttpServlet {
 
         try {
             boolean idCheck = SignUpService.INSTANCE.checkDuplicate(userid);
+            log.info("idCheck..........." + idCheck);
             if (idCheck) {
                 response.sendRedirect("/signup");
                 return;
@@ -48,8 +51,8 @@ public class SignUpController extends HttpServlet {
             SignUpService.INSTANCE.register(memberDTO);
         } catch (Exception e) {
             e.printStackTrace();
-            response.sendRedirect("/login");
-
         }
+
+        response.sendRedirect("/login");
     }
 }

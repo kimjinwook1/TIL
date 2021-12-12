@@ -3,7 +3,6 @@ package org.zerock.w3.service;
 import org.zerock.w3.dao.MemberDAO;
 import org.zerock.w3.domain.MemberVO;
 import org.zerock.w3.dto.MemberDTO;
-import org.zerock.w3.util.MapperUtil;
 
 public enum SignUpService {
 

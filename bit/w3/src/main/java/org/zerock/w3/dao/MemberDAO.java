@@ -71,7 +71,6 @@ public enum MemberDAO {
 
     public MemberVO SelectByUserID(String userid) throws Exception {
 
-
         MemberVO memberVO = null;
 
         String sql = "select `userid`, `userpw`, `username`, `uno` from `tbl_member` where `userid` = ?";
@@ -80,15 +79,14 @@ public enum MemberDAO {
         preparedStatement.setString(1, userid);
         @Cleanup ResultSet resultSet = preparedStatement.executeQuery();
 
-        int idx = 1;
-
-        resultSet.next();
-        memberVO = MemberVO.builder()
-                .userid(resultSet.getString(idx++))
-                .userpw(resultSet.getString(idx++))
-                .username(resultSet.getString(idx++))
-                .uno(resultSet.getInt(idx++))
-                .build();
+        if (resultSet.next()) {
+            memberVO = MemberVO.builder()
+                    .userid(resultSet.getString(1))
+                    .userpw(resultSet.getString(2))
+                    .username(resultSet.getString(3))
+                    .uno(resultSet.getInt(4))
+                    .build();
+        }
 
         return memberVO;
     }

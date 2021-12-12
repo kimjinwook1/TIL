@@ -32,10 +32,13 @@ public class LoginCheckFilter implements Filter {
             boolean checkCookie = false;
 
             if (req.getCookies() != null && req.getCookies().length > 0) {
-                Optional<Cookie> rememberCookie = Arrays.stream(req.getCookies()).filter(ck -> ck.getName().equals(("remember-me"))).findFirst();
+                Optional<Cookie> rememberCookie =
+                        Arrays.stream(req.getCookies()).filter(ck -> ck.getName().equals(("remember-me"))).findFirst();
 
                 String uuid = null;
                 if (rememberCookie.isPresent()) {
+                    // rememberCookie가 값이 있으면(즉, null이 아니면)
+                    // isPresent()는 true를 반환하고 get()은 값을 반환한다.
                     uuid = rememberCookie.get().getValue();
                 }
                 try {
@@ -45,9 +48,8 @@ public class LoginCheckFilter implements Filter {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                //rememver-me 쿠키의 값을 가지고 사용자의 정보를 가져와야
-
-                //가지고 온 정보를 현재 사용자의 HttpSession에 저장
+                //rememver-me 쿠키의 값을 가지고
+                //사용자의 정보를 가지고 온 정보를 현재 사용자의 HttpSession에 저장
             }
 
             if (checkCookie) {
