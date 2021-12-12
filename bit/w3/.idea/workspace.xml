@@ -10,7 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d5db627-652a-421f-bac7-439d642859a3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dao/TodoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dao/TodoDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w3_1/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w3_1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/.idea/gradle.xml" afterDir="false" />
@@ -302,7 +301,7 @@
       <workItem from="1638946521161" duration="6251000" />
       <workItem from="1638953141844" duration="50943000" />
       <workItem from="1639138656179" duration="21725000" />
-      <workItem from="1639301427028" duration="2288000" />
+      <workItem from="1639301427028" duration="2714000" />
     </task>
     <servers />
   </component>

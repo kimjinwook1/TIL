@@ -145,7 +145,7 @@ public enum TodoDAO {
         @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
         @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, todoVo.getTitle());
-        preparedStatement.setString(2, DateUtil.getStr(todoVo.getDueDate()));
+        preparedStatement.setDate(2, Date.valueOf(todoVo.getDueDate()));
         preparedStatement.setBoolean(3, todoVo.isFinished());
         preparedStatement.setLong(4, todoVo.getTno());
 
