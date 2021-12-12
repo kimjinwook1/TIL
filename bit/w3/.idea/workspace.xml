@@ -10,15 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d5db627-652a-421f-bac7-439d642859a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/filter/LoginCheckFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/exploded/w3-1.0-SNAPSHOT.war/WEB-INF/classes/org/zerock/w3/filter/LoginCheckFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/filter/LoginCheckFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/filter/LoginCheckFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dao/MemberDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dao/MemberDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/filter/LoginCheckFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/service/SignUpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/service/SignUpService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dao/TodoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dao/TodoDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w3_1/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w3_1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w5/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../w5/.idea/gradle.xml" afterDir="false" />
@@ -309,7 +302,7 @@
       <workItem from="1638946521161" duration="6251000" />
       <workItem from="1638953141844" duration="50943000" />
       <workItem from="1639138656179" duration="21725000" />
-      <workItem from="1639301427028" duration="1628000" />
+      <workItem from="1639301427028" duration="2288000" />
     </task>
     <servers />
   </component>

@@ -83,7 +83,7 @@ public enum TodoDAO {
 
         preparedStatement.setString(1, vo.getTitle());
         preparedStatement.setString(2, vo.getWriter());
-        preparedStatement.setString(3, DateUtil.getStr(vo.getDueDate()));
+        preparedStatement.setDate(3, Date.valueOf(vo.getDueDate()));
         preparedStatement.setInt(4, vo.getWriterid());
 
         int count = preparedStatement.executeUpdate();
