@@ -12,7 +12,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">PASSWORD</label>
-                <input type="text" name="userpw" class="form-control">
+                <input type="password" name="userpw" class="form-control">
             </div>
             <div class="mb-3">
                 <label class="form-label">USERNAME</label>

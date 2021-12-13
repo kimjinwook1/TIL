@@ -2,6 +2,7 @@ package org.zerock.w3.controller;
 
 import lombok.extern.log4j.Log4j2;
 import org.zerock.w3.dto.TodoDTO;
+import org.zerock.w3.service.MemberService;
 import org.zerock.w3.service.TodoService;
 import org.zerock.w3.util.StringUtil;
 
@@ -34,7 +35,7 @@ public class TodoModifyController extends HttpServlet {
             e.printStackTrace();
         }
 
-        String viewPath = "/WEB-INF/todo/modify.jsp";
+        String viewPath = "/WEB-INF/todo/todomodify.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
         dispatcher.forward(request, response);
 
@@ -56,6 +57,7 @@ public class TodoModifyController extends HttpServlet {
                 .dueDate(dueDateData)
                 .finished(finishedData)
                 .build();
+
 
         try {
             TodoService.INSTANCE.update(todoDTO);

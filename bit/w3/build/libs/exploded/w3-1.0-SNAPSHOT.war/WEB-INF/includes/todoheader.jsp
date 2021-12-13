@@ -20,6 +20,7 @@
         <div class="list-group list-group-flush">
             <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/todo/list">목록 보기</a>
             <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/todo/register">등록 하기</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/member/read">회원 정보 보기</a>
         </div>
     </div>
     <!-- Page content wrapper-->

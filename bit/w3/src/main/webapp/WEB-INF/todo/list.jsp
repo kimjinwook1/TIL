@@ -24,7 +24,6 @@
                 <td>${dto.dueDate}</td>
                 <td>${dto.writer}</td>
                 <td>${dto.finished?"Done":"Not Yet"}</td>
-
             </tr>
         </c:if>
     </c:forEach>

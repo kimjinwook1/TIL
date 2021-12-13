@@ -4,8 +4,6 @@
 <h1 class="mt-4">Register Sidebar</h1>
 <div class="card" style="width: 70vw;">
     <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-
         <div class="mb-3">
             <label class="form-label">TNO</label>
             <input type="text" class="form-control" value="${dto.tno}" readonly>

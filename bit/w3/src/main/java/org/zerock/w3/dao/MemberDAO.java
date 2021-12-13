@@ -104,4 +104,54 @@ public enum MemberDAO {
         preparedStatement.executeUpdate();
 
     }
+
+    public void updateMember(MemberDTO memberDTO) throws Exception {
+
+        String sql = "update `tbl_member` set `username` = ?, `userpw` = ? where uno = ?";
+        @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
+        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1, memberDTO.getUsername());
+        preparedStatement.setString(2, memberDTO.getUserpw());
+        preparedStatement.setInt(3, memberDTO.getUno());
+
+        preparedStatement.executeUpdate();
+    }
+
+    public MemberVO selectOneByUno(int uno) throws Exception {
+
+        MemberVO memberVO = null;
+
+        String sql = "select `userid`, `userpw`, `username`, `uno` from `tbl_member` where `uno` = ?";
+        @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
+        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setInt(1, uno);
+
+        ResultSet resultSet = preparedStatement.executeQuery();
+        resultSet.next();
+
+        memberVO = memberVO.builder()
+                .userid(resultSet.getString("userid"))
+                .userpw(resultSet.getString("userpw"))
+                .username(resultSet.getString("username"))
+                .uno(resultSet.getInt("uno"))
+                .build();
+
+        return memberVO;
+    }
+
+    public void remove(int uno) throws Exception {
+
+        String sql = "delete from `tbl_todo` where `writerid` = ?";
+        @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
+        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setInt(1, uno);
+        preparedStatement.executeUpdate();
+
+        sql = "delete from `tbl_member` where `uno` = ?";
+        connection = ConnectionUtil.INSTANCE.getConnection();
+        preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setInt(1, uno);
+        preparedStatement.executeUpdate();
+
+    }
 }

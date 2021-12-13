@@ -34,4 +34,22 @@ public enum MemberService {
         return memberDTO;
     }
 
+    public void update(MemberDTO memberDTO) throws Exception {
+
+        MemberDAO.INSTANCE.updateMember(memberDTO);
+    }
+
+    public MemberDTO getByUno(int uno) throws Exception {
+
+        MemberVO memberVO = MemberDAO.INSTANCE.selectOneByUno(uno);
+        MemberDTO memberDTO = MapperUtil.INSTANCE.get().map(memberVO, MemberDTO.class);
+
+        return memberDTO;
+    }
+
+    public void remove(int uno) throws Exception{
+
+        MemberDAO.INSTANCE.remove(uno);
+
+    }
 }
