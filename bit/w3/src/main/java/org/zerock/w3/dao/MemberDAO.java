@@ -107,14 +107,21 @@ public enum MemberDAO {
 
     public void updateMember(MemberDTO memberDTO) throws Exception {
 
-        String sql = "update `tbl_member` set `username` = ?, `userpw` = ? where uno = ?";
+        String sql = "update `tbl_todo` set `writer` = ? where `writerid` = ?";
         @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
         @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, memberDTO.getUsername());
-        preparedStatement.setString(2, memberDTO.getUserpw());
-        preparedStatement.setInt(3, memberDTO.getUno());
+        preparedStatement.setInt(2, memberDTO.getUno());
 
         preparedStatement.executeUpdate();
+
+        String sql2 = "update `tbl_member` set `username` = ? where uno = ?";
+        @Cleanup Connection connection2 = ConnectionUtil.INSTANCE.getConnection();
+        @Cleanup PreparedStatement preparedStatement2 = connection2.prepareStatement(sql2);
+        preparedStatement2.setString(1, memberDTO.getUsername());
+        preparedStatement2.setString(2, memberDTO.getUserpw());
+
+        preparedStatement2.executeUpdate();
     }
 
     public MemberVO selectOneByUno(int uno) throws Exception {
@@ -147,11 +154,11 @@ public enum MemberDAO {
         preparedStatement.setInt(1, uno);
         preparedStatement.executeUpdate();
 
-        sql = "delete from `tbl_member` where `uno` = ?";
-        connection = ConnectionUtil.INSTANCE.getConnection();
-        preparedStatement = connection.prepareStatement(sql);
-        preparedStatement.setInt(1, uno);
-        preparedStatement.executeUpdate();
+        String sql2 = "delete from `tbl_member` where `uno` = ?";
+        @Cleanup Connection connection2 = ConnectionUtil.INSTANCE.getConnection();
+        @Cleanup PreparedStatement preparedStatement2 = connection2.prepareStatement(sql2);
+        preparedStatement2.setInt(1, uno);
+        preparedStatement2.executeUpdate();
 
     }
 }
