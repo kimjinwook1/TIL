@@ -11,14 +11,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4d5db627-652a-421f-bac7-439d642859a3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/dao/MemberDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/dao/MemberDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/dao/TodoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/dao/TodoDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/MemberModifyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/MemberModifyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/MemberRemoveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/MemberRemoveController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dao/MemberDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dao/MemberDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dao/TodoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dao/TodoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/service/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/service/TodoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/signup/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/signup/signup.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w3_1/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w3_1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w5/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../w5/.idea/gradle.xml" afterDir="false" />
@@ -38,8 +34,8 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -319,7 +315,11 @@
       <workItem from="1639375119902" duration="562000" />
       <workItem from="1639377907184" duration="30000" />
       <workItem from="1639377968631" duration="12463000" />
-      <workItem from="1639440074620" duration="1380000" />
+      <workItem from="1639440074620" duration="1857000" />
+      <workItem from="1639443503106" duration="126000" />
+      <workItem from="1639444279303" duration="92000" />
+      <workItem from="1639444967531" duration="185000" />
+      <workItem from="1639445344228" duration="862000" />
     </task>
     <servers />
   </component>

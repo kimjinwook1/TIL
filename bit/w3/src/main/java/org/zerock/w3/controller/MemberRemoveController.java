@@ -51,7 +51,5 @@ public class MemberRemoveController extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 }

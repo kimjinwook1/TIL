@@ -15,6 +15,10 @@
                 <input type="password" name="userpw" class="form-control">
             </div>
             <div class="mb-3">
+                <label class="form-label">PASSWORD</label>
+                <input type="password" name="checkpw" class="form-control">
+            </div>
+            <div class="mb-3">
                 <label class="form-label">USERNAME</label>
                 <input type="text" name="username" class="form-control">
             </div>

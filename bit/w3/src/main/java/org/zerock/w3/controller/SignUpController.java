@@ -40,19 +40,25 @@ public class SignUpController extends HttpServlet {
                 return;
             }
             String userpw = request.getParameter("userpw");
+            String checkpw = request.getParameter("checkpw");
             String username = request.getParameter("username");
 
-            memberDTO = MemberDTO.builder()
-                    .userid(userid)
-                    .userpw(userpw)
-                    .username(username)
-                    .build();
+            if (userpw.equals(checkpw)) {
+                memberDTO = MemberDTO.builder()
+                        .userid(userid)
+                        .userpw(userpw)
+                        .username(username)
+                        .build();
 
-            SignUpService.INSTANCE.register(memberDTO);
+                SignUpService.INSTANCE.register(memberDTO);
+                response.sendRedirect("/login");
+
+            } else {
+                response.sendRedirect("/signup");
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        response.sendRedirect("/login");
     }
+
 }
