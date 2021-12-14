@@ -2,6 +2,7 @@ package org.zerock.w3.controller;
 
 import org.zerock.w3.dto.MemberDTO;
 import org.zerock.w3.service.MemberService;
+import org.zerock.w3.service.TodoService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -47,6 +48,7 @@ public class MemberModifyController extends HttpServlet {
                 .build();
 
         try {
+            TodoService.INSTANCE.updateWriter(username, uno);
             MemberService.INSTANCE.update(memberDTO);
         } catch (Exception e) {
             e.printStackTrace();

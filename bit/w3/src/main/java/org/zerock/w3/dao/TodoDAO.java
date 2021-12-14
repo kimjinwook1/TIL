@@ -151,5 +151,27 @@ public enum TodoDAO {
         preparedStatement.executeUpdate();
     }
 
+    public void updateWriter(String writer, int writerId) throws Exception {
 
+        String sql = "update `tbl_todo` set `writer` = ? where `writerid` = ?";
+        @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
+        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1, writer);
+        preparedStatement.setInt(2, writerId);
+
+        preparedStatement.executeUpdate();
+
+
+    }
+
+    public void deleteOneByWriterId(int writerId) throws Exception {
+
+        String sql = "delete from tbl_todo where writerid = ?";
+
+        @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
+        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setLong(1, writerId);
+        preparedStatement.executeUpdate();
+
+    }
 }

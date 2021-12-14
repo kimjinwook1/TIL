@@ -66,4 +66,15 @@ public enum TodoService {
         todoDAO.modify(todoVO);
 
     }
+
+    public void updateWriter(String writer, int writerId) throws Exception {
+
+        TodoDAO.INSTANCE.updateWriter(writer, writerId);
+
+    }
+
+    public void removeByUno(int writerId) throws Exception{
+
+        TodoDAO.INSTANCE.deleteOneByWriterId(writerId);
+    }
 }
