@@ -1,43 +1,41 @@
 plugins {
+    id 'org.springframework.boot' version '2.5.4'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
     id 'war'
 }
 
 group 'org.zerock'
 version '1.0-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
 
 repositories {
     mavenCentral()
 }
 
-ext {
-    junitVersion = '5.7.1'
-}
-
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
-
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
-}
-
 dependencies {
-    compileOnly('javax.servlet:javax.servlet-api:4.0.1')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    //JSP 추가 시작
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+    implementation 'javax.servlet:jstl'
+    //JSP 추가 끝
 
-    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
 
-    implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
-    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
-    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.4.4'
 
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.27'
     implementation group: 'com.zaxxer', name: 'HikariCP', version: '5.0.0'
 
-    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.15.0'
-    testImplementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.15.0'
-    implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.4.4'
-    implementation group: 'javax.servlet', name: 'jstl', version: '1.2'
 }
 
 test {

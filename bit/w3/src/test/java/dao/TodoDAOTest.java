@@ -3,8 +3,8 @@ package dao;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.zerock.w3.dao.TodoDAO;
-import org.zerock.w3.domain.TodoVO;
+import org.zerock.w3.servletmvc.dao.TodoDAO;
+import org.zerock.w3.servletmvc.domain.TodoVO;
 
 @Log4j2
 class TodoDAOTest {

@@ -10,13 +10,79 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d5db627-652a-421f-bac7-439d642859a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/LoginFrontController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/MemberFrontController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/MyView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/TodoFrontController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/ServletApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc/v1/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc/v1/controller/MemberModifyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc/v1/controller/MemberReadController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc/v1/controller/MemberRemoveController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/HelloServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/controller/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/controller/LogoutController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/controller/MemberModifyController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/controller/MemberReadController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/controller/MemberRemoveController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/controller/SignUpController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/controller/TimeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/controller/TodoListController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/controller/TodoModifyController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/controller/TodoReadController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/controller/TodoRegisterController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/controller/TodoRegisterController2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/controller/TodoRemoveController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/dao/ConnectionUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/dao/MemberDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/dao/TodoDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/domain/MemberVO$MemberVOBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/domain/MemberVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/domain/TodoVO$TodoVOBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/domain/TodoVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/dto/MemberDTO$MemberDTOBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/dto/MemberDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/dto/TodoDTO$TodoDTOBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/dto/TodoDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/filter/LoginCheckFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/service/MemberService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/service/SignUpService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/service/TodoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/util/DateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/util/DateUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/util/MapperUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/util/MapperUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/util/StringUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/util/StringUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/LoginFrontController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/MemberFrontController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/MyView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/TodoFrontController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/LogoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/controller/LogoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/MemberModifyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/controller/MemberModifyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/MemberReadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/controller/MemberReadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/MemberRemoveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/controller/MemberRemoveController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/controller/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/TimeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/controller/TimeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/TodoListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/controller/TodoListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/TodoModifyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/controller/TodoModifyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/TodoReadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/controller/TodoReadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/TodoRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/controller/TodoRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/TodoRegisterController2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/controller/TodoRegisterController2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/controller/TodoRemoveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/controller/TodoRemoveController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dao/ConnectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/dao/ConnectionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dao/MemberDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/dao/MemberDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dao/TodoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/dao/TodoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/domain/MemberVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/domain/MemberVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/domain/TodoVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/domain/TodoVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dto/MemberDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/dto/MemberDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/dto/TodoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/dto/TodoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/filter/LoginCheckFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/service/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/service/SignUpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/service/SignUpService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/service/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/service/TodoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dao/TimeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dao/TimeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dao/TodoDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dao/TodoDAOTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w3_1/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w3_1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../w3_1/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../w5/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../w5/.idea/gradle.xml" afterDir="false" />
@@ -40,6 +106,7 @@
         <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -71,18 +138,23 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/includes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -90,10 +162,11 @@
       <recent name="org.zerock.w3.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc/v1" />
+      <recent name="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/includes" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo" />
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -105,20 +178,20 @@
       <recent name="org.zerock.w3.dao" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.zerock.w3.springmvc.v1.controller" />
+      <recent name="org.zerock.w3" />
       <recent name="org.zerock.w3.controller" />
       <recent name="org.zerock.w3.util" />
       <recent name="org.zerock.w3.domain" />
-      <recent name="dao" />
-      <recent name="org.zerock.w3.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.554">
+  <component name="RunManager" selected="Spring Boot.ServletApplication">
     <configuration name="ㅁㄴㅇㄹ" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.zerock.w3.dao.ㅁㄴㅇㄹ" />
       <module name="w3.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.zerock.w3.dao.*" />
+          <option name="PATTERN" value="org.zerock.w3.servletmvc.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -136,21 +209,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="dao" />
       <option name="MAIN_CLASS_NAME" value="dao.TodoDAOTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TodoDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="w3.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.zerock.w3.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.zerock.w3.dao" />
-      <option name="MAIN_CLASS_NAME" value="org.zerock.w3.dao.TodoDAOTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -184,6 +242,19 @@
       <option name="MAIN_CLASS_NAME" value="dao.TodoDAOTest" />
       <option name="METHOD_NAME" value="testRead" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServletApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="w3.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.zerock.w3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.zerock.w3.ServletApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -280,19 +351,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.ㅁㄴㅇㄹ" />
-      <item itemvalue="JUnit.TodoDAOTest" />
       <item itemvalue="JUnit.TodoDAOTest.testList" />
       <item itemvalue="JUnit.TodoDAOTest (1)" />
       <item itemvalue="JUnit.TodoDAOTest.testRead" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.554" />
+      <item itemvalue="Spring Boot.ServletApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ServletApplication" />
         <item itemvalue="Application.ㅁㄴㅇㄹ" />
         <item itemvalue="JUnit.TodoDAOTest.testRead" />
         <item itemvalue="JUnit.TodoDAOTest (1)" />
         <item itemvalue="JUnit.TodoDAOTest.testList" />
-        <item itemvalue="JUnit.TodoDAOTest" />
       </list>
     </recent_temporary>
   </component>
@@ -325,7 +396,12 @@
       <workItem from="1639444279303" duration="92000" />
       <workItem from="1639444967531" duration="185000" />
       <workItem from="1639445344228" duration="4740000" />
-      <workItem from="1639465112224" duration="8041000" />
+      <workItem from="1639465112224" duration="8967000" />
+      <workItem from="1639488964636" duration="13000" />
+      <workItem from="1639526984800" duration="1773000" />
+      <workItem from="1639532778671" duration="187000" />
+      <workItem from="1639533876929" duration="646000" />
+      <workItem from="1639536391528" duration="8068000" />
     </task>
     <servers />
   </component>

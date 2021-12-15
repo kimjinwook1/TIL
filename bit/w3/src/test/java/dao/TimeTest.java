@@ -4,7 +4,7 @@ import lombok.Cleanup;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.zerock.w3.dao.ConnectionUtil;
+import org.zerock.w3.servletmvc.dao.ConnectionUtil;
 
 import java.sql.Connection;
 
