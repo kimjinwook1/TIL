@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style type="text/css">
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #container {
+            width: 100%;
+            margin: 10px;
+            border: 2px solid gray;
+            padding: 10px;
+            border-radius: 30px;
+            background-color: whitesmoke
+        }
+
+        .asdf {
+            text-align: center;
+            float: left;
+            margin: 40px;
+            padding: 40px;
+            border-radius: 10px;
+            border: 3px solid black;
+            text-align: left;
+
+        }
+        .asdf2 {
+            text-align: center;
+            float: left;
+            margin: 40px;
+            padding: 40px;
+            border-radius: 10px;
+            border: 3px solid black;
+            text-align: center;
+
+        }
+
+        #header {
+            text-align: center;
+            float: left;
+            width: 100%;
+            border-radius: 10px;
+            border: 3px solid black;
+
+        }
+
+        .section {
+            margin: 40px;
+            padding: 40px;
+            border-radius: 10px;
+            border: 3px solid black;
+            float: left;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        #section2 {
+            margin: 40px;
+            padding: 40px;
+            border-radius: 10px;
+            border: 3px solid black;
+            float: left;
+        }
+
+        #footer {
+            border: 1px solid whitesmoke;
+            border-radius: 10px;
+            width: 100%;
+            clear: both;
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <div>
+        <button type="button" class="btn btn-danger"></button>
+        <button type="button" class="btn btn-warning"></button>
+        <button type="button" class="btn btn-success"></button>
+    </div>
+
+    <div id="header">
+        <div class="asdf">
+            <div class="asdf">
+                <h3>이름: 김진욱</h3>
+                <h3>생일: 1993.06.28</h3>
+                <h3>이메일: jinwook628@gmail.com</h3>
+            </div>
+            <div class="asdf2">
+                <h3>피곤함
+                    <input type="range" id="a" name="ages" min="10" max="60" step="50">
+                    <output name="x" for="a"></output><br>
+                </h3>
+                <h3>피곤함
+                    <input type="range"  name="ages" min="10" max="60" step="50">
+                    <output name="x" for="a"></output><br>
+                </h3>
+                <h3>피곤함
+                    <input type="range" name="ages" min="10" max="60" step="50">
+                    <output name="x" for="a"></output><br>
+                </h3>
+            </div>
+            <div class="asdf">
+                <h3>나의 관심사</h3>
+                <h3>코틀린</h3>
+                <h3>영화</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="section2">
+        <h1>back-end</h1>
+        <div class="section">
+            <p>java</p>
+        </div>
+        <div class="section">
+            <p>spring</p>
+        </div>
+        <div class="section">
+            <p>kotlin</p>
+        </div>
+        <div class="section">
+            <p>jpa</p>
+        </div>
+        <div class="section">
+            <p>IntelliJ</p>
+        </div>
+    </div>
+
+    <div id="footer">
+       김진욱
+    </div>
+</div>
+</body>
+</html>
