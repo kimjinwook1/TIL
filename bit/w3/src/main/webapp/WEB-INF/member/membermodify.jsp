@@ -4,7 +4,7 @@
 <h1 class="mt-4">Member Info Modify</h1>
 <div class="card" style="width: 70vw;">
     <div class="card-body">
-        <form action="/member/modify/" method="post">
+        <form action="/member/modify" method="post">
             <div class="mb-3">
                 <label class="form-label">Id</label>
                 <input type="text" class="form-control" value="${memberDTO.userid}" readonly>

@@ -4,10 +4,8 @@
 <h1 class="mt-4">Login</h1>
 <div class="card" style="width: 70vw;">
     <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-
         <form action="/login" method="post">
-
+        <h5 class="card-title">Card title</h5>
             <div class="mb-3">
                 <label class="form-label">ID</label>
                 <input type="text" name="userid" class="form-control">
@@ -21,7 +19,6 @@
             <div class="mb-3">
                 <button type="submit" class="btn btn-primary float-end">LOGIN</button>
             </div>
-
         </form>
     </div>
 </div>
