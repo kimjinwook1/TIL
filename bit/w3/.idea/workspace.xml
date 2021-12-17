@@ -10,10 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d5db627-652a-421f-bac7-439d642859a3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc/v1/controller/SignUpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/zxcvzxcv.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/springmvc/v1/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/springmvc/v1/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/springmvc/v1/controller/LogoutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/springmvc/v1/controller/LogoutController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc/v1/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc/v1/controller/LoginController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -336,7 +335,7 @@
       <workItem from="1639633747204" duration="2000" />
       <workItem from="1639634045947" duration="17000" />
       <workItem from="1639634531773" duration="167000" />
-      <workItem from="1639635700939" duration="11311000" />
+      <workItem from="1639635700939" duration="13241000" />
     </task>
     <servers />
   </component>
