@@ -6,28 +6,28 @@
     <div class="card-body">
         <h5 class="card-title">Card title</h5>
 
-        <form method="post">
+        <form action="/todo/modify" method="post">
 
-        <div class="mb-3">
-            <label class="form-label">TNO</label>
-            <input type="text" class="form-control" name="tno" value="${dto.tno}" readonly>
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Title</label>
-            <input type="text" class="form-control" name="title" value="${dto.title}">
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Writer</label>
-            <input type="text" class="form-control" value="${dto.writer}" readonly>
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Date</label>
-            <input type="date" class="form-control" name="dueDate" value="${dto.dueDate}">
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Finished</label>
-            <input type="checkbox" name="checkbox" ${dto.finished?"checked":""} >
-        </div>
+            <div class="mb-3">
+                <label class="form-label">TNO</label>
+                <input type="text" class="form-control" name="tno" value="${dto.tno}" readonly>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Title</label>
+                <input type="text" class="form-control" name="title" value="${dto.title}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Writer</label>
+                <input type="text" class="form-control" value="${dto.writer}" readonly>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Date</label>
+                <input type="date" class="form-control" name="dueDate" value="${dto.dueDate}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Finished</label>
+                <input type="checkbox" name="checkbox" ${dto.finished?"checked":""} >
+            </div>
 
             <div class="mb-3">
                 <button type="submit" class="btn btn-primary float-end">수정</button>

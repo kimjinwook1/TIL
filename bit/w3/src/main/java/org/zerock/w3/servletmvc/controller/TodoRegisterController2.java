@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 
 @Log4j2
-@WebServlet(name = "todoRegister", urlPatterns = "/todo/register")
+//@WebServlet(name = "todoRegister", urlPatterns = "/todo/register")
 public class TodoRegisterController2 extends HttpServlet {
 
     @Override

@@ -1,5 +1,6 @@
 package org.zerock.w3.springmvc.v1.controller;
 
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.sql.Date;
 import java.util.UUID;
 
+@Log4j2
 @Controller
 @SessionAttributes("userInfo")
 @RequestMapping("/login")
@@ -19,6 +21,7 @@ public class LoginController extends HttpServlet {
 
     @GetMapping
     public String doGet() {
+        log.info("login..............");
         return "/login/login";
     }
 

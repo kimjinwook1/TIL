@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Log4j2
-@WebServlet(name = "todoList", urlPatterns = "/todo/list")
+//@WebServlet(name = "todoList", urlPatterns = "/todo/list")
 public class TodoListController extends HttpServlet {
 
     @Override

@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Log4j2
-@WebServlet(name = "todoRead", urlPatterns = "/todo/read/*")
+//@WebServlet(name = "todoRead", urlPatterns = "/todo/read/*")
 public class TodoReadController extends HttpServlet {
 
     @Override
@@ -22,6 +22,7 @@ public class TodoReadController extends HttpServlet {
 
         log.info("Read.......................");
 
+//        String tno1 = request.getParameter("tno");
         String tnoStr = request.getPathInfo().substring(1);
         Long tno = StringUtil.parseLong(tnoStr, -1L);
 

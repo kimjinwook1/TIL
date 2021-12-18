@@ -2,16 +2,14 @@ package org.zerock.w3.springmvc.v1.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.zerock.w3.servletmvc.dto.MemberDTO;
 import org.zerock.w3.servletmvc.service.MemberService;
 import org.zerock.w3.servletmvc.service.TodoService;
 
 @Controller
 @RequestMapping("/member")
+@SessionAttributes("userInfo")
 public class MemberModifyController {
 
     @GetMapping("/modify")
@@ -32,7 +30,8 @@ public class MemberModifyController {
     public String doPost(
             @RequestParam("userpw") String userpw,
             @RequestParam("username") String username,
-            @RequestParam("uno") int uno
+            @RequestParam("uno") int uno,
+            Model model
            ) throws Exception {
 
         MemberDTO memberDTO = MemberDTO.builder()
@@ -44,6 +43,7 @@ public class MemberModifyController {
         try {
             TodoService.INSTANCE.updateWriter(username, uno);
             MemberService.INSTANCE.update(memberDTO);
+            model.addAttribute("userInfo", memberDTO);
         } catch (Exception e) {
             e.printStackTrace();
         }

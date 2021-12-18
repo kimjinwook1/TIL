@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "todoRemove", urlPatterns = "/todo/remove")
+//@WebServlet(name = "todoRemove", urlPatterns = "/todo/remove")
 public class TodoRemoveController extends HttpServlet {
 
     @Override

@@ -25,7 +25,13 @@
             <input type="checkbox" ${dto.finished?"checked":""} disabled>
         </div>
         <div class="mb-3">
-            <a href="/todo/modify/${dto.tno}" class="btn btn-primary float-end">수정/삭제</a>
+            <form action="/todo/modify" method="get">
+                <div class="mb-3">
+                    <input type="hidden" name="tno" value="${dto.tno}">
+                    <button type="submit" class="btn btn-primary float-end">수정/삭제</button>
+                </div>
+            </form>
+<%--            <a href="/todo/modify/${dto.tno}" class="btn btn-primary float-end">수정/삭제</a>--%>
             <a href="/todo/list" class="btn btn-primary float-lg-start">목록</a>
         </div>
 

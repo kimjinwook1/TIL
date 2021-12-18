@@ -21,12 +21,6 @@
             </div>
             <input type="hidden" name="writerid" value="${userInfo.uno}">
             <input type="hidden" name="writer" value="${userInfo.username}">
-            <%--            <br>--%>
-            <%--            <br>--%>
-            <%--            <br>--%>
-            <%--            <div class="d-grid gap-2">--%>
-            <%--                <button class="btn btn-primary" type="button">등록</button>--%>
-            <%--            </div>--%>
         </form>
     </div>
 </div>

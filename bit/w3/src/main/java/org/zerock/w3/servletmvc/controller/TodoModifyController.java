@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 
 @Log4j2
-@WebServlet(name = "todoModify", urlPatterns = "/todo/modify/*")
+//@WebServlet(name = "todoModify", urlPatterns = "/todo/modify/*")
 public class TodoModifyController extends HttpServlet {
 
     @Override
@@ -24,8 +24,9 @@ public class TodoModifyController extends HttpServlet {
 
         log.info("Read.......................");
 
-        String tnoStr = request.getPathInfo().substring(1);
-        Long tno = StringUtil.parseLong(tnoStr, -1L);
+        String tno1 = request.getParameter("tno");
+//        String tnoStr = request.getPathInfo().substring(1);
+        Long tno = StringUtil.parseLong(tno1, -1L);
 
         try {
             TodoDTO todoDTO = TodoService.INSTANCE.read(tno);
@@ -57,8 +58,6 @@ public class TodoModifyController extends HttpServlet {
                 .dueDate(dueDateData)
                 .finished(finishedData)
                 .build();
-
-
         try {
             TodoService.INSTANCE.update(todoDTO);
         } catch (Exception e) {
