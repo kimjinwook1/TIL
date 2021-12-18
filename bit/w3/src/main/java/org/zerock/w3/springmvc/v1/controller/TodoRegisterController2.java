@@ -10,9 +10,9 @@ import org.zerock.w3.util.StringUtil;
 import javax.servlet.http.HttpSession;
 
 @Log4j2
-@Controller
-@RequestMapping("/todo/register")
-@SessionAttributes("userInfo")
+//@Controller
+//@RequestMapping("/todo/register")
+//@SessionAttributes("userInfo")
 public class TodoRegisterController2 {
 
     @GetMapping

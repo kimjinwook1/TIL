@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import javax.servlet.http.HttpSession;
 
 @SessionAttributes("userInfo")
-@Controller
-@RequestMapping
+//@Controller
+//@RequestMapping
 public class LogoutController {
 
     @PostMapping("/logout")

@@ -11,8 +11,8 @@ import org.zerock.w3.servletmvc.service.TodoService;
 import org.zerock.w3.util.StringUtil;
 
 @Log4j2
-@Controller
-@RequestMapping("/todo/read/{tno}")
+//@Controller
+//@RequestMapping("/todo/read/{tno}")
 public class TodoReadController {
 
     @GetMapping

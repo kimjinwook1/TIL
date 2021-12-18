@@ -18,8 +18,8 @@
     <div class="border-end bg-white" id="sidebar-wrapper">
         <div class="sidebar-heading border-bottom bg-light">TODO LIST</div>
         <div class="list-group list-group-flush">
-            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/login">로그인</a>
-            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/signup">회원가입</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/member/login">로그인</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/member/signup">회원가입</a>
         </div>
     </div>
     <!-- Page content wrapper-->

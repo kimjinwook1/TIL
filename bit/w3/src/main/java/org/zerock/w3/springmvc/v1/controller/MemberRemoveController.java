@@ -11,7 +11,7 @@ import org.zerock.w3.servletmvc.service.MemberService;
 import org.zerock.w3.servletmvc.service.TodoService;
 
 @Controller
-@RequestMapping("/member")
+//@RequestMapping("/member")
 public class MemberRemoveController {
 
     @GetMapping("/remove")

@@ -11,9 +11,9 @@ import org.zerock.w3.servletmvc.service.TodoService;
 import javax.servlet.http.HttpSession;
 
 @Log4j2
-@Controller
-@RequestMapping("/todo/list")
-@SessionAttributes("userInfo")
+//@Controller
+//@RequestMapping("/todo/list")
+//@SessionAttributes("userInfo")
 public class TodoListController {
 
     @GetMapping

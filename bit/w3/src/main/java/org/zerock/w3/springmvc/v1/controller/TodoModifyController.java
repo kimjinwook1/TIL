@@ -9,8 +9,8 @@ import org.zerock.w3.servletmvc.service.TodoService;
 import org.zerock.w3.util.StringUtil;
 
 @Log4j2
-@Controller
-@RequestMapping("/todo/modify")
+//@Controller
+//@RequestMapping("/todo/modify")
 public class TodoModifyController {
 
     @GetMapping

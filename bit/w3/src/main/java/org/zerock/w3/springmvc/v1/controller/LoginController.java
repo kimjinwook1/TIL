@@ -14,9 +14,9 @@ import java.sql.Date;
 import java.util.UUID;
 
 @Log4j2
-@Controller
-@SessionAttributes("userInfo")
-@RequestMapping("/login")
+//@Controller
+//@SessionAttributes("userInfo")
+//@RequestMapping("/login")
 public class LoginController extends HttpServlet {
 
     @GetMapping

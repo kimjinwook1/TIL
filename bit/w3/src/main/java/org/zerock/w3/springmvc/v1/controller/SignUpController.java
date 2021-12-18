@@ -10,8 +10,8 @@ import org.zerock.w3.servletmvc.dto.MemberDTO;
 import org.zerock.w3.servletmvc.service.SignUpService;
 
 @Slf4j
-@Controller
-@RequestMapping("/signup")
+//@Controller
+//@RequestMapping("/signup")
 public class SignUpController {
 
     @GetMapping

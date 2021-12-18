@@ -7,8 +7,8 @@ import org.zerock.w3.servletmvc.dto.MemberDTO;
 import org.zerock.w3.servletmvc.service.MemberService;
 
 @Controller
-@RequestMapping("/member")
-@SessionAttributes("userInfo")
+//@RequestMapping("/member")
+//@SessionAttributes("userInfo")
 public class MemberReadController {
 
     @GetMapping("/read")

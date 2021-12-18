@@ -8,8 +8,8 @@ import org.zerock.w3.servletmvc.service.MemberService;
 import org.zerock.w3.servletmvc.service.TodoService;
 
 @Controller
-@RequestMapping("/member")
-@SessionAttributes("userInfo")
+//@RequestMapping("/member")
+//@SessionAttributes("userInfo")
 public class MemberModifyController {
 
     @GetMapping("/modify")

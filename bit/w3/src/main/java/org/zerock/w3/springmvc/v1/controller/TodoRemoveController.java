@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.zerock.w3.servletmvc.service.TodoService;
 
-@Controller
-@RequestMapping("/todo/remove")
+//@Controller
+//@RequestMapping("/todo/remove")
 public class TodoRemoveController {
 
     @PostMapping

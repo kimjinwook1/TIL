@@ -29,7 +29,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
             <div class="container-fluid">
                 <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
-                <form action="/logout" method="post">
+                <form action="/member/logout" method="post">
                     <button type="submit" class="btn btn-primary">LOGOUT</button>
                 </form>
             </div>
