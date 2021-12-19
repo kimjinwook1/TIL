@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript 문법</title>
+    <script type="text/javascript">
+        /**
+         *  변수 생성 -> 값 입력 -> 타입 설정
+         *  var a;
+         *  let b;
+         * -> 위의 두 변수는 정의 되지 않았다.
+         *  a=10; -> number 타입으로
+         *  b="a" -> String 타입으로 설정 된다.
+         *
+         *  ES5(모든 변수: var) -> 2015년 ES6(ECMA) (let, const: 상수)
+         *  현재: var, let, const
+         *  권장: let, const
+         *
+         *  초기화(어떤 변수가 처음 값을 갖는 것)시점에 타입이 결정(javascript)
+         *  javascript 타입: number, String, boolean. Array, object ...
+         *
+         *  변수의 범위(scope)
+         *  기준 현재 page 기준(Ex04_Script.html)
+         *  1. page 전체에서 사용(함수 내부도 포함) -> 전역(global)
+         *  2. page 안에 함수 안에서만 변수 사용 -> 지역변수(local)
+         */
+
+        let num; // -> 전역변수, 페이지 어디서나 사용 가능(함수 내부 포함)
+        function call() {
+            let name; // ->지역변수
+            name = "홍길동";
+            num = 100; // num은 전역변수니까 함수안에서 사용 가
+        }
+
+        let n;
+        console.log(n); // 에러가 아니라 정의 되지 않았기 때문에 undefined 나옴
+        n = 100;
+        console.log("n: " + n);
+
+        //변수는 초기화 하고 쓰자.
+        let i, j;
+        i = 200;
+        j = 300;
+
+        let result = i + j;
+        console.log(result);
+
+        let intnum = 100; //타입 정수
+        let dnum = 12.345; //타입 실수
+        let flag = true; //타입 boolean
+        let str = null;
+        let str2 = "ABC"; //타입 문자열
+
+        console.log(typeof (intnum));
+        console.log(typeof (dnum));
+        console.log(typeof (flag));
+        console.log(typeof (str));
+        console.log(typeof (str2));
+
+        //연산자
+        //산술, 논리, 관계
+        //산술(+, -, *, /, %)
+        let num1 = 10;
+        let num2 = 3;
+        document.write(num1 + num2 + "<br>");
+        document.write(num1 - num2 + "<br>");
+        document.write(num1 * num2 + "<br>");
+        document.write(num1 / num2 + "<br>");
+        document.write(num1 % num2 + "<br>");
+
+        //관계(== (===: 값과 타입 전부 비교), !=, >=, ...)
+        let a = 3;
+        let b = 5;
+        document.write((num1 == num2) + "<br>");
+        document.write((num1 != num2) + "<br>");
+        document.write((num1 > num2) + "<br>");
+
+        //논리연산 (&&, ||)
+        document.write(((10 > 5) && (1 != 3)) + "<br>");
+        document.write(((10 > 5) || (1 == 3)) + "<br>");
+
+        //진리    and    or
+        //0 0     0     0
+        //1 0     0     1
+        //1 1     0     1
+        //1 1     1     1
+
+        //삼항 연산자
+        let result2 = (4 % 2 == 0) ? "짝수" : "홀수";
+        document.write("result2: " + result2 + "<br>");
+
+        // 대입연산자(+=, -=, * =, /=)
+        let p = 10;
+        let k = 5;
+        p += k;
+        document.write("결과: " + p + "<br>");
+
+        let x = 5 + 5;
+        let y = "5" + 5; //"55"문자열(+산술, 결합)
+        let z = "hello" + 5; //hello5
+
+        let v = "5"; //문자형 숫자
+        let v2 = 5;
+        let v3 = 5;
+        document.write((v == v2)+"<br>"); // == 값 비교
+        document.write((v === v2)+"<br>"); // === 값, 타입 비교
+        document.write((v2 === v3)+"<br>");
+        document.write((v2 === v3)+"<br>");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        /**
+         *java
+         * public void print(){}
+         * public String print(){return "";}
+         * public int print(int num, int num2){return num + num2;}
+         *
+         *javascript
+         * void(x) return type(x)
+         */
+        function callConfirm() { //사용자 정의 함수
+            if (window.confirm("정말 삭제할까요?")) { //confirm 함수의 return 값은 true or false(내장함수)
+                alert("삭제");
+            } else {
+                alert("취소")
+            }
+        }
+
+        function showPopup() {
+            window.open("Ex06_Popup.html", "zipcode", "width=200, height=200");
+            //open() 새창 띄우기
+            //window.open(URL, name, specs(옵션)...)
+        }
+
+        function myFunction() {
+            let mywindow = window.open("Ex06_Popup.html", "zipcode", "width=500, height=200");
+            //mywindow 변수가 가지는 내용: 새 창 정보
+            mywindow.document.write("<p>this is zipcode window</p>")
+        }
+
+        //java: public void goUrlTime(String url(){}
+        function goUrlTime(url) { //자바스크립트의 파라미터는 타입을 명시하지 않는다.
+            window.setTimeout("location.href='" + url + "'", 3000);
+            //Url: www.naver.com -> location.href='www.naver.com'
+        }
+
+        //java: public int myFunction2(int i, int j, int k){return i+j+k;}
+        function myFunction2(i, j, k) {
+            return i + j + k;
+        }
+
+        let result = myFunction2(10, 20, 30);
+        console.log("result: " + result);
+
+        //function 함수이름(){}
+        let changeColor = function () { //chageColor 함수의 주소
+            window.document.bgColor = "silver";
+            window.document.fgColor = "red";
+        };
+    </script>
+</head>
+<body>
+<h3>내장함수, 사용자 정의 함수</h3>
+<button onclick="callConfirm()">클릭 사건 발생</button>
+<br>
+<button onclick="showPopup()">팝업창</button>
+<br>
+<button onclick="myFunction()">팝업 객체</button>
+<br>
+<button onclick="goUrlTime('http://www.daum.net')">3초 후 이동</button>
+<br>
+<button onclick="changeColor()">이름 없는 함수</button>
+<br>
+</body>
+</html>
