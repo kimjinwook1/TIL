@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        function eventProductor(form) {
+            // console.log(form)
+            // console.log(form.productor.value); //선택된 option 태그의 value 값이 출력
+            // console.log(form.productor.text);
+            // console.log("index: " + form.productor.selectedIndex);//선택되어진 index값
+            //select -> [option][option][option][option][option]
+            //              0       1       2       3       4
+            //p, div -> value가 없음.
+
+            // console.log(form.productor.options[0].value);
+            // console.log(form.productor.options[0].text);
+
+            // console.log(form.productor.options[index].value);
+            // console.log(form.productor.options[index].text);
+
+            let index = form.productor.selectedIndex;
+            let value = form.productor.options[index].value;
+            let text = form.productor.options[index].text;
+
+            console.log(value);
+            console.log(text);
+
+            if (index == 0) {
+                form.valProductor.value = "";
+                form.txtProductor.value = "";
+                return;
+            }
+            form.valProductor.value = value;
+            form.txtProductor.value = text;
+
+        }
+    </script>
+</head>
+<body>
+<br>
+<form name="frmdata">
+    <select style="width: 200px" name="productor" onchange="eventProductor(this.form)">
+        <option value="A000" selected>제조사</option>
+        <!-- select[0]  -->
+        <option value="A001">삼성전자</option>
+        <option value="A002">LG전자</option>
+        <option value="A003">Apple</option>
+        <option value="A004">Dell</option>
+    </select>
+    <input type="text" name="valProductor" size="10">
+    <input type="text" name="txtProductor" size="10"> <br>
+
+    <select style="width: 200px" name="brand" onchange="eventBrand()">
+        <option value="B000" SELECTED>브랜드</option>
+        <option value="B001">센스</option>
+        <option value="B002">X-Note</option>
+        <option value="B003">MAC</option>
+        <option value="B004">VAIO</option>
+    </select>
+    <input type="text" name="valBrand" size="10">
+    <input type="text" name="txtBrand" size="10">
+</form>
+</body>
+</html>

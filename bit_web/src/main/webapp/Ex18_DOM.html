@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<ul id="myList">
+    <li>coffee</li><li>tea</li><li>milk</li>
+</ul>
+<br>
+<button onclick="myFunc()">클릭</button>
+<button onclick="myFunc2()">클릭2</button>
+</body>
+<script type="text/javascript">
+
+    function myFunc() {
+        let list = document.getElementById("myList");
+        console.log(list);
+        list.removeChild(list.childNodes[0]);
+
+        //여러 개의 요소 -> select -> 자식요소 -> option -> 동적배열
+        //            ->ul, ol -> 자식요소 -> li -> 동적배열
+    }
+
+    function myFunc2() {
+
+        let textNode = document.createTextNode("water");
+        let item = document.getElementById("myList").childNodes[0];
+        item.replaceChild(textNode, item.childNodes[0]);
+    }
+</script>
+
+</html>
