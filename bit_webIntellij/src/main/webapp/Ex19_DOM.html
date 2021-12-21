@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        .democlass {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="div">
+    <h1 class="democlass">Hello World_1</h1>
+    <h1 class="democlass">Hello World_2</h1>
+    <h1 class="democlass">Hello World_3</h1>
+</div>
+</body>
+<script type="text/javascript">
+    // document.getElementsByTagName("h1")[0].removeAttribute("class");
+    // let arr = document.getElementsByTagName("h1");
+    // console.log(arr);
+    // for (let i = 0; i < arr.length; i++) {
+    //     console.log(arr[i]);
+    //     arr[i].removeAttribute("class");
+    // }
+
+    //문제
+    let arr = document.getElementsByTagName("h1");
+    // for (let index in arr) {
+    //     console.log(index);
+    //     document.getElementById("div").removeChild(arr[index]);
+    // }
+
+    for (let i = arr.length-1; i >= 0; i--) {
+        console.log(arr);
+        document.getElementById("div").removeChild(arr[i])
+    }
+  
+</script>
+</html>

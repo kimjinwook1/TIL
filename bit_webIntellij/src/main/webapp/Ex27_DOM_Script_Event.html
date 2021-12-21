@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            let myphotos = ["images/1.jpg", "images/2.jpeg", "images/3.jpg", "images/4.jpg"];
+            //onclick 이벤트 사용
+            //[0][1][2][3] 이미지 경로를 통해 다음 버튼을 클릭 시 2.jpg -> 3.jpg -> 4.jpg -> 없으면 1.jpg 가 나오게 하시오.
+            //이전은 위와 반대로
+            let index = 0;
+            console.log("index: " + index);
+
+            document.getElementById("prv").onclick = function () {
+                if (index == 0) {
+                    index = myphotos.length; // index>4
+                }
+                document.getElementById("imgs").src = myphotos[--index];
+            };
+
+            document.getElementById("next").onclick = function () {
+                if (++index == myphotos.length) {
+                    //초기화
+                    index = 0;
+                }
+                document.getElementById("imgs").src = myphotos[index];
+            };
+        };
+    </script>
+</head>
+<body>
+<h3>DOM 슬라이드</h3>
+<img alt="이미지" src="images/1.jpg" id="imgs" width="200" height="200">
+<hr>
+<a href="#" id="prv">이전</a>||<a href="#" id="next">다음</a>
+</body>
+
+</html>

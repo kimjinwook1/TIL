@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript">
+        /*
+
+                함수(문자열, 숫자, 날짜)
+        */
+
+        let str = "10+20+30";
+        document.write(str + "<br>");
+
+        //1.eval()
+        //문자형 수식을 계산식으로 변환 -"10+20+30" -> 10+20+30 -> 계산 -> 60
+        document.write(eval(str) + "<br>");
+
+        //2.isNaN() -> Not a Number -> 숫자인지 확인(boolean) -> 숫자이면 false를 반환
+        document.write("isNaN(eval(str)): " + isNaN(eval(str)) + "<br>");
+        document.write("isNaN(str): " + isNaN(str) + "<br>");
+        document.write("isNaN('12345'): " + isNaN('12345') + "<br>");
+        document.write("isNaN('대한민국'): " + isNaN('대한민국') + "<br>");
+
+        //문자열 함수
+        //https://www.w3schools.com/js/js_string_methods.asp
+
+        //숫자 함수
+        //https://www.w3schools.com/js/js_number_methods.asp
+
+        let i = "100";
+        let j = "200";
+        document.write("결합: " + (i + j) + "<br>"); //산술,결합을 +로 다 할 수 있음
+        document.write("숫자 변환: " + (Number(i) + Number(j)) + "<br>"); //연산
+
+        //Number()
+        //parseInt()
+        //parseFloat()
+
+        //**Events
+        //https://www.w3schools.com/js/js_events.asp
+        /*
+        Event   	Description
+        onchange	An HTML element has been changed
+        onclick 	The user clicks an HTML element
+        onmouseover	The user moves the mouse over an HTML element
+        onmouseout	The user moves the mouse away from an HTML element
+        onkeydown	The user pushes a keyboard key
+        onload	    The browser has finished loading the page
+
+        onload -> index.html body안에 요소들이 있다. -> onload는 body안에 있는 모든 요소가 메모리(웹 브라우저)에 로딩 되고 난 후 실행된다.
+
+        onblur() -> 포커스가 요소를 떠날 때
+        onfocus() -> 포커스가 요소에 들어올 때
+        */
+
+        function bodyLoad() {
+            console.log("load");
+            //body의 모든 요소가 메모리에 올라간 후에 호출됨.
+            //그러므로 body 안에 있는 모든 요소들을 제어 가능하다.
+            let data = document.myform.money.value;
+            console.log(isNaN(data));
+        }
+
+        function focusFunc() {
+            document.getElementById("myinput").style.background = "gold";
+        }
+
+        function blurFunc() {
+            //DOM방식
+            document.getElementById("myinput").style.background = "white";
+        }
+
+        function selectTag() {
+            let val = document.myform.sel.value; // 선택되어진 값
+            console.log(val);
+        }
+
+        function changeColor(obj) {
+            //java의 this-> 객체 자신을 가리킴/ this.memberfield명, 생성자 호출 this(data)
+            //javascript의 this -> 자신을 가리킴
+
+            //Point: javascript의 this(요소 자신)
+            //<input type="text" onMouseOver="changeColor(this)">
+            //-> 여기서 this는 input 태그 전체를 가리킴
+
+            console.log(obj);
+            obj.style.backgroundColor = "gold";
+        }
+
+        function changeColor2(obj) {
+
+            console.log(obj);
+            obj.style.backgroundColor = "white";
+        }
+
+        function keyPress() {
+
+            console.log("keypress");
+        }
+
+    </script>
+</head>
+<body onload="bodyLoad()">
+<form action="#" name="myform">
+    <input type="text" id="myinput" name="myinput" onfocus="focusFunc()" onblur="blurFunc()">
+    <br>
+    <select name="sel" onchange="selectTag()">
+        <option value="A">AA</option>
+        <option value="B">BB</option>
+        <option value="C">CC</option>
+        <option value="D">DD</option>
+    </select>
+    <br>
+    <input type="text" onmouseover="changeColor(this)" onmouseout="changeColor2(this)">
+    <br>
+    <input type="text" onkeypress="keyPress()">
+    <br>
+    <input type="text" value="1000" name="money">
+    <br>
+</form>
+
+</body>
+</html>

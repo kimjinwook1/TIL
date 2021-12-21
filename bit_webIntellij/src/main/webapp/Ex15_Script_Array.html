@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*
+            java: 정적(고정) -> Array -> 배열방의 크기 고정
+                : 동적(collection) -> 다양한 클래스 제공 -> ArrayList ...
+
+            int[] arr = new int[3];
+            int[] arr = new int[]{1,2,3};
+            int[] arr = {1,2,3}; //컴파일러가 알아서 new 작업을 실행
+
+            ArrayList list = new ArrayList();
+            list.add(1);
+            list.add(2);
+            --------------------------------------------------------
+
+            javascript: 정적 + 동적 -> Array
+            선언방법
+            let arr = []; //좋은 냄새가 나는 코드
+            arr.push(10);
+
+         */
+
+        //좋은코드
+        let arr = [10, 20, 30];
+        for (let i = 0; i < arr.length; i++) {
+            document.write(arr[i] + "<br>");
+        }
+
+        //나쁜코드
+        let eng = new Array(3);
+        for (let i = 0; i < eng.length; i++) {
+            document.write(eng[i] + "<br>")
+        }
+
+        eng[0] = 100;
+        eng[1] = 200;
+        eng[2] = 300;
+
+        //good 빈 배열 -> let arr = [10, 20, 30];
+        //javascript Array -> 자료구조의 stack(LIFO)을 사용
+        let arr2 = [];
+        arr2.push(10);
+        arr2.push(20);
+
+        //bad
+        let array = new Array(5);
+        let array2 = new Array(10, 20, 30);
+
+        //배열
+        let array3 = [1, 2, 3]
+        let array4 = [];
+        array4.push(10);
+        array4.push(20);
+
+        document.write(array4.pop());
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

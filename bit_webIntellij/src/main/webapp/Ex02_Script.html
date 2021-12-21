@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript">
+        // javascrip 해석 -> 웹 브라우져(해석 + 다양한 객체 제공)
+        // 내장객체 (브라우저가 기본적으로 가지고 있는 자원들) -> window
+        // new 하지 않고 사용하는 객체(이미 생성되어 있는 객체)
+        // new 사용해서 쓰는 객체
+
+        window.document.write("자바의 print 동일<br>");
+
+        //window 생략 가능
+        document.write("window 객체 생략 가능<br>");
+
+        //개발자 (필수)
+        console.log("디버깅, 결과 미리보기, 오류메시지 확인");
+        console.log(100 + 100)
+
+        document.write("<b>hello world</b>");
+        document.write('<table border="1"');
+        document.write('<tr><td>aa</td><td>bb</td></tr>');
+        document.write('</table>');
+
+        //var, let, const
+        var num; //타입 안정해짐(정수, 문자, 날짜 다 들어갈 수 있음)
+        console.log(num); // undefined
+        num = 100; // 타입 설
+        console.log("num: " + num);
+        console.log(typeof (num));
+
+        //javascript, html 순서대로 ... 라인단위로 실행된다.
+        // var ele = window.document.forms[0].elements[0];
+        // console.log(ele)
+
+        function formdata() {
+            var ele = window.document.forms[0].elements[0];
+            alert(ele);
+            //함수는 호출 시점에 실행된다.
+        }
+    </script>
+</head>
+<body>
+<form action="" method="get" name="myform">
+    <input type="text" name="userid" value="hong">
+    <input type="password" name="pwd" value="1004">
+    <input type="submit" value="전송">
+</form>
+
+<input type="button" value="클릭" onclick="formdata()">
+</body>
+<script type="text/javascript">
+    //form이 생성된 시점에 아래 코드 실행
+    var ele = window.document.forms[0].elements[0];
+    console.log(ele)
+</script>
+</html>

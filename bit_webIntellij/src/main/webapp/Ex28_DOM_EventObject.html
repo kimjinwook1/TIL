@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*
+        try{
+        0/0 -> 예외 발생 -> 자동으로 문제에 대한 예외객체가 생성
+        } catch (Exception e){
+        }
+
+        javascript -> 사건발생(click, mouseover) -> 내부적으로 객체 생성
+        Event 객체 -> 누가 언제 어디서 누구에게 담고 있는 객체(눈에 안보임) -> Event 객체
+
+        3총사: this, Array, Event 객체 -> 문제 해결능력 ↑ -> but 잘 못 다룰 시 가독성 안좋고 프로그램 오류 발생
+
+        window.event.메서드
+        window.event.속성
+        */
+
+        window.onload = function () {
+            let btn = document.getElementById("mybtn");
+            btn.onclick = function (e) {
+                //onclick 이벤트가 발생하면 event 객체가 자동 생성 -> e라는 변수가 그 객체의 주소를 받음
+                //객체에는 이벤트와 관련된 다양한 정보가 담겨있음.
+
+                console.log(e.type);//event.type -> click
+                console.log(e.target);//<span>클릭</span>
+                console.log(e.currentTarget);//<button id="mybtn"><span>클릭></span></button>
+                console.log(e.x);//x 좌표값
+                console.log(e.y);//y 좌표값
+            };
+            let btn2 = document.getElementById("mybtn2");
+            let handler = function (event) { //handler가 함수의 주소를 가지고 있다.
+                switch (event.type) {
+                    case "click":
+                        alert("클릭");
+                        break;
+                    case "mouseover":
+                        event.target.style.backgroundColor = "red";
+                        break;
+                    case "mouseout":
+                        event.target.style.backgroundColor = "";
+                        break;
+                }
+            };
+
+            //각각의 event 에 대한 함수가 없다 -> 하나의 함수로 event 처리
+            btn2.onclick = handler;
+            btn2.onmouseover = handler;
+            btn2.onmouseout = handler;
+
+        };
+    </script>
+</head>
+<body>
+<button id="mybtn"><span>클릭</span></button>
+<br>
+<button id="mybtn2">클릭2</button>
+
+</body>
+</html>

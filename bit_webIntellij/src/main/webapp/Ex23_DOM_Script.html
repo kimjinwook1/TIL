@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        window.onload = function () { //기본 ...
+            //계층 트리(node: 부모, 자식 접근 가능)
+            let menode = document.getElementById("me");
+            menode.style.backgroundColor = "gold";
+
+            let parentNode = menode.parentNode; //body
+            parentNode.style.backgroundColor = "green";
+
+            let grandnode = parentNode.parentNode;
+            grandnode.style.backgroundColor = "blue";
+
+            let my = document.getElementById("mychild");
+            console.log(my);
+            console.log(my.firstChild);
+            console.log(my.firstChild.nodeName); //LI
+            console.log(my.firstChild.innerText); //AA
+            //innerHtml, innerText -> 접근 -> p, div, li, span -> value 속성 없음
+            console.log(my.firstChild.nextSibling.innerText); // BB
+            console.log(my.childNodes); //Array[<li>AA</li>][<li>BB</li>][<li>CC</li>]
+            console.log(my.childNodes.length);
+        };
+
+    </script>
+</head>
+<body>
+<div>A</div><div>B</div><div id="me">C</div><div>D</div><div>E</div>
+<ul id="mychild"><li>AA</li><li>BB</li><li>CC</li></ul>
+</body>
+</html>

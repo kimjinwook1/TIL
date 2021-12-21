@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<form action="Ex32.jsp" id="frm">
+    <fieldset>
+        <legend>주소록</legend>
+        <textarea rows="10" cols="30" name="txt" id="txt"></textarea>
+        <input type="submit" id="sub" value="전송하기">
+    </fieldset>
+</form>
+</body>
+<script type="text/javascript">
+    let add = ["아무개, email:kglim@naver.com"];
+    let frm = document.getElementById("frm");
+
+    function addr_Search(event) {
+        console.log(event.type);
+
+        let textarea = frm.txt;
+        textarea.value = "이름.주소";
+        textarea.value += add[0] + "," + add[1];
+    }
+
+    frm.addEventListener("submit", function (event) {
+        //기본 이벤트도 있고 개발자가 설정한 이벤트도 있다.
+        //기본 이벤트를 버리고 내가 설정한 이벤트만 처리
+        event.preventDefault();//기본이벤트 해제
+        addr_Search(event);
+    });
+</script>
+</html>

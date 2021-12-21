@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript">
+
+        /*
+            javascript의 다양한 내장 객체: new를 통해서 또는 그냥 사용 가능
+            ex) Date(), Array() 제공
+         */
+
+        let today = new Date();
+        document.write(today + "<br>");
+        document.write(today.getFullYear() + "<br>");
+        document.write((today.getMonth() + 1) + "<br>");
+        document.write(today.getDate() + "<br>");
+        document.write(today.getHours() + "<br>");
+        document.write(today.getMinutes() + "<br>");
+        document.write(today.getSeconds() + "<br>");
+
+        //java: Math.Random() -> static 함수
+        document.write(parseInt(Math.random() * 45) + 1 + "<br>") //0<= 범위 <1
+        document.write(Math.round(3.5663) + "<br>") //반올림
+        document.write(Math.max(3, 8, 99, 66, 10) + "<br>"); //최대값
+
+        //Point 문자열 관련 함수
+
+        let str = "ABCDEF";
+        //document.write() -> with(document){}
+        with (document) {
+            write(str + "<br>");
+            write(str.length + "<br>");
+            write(str.charAt(0) + "<br>");
+            write(str.indexOf("D") + "<br>");
+            write(str.concat("홍길동") + "<br>");
+
+            let str2 = str.replace("E", "ZZZzzzzZ");
+            write(str2 + "<br>");
+
+            //let str = "ABCDEF";
+            write(str.substring(2, 4) + "<br>"); //CD
+            write(str.substring(1, 1) + "<br>"); // 아무것도 안나옴
+            write(str.substring(1, 2) + "<br>"); //B
+            write(str.substring(1) + "<br>"); // BCDEF
+
+            let strarr = "A B C D";
+            let arr = strarr.split(" ");
+            write(arr + "<br>"); //Object 를 가지고 있는 toString()이 Array 재정의 -> 그래서 주소가 안나옴
+            //"A,B,C,D"
+
+            //Today Point
+            //java: 개선된 for문
+            //java: for(String s: arr){s}
+            //ms(c#): in
+            //javascript: for(let s in arr){}
+            for (let index in arr) { //arr -> [A][B][C][D] ->for문을 돌면 0,1,2,3 이라는 인덱스 값을 반환
+                write(index + "<br>");
+                write(arr[index] + "<br>");
+            }
+            for (let value of arr) { //arr -> [A][B][C][D] ->for문을 돌면 A,B,C,D 의 요소 값을 반환
+                write(value + "<br>");
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

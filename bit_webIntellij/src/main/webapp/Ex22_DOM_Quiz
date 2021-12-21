@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style type="text/css">
+        table{width: 100%}
+        table,tr,th,td {border: 1px solid; border-collapse: collapse;}
+        td{background-color: gold; text-align: center;}
+    </style>
+    <script type="text/javascript">
+        window.onload = function(){
+            let intRow = parseInt(document.getElementById("txtrow").value);
+
+
+        }
+
+    </script>
+</head>
+<body>
+<div id="div">
+    행의수 : <input type="text" id="txtrow" name="txtrow" value="2"><br>
+    열의수 : <input type="text" id="txtcolumn" name="txtcolumn" value="2"><br>
+    <input type="button" id="b1"  value="동적테이블 생성" >
+    <input type="button" id="b2"  value="동적테이블 제거" >
+</div>
+</body>
+</html>

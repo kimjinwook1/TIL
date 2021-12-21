@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<button id="mybtn">클릭</button>
+<p id="demo"></p>
+</body>
+<script type="text/javascript">
+    //1. 하나의 요소에 여러 개의 event를 추가할 수 있다.
+    //2. 이벤트가 더 이상 필요 없다면 removeEventListener 통해서 제거 가능
+    document.getElementById("mybtn").addEventListener("click", displayDate);
+
+    // document.getElementById("mybtn").addEventListener(type, function (e) {
+    // }, capture);
+    //capture의 default는 false
+
+    //capture 두가지 옵션
+    //false (default) 핸들러는 버블링 동작
+    //true 핸들러(함수)는 캡쳐링에서 동작
+    function displayDate() {
+        document.getElementById("demo").innerHTML = "hello world";
+    }
+</script>
+</html>

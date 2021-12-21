@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*
+        Finding HTML Elements
+        Method                              	Description
+        document.getElementById(id)	            Find an element by element id
+        document.getElementsByTagName(name)	    Find elements by tag name
+        document.getElementsByClassName(name)	Find elements by class name
+
+        Changing HTML Elements
+        Property	                            Description
+        element.innerHTML =  new html content	Change the inner HTML of an element
+        element.attribute = new value	        Change the attribute value of an HTML element
+        element.style.property = new style	    Change the style of an HTML element
+
+        Method	                                Description
+        element.setAttribute(attribute, value)	Change the attribute value of an HTML element
+
+        Adding and Deleting Elements
+        Method	                                Description
+        document.createElement(element) 	    Create an HTML element
+        document.removeChild(element)	        Remove an HTML element
+        document.appendChild(element)	        Add an HTML element
+        document.replaceChild(new, old)	        Replace an HTML element
+        document.write(text)	                Write into the HTML output stream
+
+        Adding Events Handlers
+        Method	                                                Description
+        document.getElementById(id).onclick = function(){code}	Adding event handler code to an onclick event
+
+         */
+
+    </script>
+</head>
+<body>
+
+<div id="demo">첫번째</div>
+<div id="demo">두번째(계층 트리 형태에서 같은 id=demo 의미가 없다.</div>
+
+</body>
+<script type="text/javascript">
+    let ele_div = document.getElementById("demo");
+    console.log(ele_div);
+    ele_div.innerHTML = "<b>Hello World</b>";
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            //<input type ... onclick=""> <- 연습용(좋은방법이 아님)
+            let btnobj = document.getElementById("btngetdata");
+            btnobj.onclick = function () { //객체.이벤트=익명함수(){} //동적 방식으로 처리
+                let txtmsg = document.getElementById("txtmessage");
+                console.log(txtmsg.value);
+            }
+            document.getElementById("btncreate").onclick = function () {
+                let txtname = document.createElement("input");
+                txtname.setAttribute("type", "text");
+                //<input type="text">
+                txtname.setAttribute("id", "txtbox");
+                txtname.setAttribute("value", "홍길동");
+
+                document.body.appendChild(txtname);
+            };
+        }
+
+    </script>
+</head>
+<body>
+<input type="text" id="txtmessage" value="hello">
+<input type="button" value="getinfo" id="btngetdata">
+<hr>
+<input type="button" value="동적생성" id="btncreate">
+
+
+</body>
+</html>
