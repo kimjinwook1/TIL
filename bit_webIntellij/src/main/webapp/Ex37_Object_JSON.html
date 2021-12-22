@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        let Myobj = {name: "john", age: 30, city: "seoul"}
+        console.log(Myobj);
+
+        //[객체 데이터] -> [문자열 데이터] 로 변경 가능
+        //login.jsp?name=john&age=30&city=seoul
+        let stringStr = JSON.stringify(Myobj);
+        console.log(stringStr);
+        console.log(typeof (stringStr));
+
+        //[문자열 데이터(형식 json)] -> [객체 데이터로 변경가능]
+        let Myobj2 = '{"name": "john", "age":"30", "city":"seoul"}'; //문자열
+        console.log(typeof (Myobj2));
+        let Myjson = JSON.parse(Myobj2);
+        console.log(Myjson);
+        console.log(typeof (Myjson));
+
+        console.log(Myjson.name); //객체.속성명
+        console.log(Myjson["name"]); //객체["속성명(key값)"]
+
+
+        /*
+        확장자
+        index.htm, index.html
+        css: common.css
+        javascript: common.js
+        json: common.json -> MIME -> application/json
+        xml. common.xml
+         */
+
+        let myCars;
+        myCars = {
+            name: "john", age: 30,
+            cars: [
+                {name: "Ford", model: ["Fiesta", "Focus", "Mustang"]},
+                {name: "BMW", model: ["320", "x3", "x5"]},
+                {name: "Fiat", model: ["500", "Panda"]},
+            ]
+        }
+
+        //차량 이름, 모델명만 출력
+        //ex) Ford - Fiesta, Focus, Mustang
+        //    BMW - 320 ...
+        for (let index in myCars.cars) {
+            let cars = myCars.cars[index];
+            document.write(cars.name + "-")
+            for (let index in cars.model) {
+                document.writeln(cars.model[index])
+            }
+            document.writeln("<br>")
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

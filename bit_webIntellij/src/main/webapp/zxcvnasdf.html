@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>Team 1. About us and HTML media</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="" name="keywords"/>
+    <meta content="" name="description"/>
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+    <link href="img/favicon.ico" rel="icon"/>
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
             href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
             rel="stylesheet"
@@ -29,14 +29,14 @@
     />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet"/>
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"/>
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -169,13 +169,13 @@
                         <div class="overflow-hidden">
                             <div class="text-center p-4">
                                 <h3 class="mb-0">New-age</h3>
-                                <br />
+                                <br/>
                                 <h5 class="mb-0">Spring-Hisaishi Joe</h5>
                             </div>
-                            <img class="img-fluid" src="img/piano.png" alt="" />
+                            <img class="img-fluid" src="img/piano.png" alt=""/>
                         </div>
                         <div class="text-center p-4">
-                            <audio src="mp3/Spring.mp3" controls id="springAudio">
+                            <audio src="mp3/Spring.mp3" controls class="audio">
                                 오디오 지원되지 않는 브라우저
                             </audio>
                         </div>
@@ -192,13 +192,13 @@
                         <div class="overflow-hidden">
                             <div class="text-center p-4">
                                 <h3 class="mb-0">Post-grunge, Nu metal</h3>
-                                <br />
+                                <br/>
                                 <h5 class="mb-0">She hates me-Puddle of mudd</h5>
                             </div>
-                            <img class="img-fluid" src="img/guitar.png" alt="" />
+                            <img class="img-fluid" src="img/guitar.png" alt=""/>
                         </div>
                         <div class="text-center p-4">
-                            <audio src="mp3/she.mp3" controls id="sheAudio">
+                            <audio src="mp3/she.mp3" controls class="audio">
                                 오디오 지원되지 않는 브라우저
                             </audio>
                         </div>
@@ -215,13 +215,13 @@
                         <div class="overflow-hidden">
                             <div class="text-center p-4">
                                 <h3 class="mb-0">Dance</h3>
-                                <br />
+                                <br/>
                                 <h5 class="mb-0">Love Cherry Motion-이달의 소녀(최리)</h5>
                             </div>
-                            <img class="img-fluid" src="img/music.png" alt="" />
+                            <img class="img-fluid" src="img/music.png" alt=""/>
                         </div>
                         <div class="text-center p-4">
-                            <audio src="mp3/lovecherrymotion.mp3" controls class="cherry">
+                            <audio src="mp3/lovecherrymotion.mp3" controls class="audio">
                                 오디오 지원되지 않는 브라우저
                             </audio>
                         </div>
@@ -231,7 +231,7 @@
         </div>
     </div>
 </div>
-<!-- Audeo End -->
+<!-- Audio End -->
 
 <!-- Footer Start -->
 <div
@@ -344,7 +344,7 @@
                     Designed By
                     <a class="border-bottom" href="https://htmlcodex.com"
                     >HTML Codex</a
-                    ><br /><br />
+                    ><br/><br/>
                     Distributed By
                     <a class="border-bottom" href="https://themewagon.com"
                     >ThemeWagon</a
@@ -381,70 +381,68 @@
 <script src="js/main.js"></script>
 </body>
 <script type="text/javascript">
-    let audio = document.getElementById("springAudio");
-    let audio2 = document.getElementById("sheAudio");
-    let audio3 = document.getElementById("cherry");
+    // let audio = document.getElementById("springAudio");
+    // let audio2 = document.getElementById("sheAudio");
+    // let audio3 = document.getElementById("cherry");
 
-    function change() {
-        audio.volume = window.innerWidth * 0.00065; //볼륨 : 0~1
-        audio.playbackRate = window.innerHeight * 0.0014;
-    }
+    // function change() {
+    //   audio.volume = window.innerWidth * 0.00065; //볼륨 : 0~1
+    //   audio.playbackRate = window.innerHeight * 0.0014;
+    // }
 
-    function change2() {
-        audio2.volume = window.innerWidth * 0.00065; //볼륨 : 0~1
-        audio2.playbackRate = window.innerHeight * 0.0014;
-    }
+    // function change2() {
+    //   audio2.volume = window.innerWidth * 0.00065; //볼륨 : 0~1
+    //   audio2.playbackRate = window.innerHeight * 0.0014;
+    // }
 
-    function change3() {
-        audio3.volume = window.innerWidth * 0.00065; //볼륨 : 0~1
-        audio3.playbackRate = window.innerHeight * 0.0014; //재생속도 : 0.25~4
-    }
+    // function change3() {
+    //   audio3.volume = window.innerWidth * 0.00065; //볼륨 : 0~1
+    //   audio3.playbackRate = window.innerHeight * 0.0014; //재생속도 : 0.25~4
+    // }
 
-    window.addEventListener("resize", change);
-    window.addEventListener("resize", change2);
-    window.addEventListener("resize", change3);
+    // window.addEventListener("resize", change);
+    // window.addEventListener("resize", change2);
+    // window.addEventListener("resize", change3);
 
-    function stop() {
-        audio2.pause();
-        audio3.pause();
-    }
+    // function stop() {
+    //   audio2.pause();
+    //   audio3.pause();
+    // }
 
-    function stop2() {
-        audio.pause();
-        audio3.pause();
-    }
+    // function stop2() {
+    //   audio.pause();
+    //   audio3.pause();
+    // }
 
-    function stop3() {
-        audio.pause();
-        audio2.pause();
-    }
+    // function stop3() {
+    //   audio.pause();
+    //   audio2.pause();
+    // }
 
-    audio.addEventListener("play", stop);
-    audio2.addEventListener("play", stop2);
-    audio3.addEventListener("play", stop3);
-    audio.addEventListener("pause", onlyOnePlay);
+    // audio.addEventListener("play", stop);
+    // audio2.addEventListener("play", stop2);
+    // audio3.addEventListener("play", stop3);
+    // audio.addEventListener("pause", onlyOnePlay);
 
-    const myAudio = document.querySelector("#myaudio");
-    myAudio.volume = 0.5;
-    function changeVolume(){
-        console.log(1);
-    }
-    window.addEventListener("resize",changeVolume);
+    let myAudios = document.querySelectorAll(".audio");
 
-    function onlyOnePlay(e) {
-        //플레이 버튼 눌렸을 때마다
-        if (audio === e.target) {
-            audio2.pause();
-            audio3.pause();
-        }
-        if (audio2 === e.target) {
-            audio.pause();
-            audio3.pause();
-        }
-        if (audio3 === e.target) {
-            audio.pause();
-            audio2.pause();
+    function changeVolume() {
+        for (let index in myAudios) {
+            myAudio[index].volume = window.innerWidth * 0.00065; //볼륨 : 0~1
+            myAudio[index].playbackRate = window.innerHeight * 0.0014;
         }
     }
+
+    window.addEventListener("resize", changeVolume);
+
+
+    myAudios.addEventListener("pause", function (e) {
+        for (let index in myAudios) {
+            if (!(myAudios[index] === e.target)) {
+                myaudios[index].pause();
+            }
+        }
+    });
+
 </script>
 </html>
