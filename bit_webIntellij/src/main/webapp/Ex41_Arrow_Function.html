@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<p id="demo">demo</p>
+<p id="demo2">demo2</p>
+</body>
+<script type="text/javascript">
+    //일반함수
+    //function foo(){}
+
+    //익명함수
+    //let foo = function(){}
+    //foo();
+
+    //ES6 -> 함수의 줄임표현 제공
+    //매개변수가 없는 경우(parameter)
+    let bar = () => console.log("bar");
+    bar();
+
+    //매개변수가 1개
+    //let foo2 = function(x){return x;}
+    let foo2 = x => x; //() <- 파라미터 괄호 생략 가능, return 생략 필수
+
+    let hello;
+    // hello = (val) => "hello" + val;
+    hello = val => "hello" + val;
+    console.log(hello("aaaa"));
+
+    //매개변수가 2개 이상인 경우 -> 파라미터의 괄호 생략불가
+    // let foo3 = function(a,b){return a+b;}
+    let foo3 = (a, b) => a + b;
+    let v2 = foo3(10, 20);
+    console.log(v2);
+
+    // let foo4 = function(a,b){let c=100; return a+b+c;}
+    let foo4 = (a, b) => {
+        let c = 100;
+        return a + b + c;
+    }
+    let v3 = foo4(200, 300);
+    console.log(v3);
+
+    //객체
+    // let foo5 = function (){return {a:1, b:2, c:3};}
+    let foo5 = () => ({a: 1, b: 2, c: 3}); //JSON 표현
+    let v4 = foo5();
+    console.log(v4);
+
+    //즉시 실행 함수
+    (
+        () => console.log("즉시 실행함수")
+    )();
+
+    //Array
+    /*
+    1. for (let i=0; i<10; i++){}
+    2. for(let index in Array){Array[index]}
+    3. {a:1, b:2, c:2}
+        for(let key in Object){Object[key]}
+      + 추가적으로
+    4. Array.isArray()
+    5. Array.forEach(function(){})
+    6. Array.map()
+     */
+
+    function myFunc() {
+        let fruits = ["A", "B", "C", "D"];
+        let x = document.getElementById("demo2");
+        x.innerHTML = Array.isArray(fruits); //true, false
+    }
+    myFunc();
+
+    let txt = "";
+    let numbers = [45, 4, 9, 16, 25];
+    // numbers.forEach(function (value, index, array)){ //함수가 배열의 개수만큼 호출
+    // }
+
+    // function myFunc2(value, index, array){
+    // txt = "(" + value + ")" + "[" + index + "]" + "[" + array + "]";
+    // console.log(txt)
+    // }
+    // numbers.forEach(myFunc2);
+    numbers.forEach(function (value, index, array) {
+        txt = "(" + value + ")" + "[" + index + "]" + "[" + array + "]";
+        console.log(txt);
+    });
+
+    //Array.map(function(){}) -> 가지고 있는 배열 복제(return type은 Array)
+    //let numbers = [45,4,9,16,25];
+    let numberMap = numbers.map(myFunc3);
+
+    function myFunc3(value) {
+        return value * 2;
+    }
+
+    console.log(numberMap)
+
+    //////////////
+    let evens = [2, 4, 6, 8];
+    let odds = evens.map(val => val + 1); //function(val){return val+1}
+    console.log(odds);
+
+    let nums = evens.map((value, index) => value + index);
+    console.log(nums);
+
+    let arr = [];
+    evens.forEach(value => {
+        if (value % 2 === 0) {
+            arr.push(value);
+        }
+    });
+    console.log(arr);
+
+</script>
+</html>
