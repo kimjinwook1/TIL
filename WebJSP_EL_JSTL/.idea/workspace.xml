@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Gradle : com.example : WebJSP_EL_JSTL-1.0-SNAPSHOT.war" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c5cb9aba-3af8-496d-bec3-df71f868087e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kr/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kr/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Ex01_EL_Basic.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Ex01_EL_Basic.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Ex02_EL_Basic.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Ex02_EL_Basic.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Ex03_EL_JSTL.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Ex03_EL_JSTL.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Ex06_EL_JSTL.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Ex06_EL_JSTL.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Ex07_EL_JSTL_QUIZ.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Ex07_EL_JSTL_QUIZ.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Ex08.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Ex08.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bit/w3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bit/w3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bit/w3/out/production/classes/org/zerock/w3/springmvc/v2/controller/SpringMemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bit/w3/out/production/classes/org/zerock/w3/springmvc/v2/controller/SpringMemberController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bit/w3/src/main/java/org/zerock/w3/springmvc/v1/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bit/w3/src/main/java/org/zerock/w3/springmvc/v1/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bit/w3/src/main/java/org/zerock/w3/springmvc/v1/controller/TodoReadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bit/w3/src/main/java/org/zerock/w3/springmvc/v1/controller/TodoReadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bit/w3/src/main/java/org/zerock/w3/springmvc/v2/controller/SpringMemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bit/w3/src/main/java/org/zerock/w3/springmvc/v2/controller/SpringMemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bit/w3/src/main/java/org/zerock/w3/springmvc/v2/controller/SpringTodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../bit/w3/src/main/java/org/zerock/w3/springmvc/v2/controller/SpringTodoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bit/w3/src/main/webapp/asdf.html" beforeDir="false" afterPath="$PROJECT_DIR$/../bit/w3/src/main/webapp/asdf.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bit_webIntellij/src/main/webapp/Ex17_DOM.html" beforeDir="false" afterPath="$PROJECT_DIR$/../bit_webIntellij/src/main/webapp/Ex17_DOM.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bit_webIntellij/src/main/webapp/Ex18_DOM.html" beforeDir="false" afterPath="$PROJECT_DIR$/../bit_webIntellij/src/main/webapp/Ex18_DOM.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bit_webIntellij/src/main/webapp/Ex21_DOM_Event.html" beforeDir="false" afterPath="$PROJECT_DIR$/../bit_webIntellij/src/main/webapp/Ex21_DOM_Event.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bit_webIntellij/src/main/webapp/Ex23_DOM_Script.html" beforeDir="false" afterPath="$PROJECT_DIR$/../bit_webIntellij/src/main/webapp/Ex23_DOM_Script.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="22d9V0CkDdyFOGnbKDwLlwgWIPH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kr.Main" />
+      <module name="WebJSP_EL_JSTL.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.554" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.554" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment>
+        <artifact name="Gradle : com.example : WebJSP_EL_JSTL-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Gradle___com_example___WebJSP_EL_JSTL_1_0_SNAPSHOT_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="98545fa1-cb2f-4f2d-8692-02fe283462c2" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="49766" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : com.example : WebJSP_EL_JSTL-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c5cb9aba-3af8-496d-bec3-df71f868087e" name="Changes" comment="" />
+      <created>1640156618645</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640156618645</updated>
+      <workItem from="1640156620122" duration="9074000" />
+      <workItem from="1640251338127" duration="16000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
