@@ -21,7 +21,7 @@ public class ServletExController {
         response.sendError(404, "404오류!");
     }
 
-@GetMapping("/error-400")
+    @GetMapping("/error-400")
     public void error400(HttpServletResponse response) throws IOException {
         response.sendError(400, "400오류!");
     }
