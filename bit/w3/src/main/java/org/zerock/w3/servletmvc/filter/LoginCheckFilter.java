@@ -55,7 +55,7 @@ public class LoginCheckFilter implements Filter {
             if (checkCookie) {
                 resp.sendRedirect("/todo/list");
             } else {
-                resp.sendRedirect("/login");
+                resp.sendRedirect("/member/login");
             }
             return;
         }

@@ -8,7 +8,7 @@
         <h5 class="card-title">Card title</h5>
             <div class="mb-3">
                 <label class="form-label">ID</label>
-                <input type="text" name="userid" class="form-control">
+                <input type="text" name="userId" class="form-control">
             </div>
             <div class="mb-3">
                 <label class="form-label">PASSWORD</label>

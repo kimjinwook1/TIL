@@ -7,7 +7,7 @@
         <form action="/member/modify" method="post">
             <div class="mb-3">
                 <label class="form-label">Id</label>
-                <input type="text" class="form-control" value="${memberDTO.userid}" readonly>
+                <input type="text" class="form-control" value="${memberDTO.userId}" readonly>
             </div>
             <div class="mb-3">
                 <label class="form-label">Password</label>

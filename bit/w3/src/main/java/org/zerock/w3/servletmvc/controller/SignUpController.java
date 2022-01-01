@@ -45,7 +45,7 @@ public class SignUpController extends HttpServlet {
 
             if (userpw.equals(checkpw)) {
                 memberDTO = MemberDTO.builder()
-                        .userid(userid)
+                        .userId(userid)
                         .userpw(userpw)
                         .username(username)
                         .build();

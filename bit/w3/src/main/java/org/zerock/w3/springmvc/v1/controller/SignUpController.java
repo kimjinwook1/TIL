@@ -1,10 +1,8 @@
 package org.zerock.w3.springmvc.v1.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.zerock.w3.servletmvc.dto.MemberDTO;
 import org.zerock.w3.servletmvc.service.SignUpService;
@@ -38,7 +36,7 @@ public class SignUpController {
 
             if (userpw.equals(checkpw)) {
                 memberDTO = MemberDTO.builder()
-                        .userid(userid)
+                        .userId(userid)
                         .userpw(userpw)
                         .username(username)
                         .build();

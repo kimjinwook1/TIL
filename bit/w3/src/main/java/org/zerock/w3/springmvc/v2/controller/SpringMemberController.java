@@ -29,15 +29,15 @@ public class SpringMemberController {
 
     @PostMapping("/login")
     public String postLogin(
-            @RequestParam("userid") String userid,
-            @RequestParam("userpw") String userPw,
+            @ModelAttribute MemberDTO memberDTO,
             @RequestParam(value = "rememberme", required = false) boolean rememberme,
             @CookieValue(value = "remember-me", required = false) Cookie rememberCookie,
             HttpServletResponse response,
             Model model) {
 
         try {
-            MemberDTO memberDTO = MemberService.INSTANCE.get(userid, userPw);
+            memberDTO = MemberService.INSTANCE.get(memberDTO.getUserId(), memberDTO.getUserpw());
+            log.info("memberDTO={}", memberDTO);
             if (memberDTO == null) {
                 return "redirect:/member/login";
             }
@@ -53,7 +53,7 @@ public class SpringMemberController {
                 rememberCookie.setMaxAge(60 * 60 * 24 * 7);
                 response.addCookie(rememberCookie);
 
-                MemberService.INSTANCE.setCookieData(userid, uuid, new Date(endTime));
+                MemberService.INSTANCE.setCookieData(memberDTO.getUserId(), uuid, new Date(endTime));
 
             }
 
@@ -92,10 +92,10 @@ public class SpringMemberController {
     }
 
     @GetMapping("/modify")
-    public String getModify(@RequestParam("uno") int uno, Model model) {
+    public String getModify(@ModelAttribute MemberDTO memberDTO, Model model) {
 
         try {
-            MemberDTO memberDTO = MemberService.INSTANCE.getByUno(uno);
+            memberDTO = MemberService.INSTANCE.getByUno(memberDTO.getUno());
             model.addAttribute("memberDTO", memberDTO);
 
         } catch (Exception e) {
@@ -107,20 +107,16 @@ public class SpringMemberController {
 
     @PostMapping("/modify")
     public String postModify(
-            @RequestParam("userpw") String userpw,
-            @RequestParam("username") String username,
-            @RequestParam("uno") int uno,
-            Model model
-    ) throws Exception {
+            @ModelAttribute MemberDTO memberDTO, Model model) {
 
-        MemberDTO memberDTO = MemberDTO.builder()
-                .userpw(userpw)
-                .username(username)
-                .uno(uno)
+        memberDTO = MemberDTO.builder()
+                .userpw(memberDTO.getUserpw())
+                .username(memberDTO.getUsername())
+                .uno(memberDTO.getUno())
                 .build();
 
         try {
-            TodoService.INSTANCE.updateWriter(username, uno);
+            TodoService.INSTANCE.updateWriter(memberDTO.getUsername(), memberDTO.getUno());
             MemberService.INSTANCE.update(memberDTO);
             model.addAttribute("userInfo", memberDTO);
         } catch (Exception e) {
@@ -130,10 +126,10 @@ public class SpringMemberController {
     }
 
     @GetMapping("/remove")
-    public String getRemove(@RequestParam("uno") int uno, Model model) {
+    public String getRemove(@ModelAttribute MemberDTO memberDTO, Model model) {
 
         try {
-            MemberDTO memberDTO = MemberService.INSTANCE.getByUno(uno);
+            memberDTO = MemberService.INSTANCE.getByUno(memberDTO.getUno());
             model.addAttribute("memberDTO", memberDTO);
 
         } catch (Exception e) {
@@ -173,25 +169,21 @@ public class SpringMemberController {
     }
 
     @PostMapping("/signup")
-    public String postSignup(@RequestParam("userid") String userid,
-                         @RequestParam("userpw") String userpw,
-                         @RequestParam("checkpw") String checkpw,
-                         @RequestParam("username") String username) {
-
-        MemberDTO memberDTO = null;
+    public String postSignup(@ModelAttribute MemberDTO memberDTO,
+                             @RequestParam("checkpw") String checkpw) {
 
         try {
-            boolean idCheck = SignUpService.INSTANCE.checkDuplicate(userid);
+            boolean idCheck = SignUpService.INSTANCE.checkDuplicate(memberDTO.getUserId());
             log.info("idCheck..........." + idCheck);
             if (idCheck) {
                 return "redirect:/member/signup";
             }
 
-            if (userpw.equals(checkpw)) {
+            if (memberDTO.getUserpw().equals(checkpw)) {
                 memberDTO = MemberDTO.builder()
-                        .userid(userid)
-                        .userpw(userpw)
-                        .username(username)
+                        .userId(memberDTO.getUserId())
+                        .userpw(memberDTO.getUserpw())
+                        .username(memberDTO.getUsername())
                         .build();
 
                 SignUpService.INSTANCE.register(memberDTO);

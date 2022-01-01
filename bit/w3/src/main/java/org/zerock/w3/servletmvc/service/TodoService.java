@@ -28,7 +28,6 @@ public enum TodoService {
         return todoDAO.getAll().stream()
                 .map(vo -> modelMapper.map(vo, TodoDTO.class))
                 .collect(Collectors.toList());
-
     }
 
     public TodoVO saveOne(TodoDTO todoDTO) throws Exception {

@@ -30,7 +30,7 @@ public enum MemberDAO {
                 .userid(resultSet.getString(idx++))
                 .userpw(resultSet.getString(idx++))
                 .username(resultSet.getString(idx++))
-                .uno(resultSet.getInt(idx++))
+                .uno(resultSet.getInt(idx))
                 .build();
 
         return memberVO;
@@ -97,7 +97,7 @@ public enum MemberDAO {
         @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
         @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
-        preparedStatement.setString(1, memberDTO.getUserid());
+        preparedStatement.setString(1, memberDTO.getUserId());
         preparedStatement.setString(2, memberDTO.getUserpw());
         preparedStatement.setString(3, memberDTO.getUserpw());
 
