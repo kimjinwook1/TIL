@@ -49,7 +49,7 @@ public class TodoRegisterController2 extends HttpServlet {
         TodoDTO todoDTO = TodoDTO.builder()
                 .title(title)
                 .writer(writer)
-                .dueDate(dueDate)
+//                .dueDate(dueDate)
                 .writerid(writerId)
                 .build();
 

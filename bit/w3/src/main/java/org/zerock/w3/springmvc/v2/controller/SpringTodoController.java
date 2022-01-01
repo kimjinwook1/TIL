@@ -31,8 +31,7 @@ public class SpringTodoController {
     }
 
     @GetMapping("/modify")
-    public String getModify(@RequestParam("tno") Long tno,
-                        Model model) {
+    public String getModify(@RequestParam("tno") Long tno, Model model) {
 
         log.info("Read.......................");
 
@@ -47,16 +46,13 @@ public class SpringTodoController {
     }
 
     @PostMapping("/modify")
-    public String postModify(@RequestParam(value = "tno", defaultValue = "-1L") Long tnoData,
-                         @RequestParam("title") String titleData,
-                         @RequestParam("dueDate") String dueDateData,
-                         @RequestParam(value = "checkbox", required = false) boolean finishedData) {
+    public String postModify(@ModelAttribute TodoDTO todoDTO) {
 
-        TodoDTO todoDTO = TodoDTO.builder()
-                .tno(tnoData)
-                .title(titleData)
-                .dueDate(StringUtil.parseLocalDate(dueDateData))
-                .finished(finishedData)
+        todoDTO = TodoDTO.builder()
+                .tno(todoDTO.getTno())
+                .title(todoDTO.getTitle())
+                .dueDate(todoDTO.getDueDate())
+                .finished(todoDTO.isFinished())
                 .build();
 
         try {
@@ -70,7 +66,7 @@ public class SpringTodoController {
 
     @GetMapping("/read/{tno}")
     public String read(@PathVariable(name = "tno") String tnoStr,
-                        Model model) {
+                       Model model) {
 
         log.info("Read.......................");
 
@@ -96,21 +92,15 @@ public class SpringTodoController {
     }
 
     @PostMapping("/register")
-    public String postRegister(@RequestParam("title") String title,
-                         @RequestParam("dueDate") String dueDate,
-                         @RequestParam("writer") String writer,
-                         @RequestParam("writerid") String writerId) {
+    public String postRegister(@ModelAttribute TodoDTO todoDTO) {
 
         log.info("--register doPost---------------------");
-
-        log.info(title);
-        log.info(dueDate);
-
-        TodoDTO todoDTO = TodoDTO.builder()
-                .title(title)
-                .writer(writer)
-                .dueDate(StringUtil.parseLocalDate(dueDate))
-                .writerid(Integer.parseInt(writerId))
+        log.info("TodoDTO={}", todoDTO);
+        todoDTO = TodoDTO.builder()
+                .title(todoDTO.getTitle())
+                .writer(todoDTO.getWriter())
+                .dueDate(todoDTO.getDueDate())
+                .writerid(todoDTO.getWriterid())
                 .build();
 
         try {
@@ -123,10 +113,10 @@ public class SpringTodoController {
     }
 
     @PostMapping("/remove")
-    public String remove(@RequestParam(value = "tno", defaultValue = "-1L") Long tno) {
+    public String remove(@ModelAttribute TodoDTO todoDTO) {
 
         try {
-            TodoService.INSTANCE.remove(tno);
+            TodoService.INSTANCE.remove(todoDTO.getTno());
         } catch (Exception e) {
             e.printStackTrace();
         }
