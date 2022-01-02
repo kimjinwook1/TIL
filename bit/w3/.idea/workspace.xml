@@ -10,17 +10,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d5db627-652a-421f-bac7-439d642859a3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_Release.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_Release1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../study/StringClass/StringClass.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../study/untitled/untitled.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../study/untitled1/untitled1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Spring/study/mvc1/item-service/src/main/java/hello/itemservice/web/basic/BasicItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/study/mvc1/item-service/src/main/java/hello/itemservice/web/basic/BasicItemController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Spring/study/mvc1/springmvc/src/main/java/hello/springmvc/basic/response/ResponseBodyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/study/mvc1/springmvc/src/main/java/hello/springmvc/basic/response/ResponseBodyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Spring/study/mvc2/exception/src/main/java/hello/exception/resolver/MyHandlerExceptionResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/study/mvc2/exception/src/main/java/hello/exception/resolver/MyHandlerExceptionResolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Spring/study/mvc2/exception/src/main/java/hello/exception/resolver/UserHandlerExceptionResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/study/mvc2/exception/src/main/java/hello/exception/resolver/UserHandlerExceptionResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/springmvc/v2/controller/SpringMemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/springmvc/v2/controller/SpringMemberController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/servletmvc/dao/TodoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/servletmvc/dao/TodoDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/servletmvc/service/TodoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/servletmvc/service/TodoService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/springmvc/v2/controller/SpringTodoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/springmvc/v2/controller/SpringTodoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc/v2/controller/SpringMemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc/v2/controller/SpringMemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/dao/TodoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/dao/TodoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/service/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/service/TodoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc/v2/controller/SpringTodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc/v2/controller/SpringTodoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/member/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/member/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/read.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/todo/read.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -350,7 +360,7 @@
       <workItem from="1640583360205" duration="10677000" />
       <workItem from="1640660513557" duration="377000" />
       <workItem from="1640679509899" duration="806000" />
-      <workItem from="1641023393282" duration="7478000" />
+      <workItem from="1641023393282" duration="9370000" />
     </task>
     <servers />
   </component>

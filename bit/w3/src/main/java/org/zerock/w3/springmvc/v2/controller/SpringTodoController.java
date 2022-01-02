@@ -4,6 +4,7 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.zerock.w3.servletmvc.dto.TodoDTO;
 import org.zerock.w3.servletmvc.service.TodoService;
 import org.zerock.w3.util.StringUtil;
@@ -92,7 +93,7 @@ public class SpringTodoController {
     }
 
     @PostMapping("/register")
-    public String postRegister(@ModelAttribute TodoDTO todoDTO) {
+    public String postRegister(@ModelAttribute TodoDTO todoDTO, RedirectAttributes redirectAttributes) {
 
         log.info("--register doPost---------------------");
         log.info("TodoDTO={}", todoDTO);
@@ -105,11 +106,14 @@ public class SpringTodoController {
 
         try {
             TodoService.INSTANCE.register(todoDTO);
+            redirectAttributes.addAttribute("tno", TodoService.INSTANCE.readRecentTno());
+            redirectAttributes.addAttribute("status", true);
+            log.info("-------------------------");
+            log.info("TodoDTO={}", todoDTO);
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        return "redirect:/todo/list";
+        return "redirect:/todo/read/{tno}";
     }
 
     @PostMapping("/remove")

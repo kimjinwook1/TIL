@@ -1,7 +1,11 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="../includes/todoheader.jsp" %>
 
 <h1 class="mt-4">Register Sidebar</h1>
+<c:if test="${param.status}">
+    <h2>등록 완료</h2>
+</c:if>
 <div class="card" style="width: 70vw;">
     <div class="card-body">
         <div class="mb-3">
@@ -31,7 +35,7 @@
                     <button type="submit" class="btn btn-primary float-end">수정/삭제</button>
                 </div>
             </form>
-<%--            <a href="/todo/modify/${dto.tno}" class="btn btn-primary float-end">수정/삭제</a>--%>
+            <%--            <a href="/todo/modify/${dto.tno}" class="btn btn-primary float-end">수정/삭제</a>--%>
             <a href="/todo/list" class="btn btn-primary float-lg-start">목록</a>
         </div>
 

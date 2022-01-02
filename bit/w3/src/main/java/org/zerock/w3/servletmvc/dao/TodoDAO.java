@@ -90,15 +90,29 @@ public enum TodoDAO {
         log.info("Count: " + count);
     }
 
+    public long selectOneByRecentValue() throws Exception {
+        TodoVO todoVO = null;
+
+        String query = "select * from `tbl_todo` order by `tno` desc limit 1;";
+        @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
+        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(query);
+        @Cleanup ResultSet resultSet = preparedStatement.executeQuery();
+
+        resultSet.next();
+        long tno = resultSet.getLong(1);
+        return tno;
+
+    }
+
     public TodoVO selectOne(Long tno) throws Exception {
         TodoVO todoVO = null;
 
-        String select = " select " +
+        String query = " select " +
                 "`tno`,`title`,`writer`,`dueDate`,`finished`,`regDate`, `updateDate`, `writerid` " +
                 "from tbl_todo where tno = ?";
 
         @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
-        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(select);
+        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(query);
         preparedStatement.setLong(1, tno);
         @Cleanup ResultSet resultSet = preparedStatement.executeQuery();
 

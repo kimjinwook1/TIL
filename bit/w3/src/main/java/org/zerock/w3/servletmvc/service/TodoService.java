@@ -51,6 +51,10 @@ public enum TodoService {
 
         return todoDTO;
     }
+    public long readRecentTno() throws Exception {
+
+        return todoDAO.selectOneByRecentValue();
+    }
 
     public void remove(Long tno) throws Exception {
 
