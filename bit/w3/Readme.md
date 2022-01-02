@@ -16,4 +16,10 @@
       -> tbl_member 의 uno값을 tbl_todo의 writerid에 넘겨줘야함
   - [x] Todo/list에 로그인한 유저의 목록만 보이도록 설정
   - [x] todo 에서 작성자를 tbl_member의 userid 또는 username으로 알려준다.
--[ ] 페이징 처리 
+- [ ] 페이징 처리 
+-----------------------------------------
+##스프링 관련
+- [x] @RequestParam 중복부분 -> @ModelAttribute 로 변경
+- [x] 쿠키 -> 세션 방식으로 처리 -> 코드 길이 줄어듦 
+- [ ]  
+

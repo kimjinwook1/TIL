@@ -10,6 +10,7 @@ import org.zerock.w3.servletmvc.service.SignUpService;
 import org.zerock.w3.servletmvc.service.TodoService;
 
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.sql.Date;
@@ -33,6 +34,7 @@ public class SpringMemberController {
             @RequestParam(value = "rememberme", required = false) boolean rememberme,
             @CookieValue(value = "remember-me", required = false) Cookie rememberCookie,
             HttpServletResponse response,
+            HttpServletRequest request,
             Model model) {
 
         try {
@@ -43,17 +45,16 @@ public class SpringMemberController {
             }
             model.addAttribute("userInfo", memberDTO);
             if (rememberme) {
-
-                String uuid = UUID.randomUUID().toString();
-
+//                String uuid = UUID.randomUUID().toString();
                 //1week
-                long endTime = System.currentTimeMillis() + (1000 * 60 * 60 * 24 * 7);
-
-                rememberCookie.setPath("/"); //setPath("/") 모든 경로에 쿠키를 저장한다.
-                rememberCookie.setMaxAge(60 * 60 * 24 * 7);
-                response.addCookie(rememberCookie);
-
-                MemberService.INSTANCE.setCookieData(memberDTO.getUserId(), uuid, new Date(endTime));
+//                long endTime = System.currentTimeMillis() + (1000 * 60 * 60 * 24 * 7);
+//                rememberCookie.setPath("/"); //setPath("/") 모든 경로에 쿠키를 저장한다.
+//                rememberCookie.setMaxAge(60 * 60 * 24 * 7);
+//                response.addCookie(rememberCookie);
+//                MemberService.INSTANCE.setCookieData(memberDTO.getUserId(), uuid, new Date(endTime));
+                HttpSession session = request.getSession();
+                session.setMaxInactiveInterval(60);
+                session.setAttribute("userInfo", memberDTO);
 
             }
 
