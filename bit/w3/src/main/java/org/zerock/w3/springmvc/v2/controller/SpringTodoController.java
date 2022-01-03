@@ -3,6 +3,9 @@ package org.zerock.w3.springmvc.v2.controller;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.zerock.w3.servletmvc.dto.TodoDTO;
@@ -10,6 +13,7 @@ import org.zerock.w3.servletmvc.service.TodoService;
 import org.zerock.w3.util.StringUtil;
 
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 @Log4j2
 @Controller
@@ -93,7 +97,20 @@ public class SpringTodoController {
     }
 
     @PostMapping("/register")
-    public String postRegister(@ModelAttribute TodoDTO todoDTO, RedirectAttributes redirectAttributes) {
+    public String postRegisterV1(@ModelAttribute TodoDTO todoDTO, BindingResult bindingResult, RedirectAttributes redirectAttributes) {
+
+        if (!StringUtils.hasText(todoDTO.getTitle())) {
+            bindingResult.addError(new FieldError("todoDTO","title","제목은 필수입니다."));
+        }
+
+        if (todoDTO.getDueDate() == null) {
+            bindingResult.addError(new FieldError("todoDTO","dueDate","날짜는 필수입니다."));
+        }
+
+        if (bindingResult.hasErrors()) {
+            log.info("errors={}", bindingResult);
+            return "todo/register";
+        }
 
         log.info("--register doPost---------------------");
         log.info("TodoDTO={}", todoDTO);
