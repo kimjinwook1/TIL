@@ -13,7 +13,6 @@ import org.zerock.w3.servletmvc.service.TodoService;
 import org.zerock.w3.util.StringUtil;
 
 import javax.servlet.http.HttpSession;
-import javax.validation.Valid;
 
 @Log4j2
 @Controller
@@ -35,47 +34,60 @@ public class SpringTodoController {
         return "/todo/list";
     }
 
-    @GetMapping("/modify")
-    public String getModify(@RequestParam("tno") Long tno, Model model) {
+    @GetMapping("/modify/{tno}")
+    public String getModify(@PathVariable Long tno, Model model) {
 
-        log.info("Read.......................");
+        log.info("Read.......................modify");
 
         try {
             TodoDTO todoDTO = TodoService.INSTANCE.read(tno);
             model.addAttribute("dto", todoDTO);
-
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return "/todo/todomodify";
+        return "/todo/todoModify";
     }
 
-    @PostMapping("/modify")
-    public String postModify(@ModelAttribute TodoDTO todoDTO) {
+    @PostMapping("/modify/{tno}")
+    public String postModify(@PathVariable Long tno, @ModelAttribute TodoDTO todoDTO, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model) throws Exception {
 
-        todoDTO = TodoDTO.builder()
-                .tno(todoDTO.getTno())
-                .title(todoDTO.getTitle())
-                .dueDate(todoDTO.getDueDate())
-                .finished(todoDTO.isFinished())
-                .build();
+        log.info("todoDTO={}", todoDTO);
+
+        if (!StringUtils.hasText(todoDTO.getTitle())) {
+            bindingResult.addError(new FieldError("todoDTO", "title", "제목은 필수입니다."));
+        }
+
+        if (todoDTO.getDueDate() == null) {
+            bindingResult.addError(new FieldError("todoDTO", "dueDate", "날짜는 필수입니다."));
+        }
+
+        if (bindingResult.hasErrors()) {
+            log.info("errors={}", bindingResult);
+            model.addAttribute("dto", todoDTO);
+            return "/todo/todoModify";
+        }
 
         try {
             TodoService.INSTANCE.update(todoDTO);
+            redirectAttributes.addAttribute("tno", tno);
+            redirectAttributes.addAttribute("modifyStatus", true);
+
+            log.info("-------------------------");
+            log.info("TodoDTO={}", todoDTO);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return "redirect:/todo/list";
+        return "redirect:/todo/read/{tno}";
 
     }
 
     @GetMapping("/read/{tno}")
-    public String read(@PathVariable(name = "tno") String tnoStr,
+    public String read(@PathVariable Long tno,
                        Model model) {
 
         log.info("Read.......................");
 
-        Long tno = StringUtil.parseLong(tnoStr, -1L);
+//        Long tno = StringUtil.parseLong(tnoStr, -1L);
 
         try {
             TodoDTO todoDTO = TodoService.INSTANCE.read(tno);
@@ -100,11 +112,11 @@ public class SpringTodoController {
     public String postRegisterV1(@ModelAttribute TodoDTO todoDTO, BindingResult bindingResult, RedirectAttributes redirectAttributes) {
 
         if (!StringUtils.hasText(todoDTO.getTitle())) {
-            bindingResult.addError(new FieldError("todoDTO","title","제목은 필수입니다."));
+            bindingResult.addError(new FieldError("todoDTO", "title", "제목은 필수입니다."));
         }
 
         if (todoDTO.getDueDate() == null) {
-            bindingResult.addError(new FieldError("todoDTO","dueDate","날짜는 필수입니다."));
+            bindingResult.addError(new FieldError("todoDTO", "dueDate", "날짜는 필수입니다."));
         }
 
         if (bindingResult.hasErrors()) {

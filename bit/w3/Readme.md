@@ -22,5 +22,5 @@
 - [x] @RequestParam 중복부분 -> @ModelAttribute 로 변경
 - [x] 쿠키 -> 세션 방식으로 처리 -> 코드 길이 줄어듦 
 - [x] todo 등록 시 redirect 경로 변경 및 jsp 수정
-- [ ] 예외 처리 -> todo 등록 시 아무것도 입력하지 않을 경우 
+- [x] 예외 처리 -> todo 저장/수정 시 아무것도 입력하지 않을 경우 
 
