@@ -78,125 +78,124 @@ public class SpringMemberController {
     }
 
     @GetMapping("/read")
-    public String read(@ModelAttribute("userInfo") MemberDTO memberDTOParameter,
-                       Model model) {
+    public String read(Model model, HttpSession session) throws Exception {
+        log.info("todoList........get");
 
-        int uno = memberDTOParameter.getUno();
-
-        try {
-            MemberDTO memberDTO = MemberService.INSTANCE.getByUno(uno);
-            model.addAttribute("memberDTO", memberDTO);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return "/member/memberread";
-
-    }
-
-    @GetMapping("/modify")
-    public String getModify(@ModelAttribute MemberDTO memberDTO, Model model) {
+        MemberDTO userInfo = (MemberDTO) session.getAttribute("userInfo");
+        MemberDTO memberDTO = MemberService.INSTANCE.getByUno(userInfo.getUno());
 
         try {
-            memberDTO = MemberService.INSTANCE.getByUno(memberDTO.getUno());
-            model.addAttribute("memberDTO", memberDTO);
+                model.addAttribute("memberDTO", memberDTO);
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return "/member/membermodify";
-    }
-
-    @PostMapping("/modify")
-    public String postModify(
-            @ModelAttribute MemberDTO memberDTO, Model model) {
-
-        memberDTO = MemberDTO.builder()
-                .userPw(memberDTO.getUserPw())
-                .username(memberDTO.getUsername())
-                .uno(memberDTO.getUno())
-                .build();
-
-        try {
-            TodoService.INSTANCE.updateWriter(memberDTO.getUsername(), memberDTO.getUno());
-            MemberService.INSTANCE.update(memberDTO);
-            model.addAttribute("userInfo", memberDTO);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return "redirect:/member/read";
-    }
-
-    @GetMapping("/remove")
-    public String getRemove(@ModelAttribute MemberDTO memberDTO, Model model) {
-
-        try {
-            memberDTO = MemberService.INSTANCE.getByUno(memberDTO.getUno());
-            model.addAttribute("memberDTO", memberDTO);
-
-        } catch (Exception e) {
-
-            e.printStackTrace();
-        }
-
-        return "/member/memberremove";
-    }
-
-    @PostMapping("/remove")
-    public String postRemove(@RequestParam("uno") int uno,
-                             @RequestParam("checkPw") String checkPw) {
-
-        MemberDTO memberDTO = null;
-        try {
-            memberDTO = MemberService.INSTANCE.getByUno(uno);
-
-            if (checkPw.equals(memberDTO.getUserPw())) {
-                TodoService.INSTANCE.removeByUno(uno);
-                MemberService.INSTANCE.remove(uno);
-                return "redirect:/login";
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+            return "/member/memberread";
         }
-        return "redirect:/member/read";
 
-    }
+        @GetMapping("/modify")
+        public String getModify (@ModelAttribute MemberDTO memberDTO, Model model){
 
+            try {
+                memberDTO = MemberService.INSTANCE.getByUno(memberDTO.getUno());
+                model.addAttribute("memberDTO", memberDTO);
 
-    @GetMapping("/signup")
-    public String getSignup() throws Exception {
-
-        return "/member/signup";
-
-    }
-
-    @PostMapping("/signup")
-    public String postSignup(@ModelAttribute MemberDTO memberDTO,
-                             @RequestParam("checkPw") String checkPw) {
-
-        try {
-            boolean idCheck = SignUpService.INSTANCE.checkDuplicate(memberDTO.getUserId());
-            log.info("idCheck..........." + idCheck);
-            if (idCheck) {
-                return "redirect:/member/signup";
+            } catch (Exception e) {
+                e.printStackTrace();
             }
 
-            if (memberDTO.getUserPw().equals(checkPw)) {
-                memberDTO = MemberDTO.builder()
-                        .userId(memberDTO.getUserId())
-                        .userPw(memberDTO.getUserPw())
-                        .username(memberDTO.getUsername())
-                        .build();
+            return "/member/membermodify";
+        }
 
-                SignUpService.INSTANCE.register(memberDTO);
-                return "redirect:/member/login";
+        @PostMapping("/modify")
+        public String postModify (
+                @ModelAttribute MemberDTO memberDTO, Model model){
 
+            memberDTO = MemberDTO.builder()
+                    .userPw(memberDTO.getUserPw())
+                    .username(memberDTO.getUsername())
+                    .uno(memberDTO.getUno())
+                    .build();
+
+            try {
+                TodoService.INSTANCE.updateWriter(memberDTO.getUsername(), memberDTO.getUno());
+                MemberService.INSTANCE.update(memberDTO);
+                model.addAttribute("userInfo", memberDTO);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return "redirect:/member/read";
+        }
+
+        @GetMapping("/remove")
+        public String getRemove (@ModelAttribute MemberDTO memberDTO, Model model){
+
+            try {
+                memberDTO = MemberService.INSTANCE.getByUno(memberDTO.getUno());
+                model.addAttribute("memberDTO", memberDTO);
+
+            } catch (Exception e) {
+
+                e.printStackTrace();
             }
 
-        } catch (Exception e) {
-            e.printStackTrace();
+            return "/member/memberremove";
         }
-        return "redirect:/member/signup";
+
+        @PostMapping("/remove")
+        public String postRemove ( @RequestParam("uno") int uno,
+        @RequestParam("checkPw") String checkPw){
+
+            MemberDTO memberDTO = null;
+            try {
+                memberDTO = MemberService.INSTANCE.getByUno(uno);
+
+                if (checkPw.equals(memberDTO.getUserPw())) {
+                    TodoService.INSTANCE.removeByUno(uno);
+                    MemberService.INSTANCE.remove(uno);
+                    return "redirect:/login";
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return "redirect:/member/read";
+
+        }
+
+
+        @GetMapping("/signup")
+        public String getSignup () throws Exception {
+
+            return "/member/signup";
+
+        }
+
+        @PostMapping("/signup")
+        public String postSignup (@ModelAttribute MemberDTO memberDTO,
+                @RequestParam("checkPw") String checkPw){
+
+            try {
+                boolean idCheck = SignUpService.INSTANCE.checkDuplicate(memberDTO.getUserId());
+                log.info("idCheck..........." + idCheck);
+                if (idCheck) {
+                    return "redirect:/member/signup";
+                }
+
+                if (memberDTO.getUserPw().equals(checkPw)) {
+                    memberDTO = MemberDTO.builder()
+                            .userId(memberDTO.getUserId())
+                            .userPw(memberDTO.getUserPw())
+                            .username(memberDTO.getUsername())
+                            .build();
+
+                    SignUpService.INSTANCE.register(memberDTO);
+                    return "redirect:/member/login";
+
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return "redirect:/member/signup";
+        }
     }
-}

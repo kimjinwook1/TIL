@@ -15,7 +15,7 @@ import java.util.Arrays;
 import java.util.Optional;
 
 @Log4j2
-@WebFilter(urlPatterns = {"/todo/*"})
+//@WebFilter(urlPatterns = {"/todo/*"})
 public class LoginCheckFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
