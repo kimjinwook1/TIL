@@ -4,7 +4,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.zerock.w3.servletmvc.dto.MemberDTO;
 import org.zerock.w3.servletmvc.service.MemberService;
@@ -37,7 +36,7 @@ public class MemberRemoveController {
         try {
             memberDTO = MemberService.INSTANCE.getByUno(uno);
 
-            if (checkpw.equals(memberDTO.getUserpw())) {
+            if (checkpw.equals(memberDTO.getUserPw())) {
                 TodoService.INSTANCE.removeByUno(uno);
                 MemberService.INSTANCE.remove(uno);
                 return "redirect:/login";

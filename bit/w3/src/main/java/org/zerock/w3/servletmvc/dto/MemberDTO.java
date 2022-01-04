@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 public class MemberDTO {
 
     private String userId;
-    private String userpw;
+    private String userPw;
     private String username;
     private int uno;
 

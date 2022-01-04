@@ -6,7 +6,6 @@ import org.zerock.w3.servletmvc.service.TodoService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -42,7 +41,7 @@ public class MemberRemoveController extends HttpServlet {
             memberDTO = MemberService.INSTANCE.getByUno(uno);
 
             String checkpw = request.getParameter("checkpw");
-            if (checkpw.equals(memberDTO.getUserpw())) {
+            if (checkpw.equals(memberDTO.getUserPw())) {
                 TodoService.INSTANCE.removeByUno(uno);
                 MemberService.INSTANCE.remove(uno);
                 response.sendRedirect("/login");

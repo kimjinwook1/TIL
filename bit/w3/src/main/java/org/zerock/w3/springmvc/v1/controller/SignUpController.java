@@ -37,7 +37,7 @@ public class SignUpController {
             if (userpw.equals(checkpw)) {
                 memberDTO = MemberDTO.builder()
                         .userId(userid)
-                        .userpw(userpw)
+                        .userPw(userpw)
                         .username(username)
                         .build();
 

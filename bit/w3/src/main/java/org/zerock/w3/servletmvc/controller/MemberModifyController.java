@@ -6,7 +6,6 @@ import org.zerock.w3.servletmvc.service.TodoService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -42,7 +41,7 @@ public class MemberModifyController extends HttpServlet {
         int uno = Integer.parseInt(request.getParameter("uno"));
 
         MemberDTO memberDTO = MemberDTO.builder()
-                .userpw(userpw)
+                .userPw(userpw)
                 .username(username)
                 .uno(uno)
                 .build();

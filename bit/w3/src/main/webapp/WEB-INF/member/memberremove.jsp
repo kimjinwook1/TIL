@@ -11,11 +11,11 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Password</label>
-                <input type="password" name="userpw" class="form-control" value="${memberDTO.userpw}" readonly>
+                <input type="password" name="userPw" class="form-control" value="${memberDTO.userPw}" readonly>
             </div>
             <div class="mb-3">
                 <label class="form-label">Password</label>
-                <input type="text" name="checkpw" class="form-control">
+                <input type="text" name="checkPw" class="form-control">
             </div>
             <div class="mb-3">
                 <input type="hidden" name="uno" value="${memberDTO.uno}">

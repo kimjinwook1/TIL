@@ -12,8 +12,8 @@ import java.sql.Date;
 
 public class MemberVO {
 
-    private String userid;
-    private String userpw;
+    private String userId;
+    private String userPw;
     private String username;
     private String uuid;
     private Date expTime;

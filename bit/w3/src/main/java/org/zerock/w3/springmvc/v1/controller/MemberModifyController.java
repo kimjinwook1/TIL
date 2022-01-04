@@ -35,7 +35,7 @@ public class MemberModifyController {
            ) throws Exception {
 
         MemberDTO memberDTO = MemberDTO.builder()
-                .userpw(userpw)
+                .userPw(userpw)
                 .username(username)
                 .uno(uno)
                 .build();

@@ -13,11 +13,13 @@ public enum MemberService {
 
     INSTANCE;
 
-    public MemberDTO get(String userid, String userPw) throws Exception {
+    public MemberDTO get(String userId, String userPw) throws Exception {
 
-        MemberVO vo = MemberDAO.INSTANCE.selectOne(userid, userPw);
+        MemberVO vo = MemberDAO.INSTANCE.selectOne(userId, userPw);
+        if (vo == null) {
+            return null;
+        }
         MemberDTO memberDTO = MapperUtil.INSTANCE.get().map(vo, MemberDTO.class);
-
         return memberDTO;
     }
 
@@ -47,7 +49,7 @@ public enum MemberService {
         return memberDTO;
     }
 
-    public void remove(int uno) throws Exception{
+    public void remove(int uno) throws Exception {
 
         MemberDAO.INSTANCE.remove(uno);
 

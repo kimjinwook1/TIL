@@ -3,60 +3,62 @@ package org.zerock.w3.springmvc.v2.controller;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 import org.zerock.w3.servletmvc.dto.MemberDTO;
 import org.zerock.w3.servletmvc.service.MemberService;
 import org.zerock.w3.servletmvc.service.SignUpService;
 import org.zerock.w3.servletmvc.service.TodoService;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.sql.Date;
-import java.util.UUID;
 
 @Log4j2
 @Controller
-@SessionAttributes("userInfo")
 @RequestMapping("/member")
 public class SpringMemberController {
 
     @GetMapping("/login")
     public String getLogin() {
         log.info("login..............");
-        return "member/login";
+        return "/member/login";
     }
 
     @PostMapping("/login")
     public String postLogin(
-            @ModelAttribute MemberDTO memberDTO,
+            @ModelAttribute MemberDTO memberDTO, BindingResult bindingResult,
             @RequestParam(value = "rememberme", required = false) boolean rememberme,
-            @CookieValue(value = "remember-me", required = false) Cookie rememberCookie,
-            HttpServletResponse response,
-            HttpServletRequest request,
-            Model model) {
+            HttpServletRequest request) {
+
+        if (!StringUtils.hasText(memberDTO.getUserId())) {
+            bindingResult.addError(new FieldError("memberDTO", "userId", "아이디는 필수입니다."));
+        }
+
+        if (!StringUtils.hasText(memberDTO.getUserPw())) {
+            bindingResult.addError(new FieldError("memberDTO", "userPw", "비밀번호는 필수입니다."));
+        }
+
+        if (bindingResult.hasErrors()) {
+            log.info("memberDTO={}", memberDTO);
+            return "/member/login";
+        }
 
         try {
-            memberDTO = MemberService.INSTANCE.get(memberDTO.getUserId(), memberDTO.getUserpw());
             log.info("memberDTO={}", memberDTO);
+            memberDTO = MemberService.INSTANCE.get(memberDTO.getUserId(), memberDTO.getUserPw());
             if (memberDTO == null) {
                 return "redirect:/member/login";
             }
-            model.addAttribute("userInfo", memberDTO);
-            if (rememberme) {
-//                String uuid = UUID.randomUUID().toString();
-                //1week
-//                long endTime = System.currentTimeMillis() + (1000 * 60 * 60 * 24 * 7);
-//                rememberCookie.setPath("/"); //setPath("/") 모든 경로에 쿠키를 저장한다.
-//                rememberCookie.setMaxAge(60 * 60 * 24 * 7);
-//                response.addCookie(rememberCookie);
-//                MemberService.INSTANCE.setCookieData(memberDTO.getUserId(), uuid, new Date(endTime));
-                HttpSession session = request.getSession();
-                session.setMaxInactiveInterval(60);
-                session.setAttribute("userInfo", memberDTO);
 
+            HttpSession session = request.getSession();
+
+            if (rememberme) {
+                session.setMaxInactiveInterval(60);
             }
+
+            session.setAttribute("userInfo", memberDTO);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -111,7 +113,7 @@ public class SpringMemberController {
             @ModelAttribute MemberDTO memberDTO, Model model) {
 
         memberDTO = MemberDTO.builder()
-                .userpw(memberDTO.getUserpw())
+                .userPw(memberDTO.getUserPw())
                 .username(memberDTO.getUsername())
                 .uno(memberDTO.getUno())
                 .build();
@@ -143,13 +145,13 @@ public class SpringMemberController {
 
     @PostMapping("/remove")
     public String postRemove(@RequestParam("uno") int uno,
-                             @RequestParam("checkpw") String checkpw) {
+                             @RequestParam("checkPw") String checkPw) {
 
         MemberDTO memberDTO = null;
         try {
             memberDTO = MemberService.INSTANCE.getByUno(uno);
 
-            if (checkpw.equals(memberDTO.getUserpw())) {
+            if (checkPw.equals(memberDTO.getUserPw())) {
                 TodoService.INSTANCE.removeByUno(uno);
                 MemberService.INSTANCE.remove(uno);
                 return "redirect:/login";
@@ -165,13 +167,13 @@ public class SpringMemberController {
     @GetMapping("/signup")
     public String getSignup() throws Exception {
 
-        return "member/signup";
+        return "/member/signup";
 
     }
 
     @PostMapping("/signup")
     public String postSignup(@ModelAttribute MemberDTO memberDTO,
-                             @RequestParam("checkpw") String checkpw) {
+                             @RequestParam("checkPw") String checkPw) {
 
         try {
             boolean idCheck = SignUpService.INSTANCE.checkDuplicate(memberDTO.getUserId());
@@ -180,10 +182,10 @@ public class SpringMemberController {
                 return "redirect:/member/signup";
             }
 
-            if (memberDTO.getUserpw().equals(checkpw)) {
+            if (memberDTO.getUserPw().equals(checkPw)) {
                 memberDTO = MemberDTO.builder()
                         .userId(memberDTO.getUserId())
-                        .userpw(memberDTO.getUserpw())
+                        .userPw(memberDTO.getUserPw())
                         .username(memberDTO.getUsername())
                         .build();
 

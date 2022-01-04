@@ -11,7 +11,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Password</label>
-                <input type="password" name="userpw" class="form-control" value="${memberDTO.userpw}">
+                <input type="password" name="userPw" class="form-control" value="${memberDTO.userPw}">
             </div>
             <div class="mb-3">
                 <label class="form-label">Name</label>

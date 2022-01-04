@@ -10,7 +10,7 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Password</label>
-            <input type="password" class="form-control" value="${memberDTO.userpw}" readonly>
+            <input type="password" class="form-control" value="${memberDTO.userPw}" readonly>
         </div>
         <div class="mb-3">
             <label class="form-label">Name</label>
