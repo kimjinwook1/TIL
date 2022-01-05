@@ -1,7 +1,6 @@
 package org.zerock.w3.springmvc.v2.interceptor;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
@@ -9,7 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 @Slf4j
-@Configuration
 public class LoginCheckInterceptor implements HandlerInterceptor {
 
     @Override

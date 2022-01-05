@@ -1,6 +1,5 @@
 package org.zerock.w3.springmvc.v2.interceptor;
 
-import com.mysql.cj.log.Log;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;

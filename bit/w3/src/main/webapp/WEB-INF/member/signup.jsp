@@ -29,10 +29,20 @@
             <div class="mb-3">
                 <label class="form-label">PASSWORD</label>
                 <input type="password" name="checkPw" class="form-control">
+                <spring:hasBindErrors name="memberDTO">
+                    <c:if test="${errors.hasFieldErrors('checkPw')}">
+                        <div class="field-error">비밀번호는 필수 값 입니다.</div>
+                    </c:if>
+                </spring:hasBindErrors>
             </div>
             <div class="mb-3">
                 <label class="form-label">USERNAME</label>
                 <input type="text" name="username" class="form-control">
+                <spring:hasBindErrors name="memberDTO">
+                    <c:if test="${errors.hasFieldErrors('username')}">
+                        <div class="field-error">이름은 필수 값 입니다.</div>
+                    </c:if>
+                </spring:hasBindErrors>
             </div>
             <div class="mb-3">
                 <button type="submit" class="btn btn-primary float-end">SIGN UP</button>

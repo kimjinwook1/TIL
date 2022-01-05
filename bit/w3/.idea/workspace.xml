@@ -10,18 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d5db627-652a-421f-bac7-439d642859a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc/v2/interceptor/LoginCheckInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc/v2/interceptor/LoginInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Spring/study/mvc1/item-service/src/main/java/hello/itemservice/web/basic/BasicItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/study/mvc1/item-service/src/main/java/hello/itemservice/web/basic/BasicItemController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Spring/study/mvc1/springmvc/src/main/java/hello/springmvc/basic/response/ResponseBodyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/study/mvc1/springmvc/src/main/java/hello/springmvc/basic/response/ResponseBodyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Spring/study/mvc2/exception/src/main/java/hello/exception/resolver/MyHandlerExceptionResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/study/mvc2/exception/src/main/java/hello/exception/resolver/MyHandlerExceptionResolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Spring/study/mvc2/exception/src/main/java/hello/exception/resolver/UserHandlerExceptionResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring/study/mvc2/exception/src/main/java/hello/exception/resolver/UserHandlerExceptionResolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/servletmvc/filter/LoginCheckFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/servletmvc/filter/LoginCheckFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/springmvc/v2/controller/SpringMemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/springmvc/v2/controller/SpringMemberController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/servletmvc/filter/LoginCheckFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/springmvc/v2/interceptor/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/zerock/w3/springmvc/v2/interceptor/LoginInterceptor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc/v2/controller/SpringMemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc/v2/controller/SpringMemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc/v2/interceptor/LoginCheckInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc/v2/interceptor/LoginCheckInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc/v2/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zerock/w3/springmvc/v2/interceptor/LoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/includes/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/member/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/member/signup.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -352,7 +353,7 @@
       <workItem from="1640660513557" duration="377000" />
       <workItem from="1640679509899" duration="806000" />
       <workItem from="1641023393282" duration="38461000" />
-      <workItem from="1641274456716" duration="2172000" />
+      <workItem from="1641274456716" duration="8913000" />
     </task>
     <servers />
   </component>
