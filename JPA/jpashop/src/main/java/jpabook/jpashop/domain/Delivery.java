@@ -1,14 +1,20 @@
 package jpabook.jpashop.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 import static javax.persistence.FetchType.LAZY;
 
 @Entity
-public class Delivery extends BaseEntity {
+@Getter
+@Setter
+public class Delivery {
 
     @Id
     @GeneratedValue
+    @Column(name = "delivery_id")
     private Long id;
 
     @OneToOne(mappedBy = "delivery", fetch = LAZY)
@@ -17,37 +23,6 @@ public class Delivery extends BaseEntity {
     @Embedded
     private Address address;
 
+    @Enumerated(EnumType.STRING)
     private DeliveryStatus status;
-
-    public Long getId() {
-        return id;
-    }
-
-    public Order getOrder() {
-        return order;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public DeliveryStatus getStatus() {
-        return status;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setOrder(Order order) {
-        this.order = order;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
-    public void setStatus(DeliveryStatus status) {
-        this.status = status;
-    }
 }
