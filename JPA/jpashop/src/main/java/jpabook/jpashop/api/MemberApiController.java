@@ -25,6 +25,7 @@ public class MemberApiController {
     @GetMapping("/api/v2/members")
     public Result membersV2() {
         List<Member> findMembers = memberService.findMembers();
+
         List<MemberDTO> collect = findMembers.stream()
                 .map(m -> new MemberDTO(m.getName()))
                 .collect(Collectors.toList());

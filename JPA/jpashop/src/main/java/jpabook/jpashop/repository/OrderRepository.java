@@ -99,5 +99,13 @@ public class OrderRepository {
         return query.getResultList();
     }
 
+    public List<Order> findWithMemberDelivery() { //재사용성이 뛰어남
+
+        return em.createQuery("select o from Order o" +
+                        " join fetch o.member m" +
+                        " join fetch o.delivery d", Order.class)
+                .getResultList();
+    }
+
 
 }
