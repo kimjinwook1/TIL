@@ -68,7 +68,7 @@ public class ValidationItemControllerV1 {
         }
 
         //검증에 실패하면 다시 입력 폼으로 이동
-        if (!errors.isEmpty()) {
+        if (hasErrors(errors)) {
             log.info("errors = {}", errors);
             model.addAttribute("errors", errors);
             return "validation/v1/addForm";
@@ -94,5 +94,9 @@ public class ValidationItemControllerV1 {
         return "redirect:/validation/v1/items/{itemId}";
     }
 
+
+    private boolean hasErrors(Map<String, String> errors) {
+        return !errors.isEmpty();
+    }
 }
 
