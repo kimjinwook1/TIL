@@ -60,11 +60,9 @@ public class ValidationItemControllerV2 {
         }
         if (item.getPrice() == null || item.getPrice() < 1000 || item.getPrice() > 1000000) {
             bindingResult.addError(new FieldError("item", "price", "가격은 1,000 ~ 1,000,000 까지 허용합니다."));
-
         }
         if (item.getQuantity() == null || item.getQuantity() > 9999) {
             bindingResult.addError(new FieldError("item", "quantity", "수량은 최대 9,999 까지 허용합니다."));
-
         }
 
         //특정 필드가 아닌 복합 룰 검증
@@ -115,6 +113,7 @@ public class ValidationItemControllerV2 {
         //검증에 실패하면 다시 입력 폼으로 이동
         if (bindingResult.hasErrors()) {
             log.info("errors = {}", bindingResult);
+            // bindingResult를 사용하면 자동으로 model에 에러 정보가 담기게 된다.
             return "validation/v2/addForm";
         }
 
