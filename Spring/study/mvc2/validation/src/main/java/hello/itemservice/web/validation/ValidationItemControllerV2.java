@@ -76,6 +76,7 @@ public class ValidationItemControllerV2 {
         //검증에 실패하면 다시 입력 폼으로 이동
         if (bindingResult.hasErrors()) {
             log.info("errors = {}", bindingResult);
+            // bindingResult를 사용하면 자동으로 model에 에러 정보가 담기게 된다.
             return "validation/v2/addForm";
         }
 
@@ -92,6 +93,17 @@ public class ValidationItemControllerV2 {
         //검증 로직
         if (!StringUtils.hasText(item.getItemName())) {
             bindingResult.addError(new FieldError("item", "itemName", item.getItemName(), false, null, null, "상품 이름은 필수입니다."));
+            // -> rejectedValue 파라미터에 값을 넣어주면 렌더링 시 값을 보존해준다.
+            /*
+            bindingResult.addError의 파라미터 목록
+            objectName: 오류가 발생한 객체 이름
+            field: 오류 필드
+            rejectedValue: 사용자가 입력한 값(거절된 값)
+            bindingFailure: 타입 오류 같은 바인딩 실패인지, 검증 실패인지 구분 값
+            codes: 메시지 코드
+            arguments: 메시지에서 사용하는 인자
+            defaultMessage: 기본 오류 메시지
+            */
         }
         if (item.getPrice() == null || item.getPrice() < 1000 || item.getPrice() > 1000000) {
             bindingResult.addError(new FieldError("item", "price", item.getPrice(), false, null, null, "가격은 1,000 ~ 1,000,000 까지 허용합니다."));
