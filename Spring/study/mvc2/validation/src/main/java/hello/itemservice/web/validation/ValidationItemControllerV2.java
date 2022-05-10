@@ -141,17 +141,19 @@ public class ValidationItemControllerV2 {
 
         log.info("objectName = {}", bindingResult.getObjectName());
         log.info("target = {}", bindingResult.getTarget());
+        //objectName에는 item이 들어가 있고
+        //target에는 item 객체가 직접 들어가 있다.
+
         //검증 로직
         if (!StringUtils.hasText(item.getItemName())) {
             bindingResult.addError(new FieldError("item", "itemName", item.getItemName(), false, new String[]{"required.item.itemName"}, null, null));
+            //codes 파라미터는 배열을 받을 수 있다. 만약 codes에 값이 없다면 default 파라미터의 메시지가 출력된다.
         }
         if (item.getPrice() == null || item.getPrice() < 1000 || item.getPrice() > 1000000) {
             bindingResult.addError(new FieldError("item", "price", item.getPrice(), false, new String[]{"range.item.price"}, new Object[]{1000, 1000000}, null));
-
         }
         if (item.getQuantity() == null || item.getQuantity() > 9999) {
             bindingResult.addError(new FieldError("item", "quantity", item.getQuantity(), false, new String[]{"max.item.quantity"}, new Object[]{9999}, null));
-
         }
 
         //특정 필드가 아닌 복합 룰 검증
@@ -184,10 +186,18 @@ public class ValidationItemControllerV2 {
 
         if (!StringUtils.hasText(item.getItemName())) {
             bindingResult.rejectValue("itemName", "required");
+            //rejectValue를 사용하면 FieldError, ObjectError를 직접 생성하지 않아도 된다.
         }
 
         if (item.getPrice() == null || item.getPrice() < 1000 || item.getPrice() > 1000000) {
             bindingResult.rejectValue("price", "range", new Object[]{1000, 1000000}, null);
+            /*
+            field: 오류 필드명
+            errorCode: 오류코드(이 오류코드는 메시지에 등록한 코드가 아니다.)
+            -> errors.properties에 정의된 오류 코드 중 세밀한 메시지 코드가 있으면 우선순위로 사용된다.
+            errorArgs: 오류 메시지에서 치환하기 위한 값
+            defaultMessage: 오류 메시지를 찾을 수 없을 때 사용하는 기본 메시지
+             */
         }
         if (item.getQuantity() == null || item.getQuantity() > 9999) {
             bindingResult.rejectValue("quantity", "max", new Object[]{9999}, null);
