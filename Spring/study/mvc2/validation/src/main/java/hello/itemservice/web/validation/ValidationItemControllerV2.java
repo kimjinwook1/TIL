@@ -27,7 +27,14 @@ public class ValidationItemControllerV2 {
     private final ItemValidator itemValidator;
 
     @InitBinder
-    public void inti(WebDataBinder dataBinder) {
+    public void init(WebDataBinder dataBinder) {
+        /*
+        @Validated는 검증기를 실행하라는 애노테이션이다.
+        이 애노테이션이 붙으면서 앞서 WebDataBinder에 등록한 검증기를 찾아서 실행한다.
+        여러 검증기를 등록한다면 그 중 어떤 검증기가 실행되어야 할지 구분이 필요 하다.
+        이때 supports()가 사용된다. supports(Item.class)가 호출되고 결과가 true이므로
+        ItemValidator의 validate()가 호출된다.
+        */
         dataBinder.addValidators(itemValidator);
     }
 
