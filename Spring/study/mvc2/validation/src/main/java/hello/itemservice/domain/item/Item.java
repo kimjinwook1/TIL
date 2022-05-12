@@ -9,6 +9,9 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Data
+//@ScriptAssert(lang = "javascript", script = "_this.price * _this.quantity >= 10000", message = "총합이 10000원 넘게 입력해주세요.")
+//@ScriptAssert를 적용하면 오브젝트 오류를 검증해준다.
+//하지만 제약조건이 너무 많기 때문에 직접 자바 코드로 작성하는 것을 권장한다.
 public class Item {
 
 //    @NotNull(groups = UpdateCheck.class)

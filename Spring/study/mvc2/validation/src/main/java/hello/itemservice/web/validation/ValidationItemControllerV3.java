@@ -46,6 +46,18 @@ public class ValidationItemControllerV3 {
     //    @PostMapping("/add")
     public String addItem(@Validated @ModelAttribute Item item, BindingResult bindingResult, RedirectAttributes redirectAttributes) {
 
+        //스프링 부트는 자동으로 글로벌 Validator로 등록한다.
+        //글로벌 Validator가 적용되어있기 때문에 @Valid, @Validated만 적용하면 된다.
+        //검증 오류가 발생하면 FieldError, ObjectError를 생성해서 BindingResult에 담아준다.
+
+        //참고
+        //검증 시, @Valid, @Validated 둘 다 사용가능하다.
+        //@Valid를 사용하려면 build.gradle에 의존관계 추가가 필요하다.
+        //@Validated는 스프링 전용 검증애노테이션이고, @Valid는 자바 표준 검증 애노테이션이다.
+        //둘 중 아무거나 사용해도 동일하게 작동하지만,
+        //@Validated는 내부에 groups 라는 기능을 포함하고 있다.
+
+
         //특정 필드가 아닌 복합 룰 검증
         if (item.getPrice() != null && item.getQuantity() != null) {
             int resultPrice = item.getPrice() * item.getQuantity();
