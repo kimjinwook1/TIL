@@ -15,6 +15,10 @@ import javax.validation.constraints.NotNull;
 public class Item {
 
 //    @NotNull(groups = UpdateCheck.class)
+// id값은 상품을 수정할 경우에만 필요하다
+// 상품을 처음 저장할 경우 id 값이 존재하지 않으니
+// @NotNull을 UpdateCheck라는 그룹에 넣어서 상품 수정시에만 적용되도록 한다.
+// Group을 사용하려면 @Validated를 사용해야한다.
     private Long id;
 
 //    @NotBlank(groups = {SaveCheck.class, UpdateCheck.class})
