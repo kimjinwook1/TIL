@@ -63,6 +63,7 @@ public class ValidationItemControllerV4 {
         }
 
         //성공 로직
+        //form에서 받아온 객체를 item으로 변경해줘야한다.
         Item item = new Item();
         item.setItemName(form.getItemName());
         item.setPrice(form.getPrice());
@@ -98,6 +99,7 @@ public class ValidationItemControllerV4 {
             return "validation/v4/editForm";
         }
 
+        //form에서 받아온 객체를 item으로 변경해줘야한다.
         Item itemParam = new Item();
         itemParam.setItemName(form.getItemName());
         itemParam.setPrice(form.getPrice());
