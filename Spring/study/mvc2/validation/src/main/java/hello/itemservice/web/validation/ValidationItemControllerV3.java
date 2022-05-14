@@ -121,7 +121,7 @@ public class ValidationItemControllerV3 {
             }
         }
 
-        //검증에 실패하면 다시 수정 폼으로 이동정-> 검증 로직 맨 앞에 두면 아래의 코드만 출력된다.
+        //검증에 실패하면 다시 수정 폼으로 이동-> 검증 로직 맨 앞에 두면 아래의 코드만 출력된다.
         if (bindingResult.hasErrors()) {
             log.info("errors = {}", bindingResult);
             return "validation/v3/editForm";
