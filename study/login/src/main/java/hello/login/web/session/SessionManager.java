@@ -16,7 +16,6 @@ import java.util.concurrent.ConcurrentHashMap;
 @Component
 public class SessionManager {
 
-    public static final String sessionId = "mySessionId";
     public static final String SESSION_COOKIE_NAME = "mySessionId";
     private Map<String, Object> sessionStore = new ConcurrentHashMap<>();
     //동시성 이슈가 있을 경우 ConcurrentHashMap을 사용해야 한다.
