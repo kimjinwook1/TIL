@@ -87,6 +87,7 @@ public class HomeController {
     //    @GetMapping("/")
     public String homeLoginV3Spring(
             @SessionAttribute(name = SessionConst.LOGIN_MEMBER, required = false) Member loginMember, Model model) {
+        //@SessionAttribute를 사용하면 세션을 직접 생성해 줄 필요가 없어진다.
 
         // 세션에 회원 데이터가 없으면 home
         if (loginMember == null) {
