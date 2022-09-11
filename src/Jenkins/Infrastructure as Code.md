@@ -120,6 +120,52 @@ jenkins-server: 172.17.0.3
 
 ex) war파일을 배포할 경우 도커서버에 이미지와 프로세스가 살아있어서 재 배포가 안되는 문제가 발생하는데 배포 전 도커 이미지와 프로세스를 삭제하는 스크립트를 작성, 그 후 도커를 배포하는 스크립트를 실행하여 문제를 해결할 수 있다.
 
+vi create-cicd-devops-image.yml // ->ansible-server
+
+```
+- hosts: all
+#   become: true
+
+  tasks:
+  - name: create a docker image with deployed waf file //이미지 생성
+    command: docker build -t edowon0623/cicd-project-ansible .
+    args: 
+        chdir: /root
+    
+  - name: push the image on Docker Hub //이미지 업로드
+    command: docker push edowon0623/cicd-project-ansible
+
+  - name: remove the docker image from the ansible server //이미지 삭제
+    command: docker rmi edowon0623/cicd-project-ansible  
+    ignore_errors: yes
+```
+
+vi create-cicd-devops-container.yml // ->docker-server
+
+```
+- hosts: all
+#   become: true  
+
+  tasks:
+  - name: stop current running container //도커 중지
+    command: docker stop my_cicd_project
+    ignore_errors: yes
+
+  - name: remove stopped cotainer //도커 삭제
+    command: docker rm my_cicd_project
+    ignore_errors: yes
+
+  - name: remove current docker image //이미지 삭제
+    command: docker rmi edowon0623/cicd-project-ansible
+    ignore_errors: yes
+
+  - name: pull the newest docker image from Docker Hub //허브에서 도커이미지 다운로드
+    command: docker pull edowon0623/cicd-project-ansible
+
+  - name: create a container using cicd-project-ansible image //도커 생
+    command: docker run -d --name my_cicd_project -p 8080:8080 edowon0623/cicd-project-ansible
+```
+
 > ### ssh 로그인 오류시
 > 
 > - cd .ssh
