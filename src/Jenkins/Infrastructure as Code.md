@@ -1,5 +1,3 @@
-
-
 ### Infrastructure as Code
 
 - 시스템, 하드웨어 또는 인터페이스의 구성정보를 파일(스크립트)을 통해 관리 및 프로비저닝
@@ -7,7 +5,6 @@
 - IT 인프라 스트럭처, 베어 메탈 서버 등의 물리 장비 및 가상 머신과 관련된 구성 리소르를 관리
 
 - 버전 관리를 통한 리소스 관리
-
 
 
 Terraform
@@ -27,9 +24,7 @@ Ansible
 - 어떤 문제가 발생했을 때 왜 문제가 발생했는지, 그 문제에 대한 해결을 하기 위한 스크립트를 작성하는데 사용
 
 
-
 - 테라폼은 인프라를 구축하는 용도로 많이 사용, 앤서블은 이미 구축되어있는 서버들의 구성정보를 변경하거나 관리하는 용도로 사용
-
 
 
 Ansible
@@ -55,7 +50,6 @@ Ansible
   - 실행: shell, task
 
 
-
 Install Ansible
 
 - Ansible Server 설치(Linux)
@@ -69,16 +63,15 @@ Install Ansible
 - Ansible에서 접속하는 호스트 목록 -> /etc/ansible/hosts
 
 
-
 - docker run --privileged --name ansible-server -itd -p 20022:22 -p 8081:8080 -e container=docker -v /sys/fs/cgroup:/sys/fs/cgroup --cgroupns=host edowon0623/ansible-server:m1 /usr/sbin/init
 
 ansible-server : 172.17.0.2/16
 
 docker-server: 172.17.0.4/16
 
+jenkins-server: 172.17.0.3
+
 비밀번호: P@ssw0rd
-
-
 
 ### Test Ansible module
 
@@ -94,12 +87,11 @@ docker-server: 172.17.0.4/16
   
   - --list-hosts -> 적용되는 호스트 목록
 
-- 멱등성
-  
+- **멱등성**
+
   - 같은 설정을 여러 번 적용하더라도 결과가 달라지지 않는 설정
   
   - ex) echo -e "[mygroup]\n172.20.10.11" >> /etc/ansible/hosts
-
 
 
 - Ansible Test 
@@ -107,6 +99,26 @@ docker-server: 172.17.0.4/16
   - $ansible all -m ping // host에 등록된 모든 ip에 모듈을 실행시킨다.
 
 
+### Ansible Playbook
+
+- 사용자가 원하는 내용을 미리 작성해 놓은 파일
+
+  - ex) 설치, 파일 전송, 서비스 재시작 ...
+
+  - ex) 다수의 서버에 반복 작업을 처리하는 경우
+
+- Playbook
+
+- $vi first-playbook.yml 작성
+
+- $ ansbile-playbook first-playbook.yml
+
+- $ cat/etc/ansible/hosts
+
+
+-> ansible의 playbook 모듈을 통해 우리가 ansible 에서 해야할 스크립트를 미리 작성한 후 젠킨스에서 ansible-playbook을 실행만 시키면 되도록 한다.
+
+ex) war파일을 배포할 경우 도커서버에 이미지와 프로세스가 살아있어서 재 배포가 안되는 문제가 발생하는데 배포 전 도커 이미지와 프로세스를 삭제하는 스크립트를 작성, 그 후 도커를 배포하는 스크립트를 실행하여 문제를 해결할 수 있다.
 
 > ### ssh 로그인 오류시
 > 
