@@ -70,3 +70,14 @@
 - **Script 실행** - 가장 많이 사용되는 명령어
 
     - kubectl apply -f sample1.yml
+
+- 파드 확인
+  - kubectl get pos -o wide
+- 파드에 터널링으로 접속
+  - kubectl exec -it nginx-deployment-XXXX-XXXX -- /bin/bash
+- 파드 노출(공개)
+  - kubectl expose deployment nginx-deployment --port=80 --type=NodePort
+- 파드 삭제
+  - kubectl delete pod/nginx-deployment-XXXX-XXXX
+- 디플로이먼트 삭제
+  - kubectl delete deployment nginx-deployment
