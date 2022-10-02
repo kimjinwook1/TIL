@@ -70,6 +70,8 @@
 - **Script 실행** - 가장 많이 사용되는 명령어
 
     - kubectl apply -f sample1.yml
+      - 실행에 오류가 발생할 경우 경로를 지정해주어야한다.
+      - /usr/local/bin/kubectl apply -f /Users/kimjinwook/~~~.yml
 
 - 파드 확인
   - kubectl get pos -o wide
@@ -81,3 +83,4 @@
   - kubectl delete pod/nginx-deployment-XXXX-XXXX
 - 디플로이먼트 삭제
   - kubectl delete deployment nginx-deployment
+  
