@@ -45,7 +45,7 @@
     - kubectl get nodes
 - 파드 확인
 
-    - kubectl get pos
+    - kubectl get pods
 - 디플로이먼트 확인
 
     - kubectl get deployments
@@ -74,7 +74,7 @@
       - /usr/local/bin/kubectl apply -f /Users/kimjinwook/~~~.yml
 
 - 파드 확인
-  - kubectl get pos -o wide
+  - kubectl get pods -o wide
 - 파드에 터널링으로 접속
   - kubectl exec -it nginx-deployment-XXXX-XXXX -- /bin/bash
 - 파드 노출(공개)
